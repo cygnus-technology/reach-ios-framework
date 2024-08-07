@@ -1,0 +1,11 @@
+framework module CygnusUI {
+  umbrella header "CygnusUI.h"
+  export *
+
+  module * { export * }
+}
+
+module CygnusUI.Swift {
+  header "CygnusUI-Swift.h"
+  requires objc
+}

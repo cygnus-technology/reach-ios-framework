@@ -1,0 +1,2489 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ReachProtocol
+import Combine
+import Foundation
+import PromiseKit
+@_exported import ReachProtocol
+import Swift
+import SwiftProtobuf
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension ReachProtocol.DeviceInfoResponse {
+  public var bufferSizes: ReachProtocol.BufferSizes? {
+    get
+  }
+  public func implementsService(_ service: ReachProtocol.ServiceIds) -> Swift.Bool
+}
+extension ReachProtocol.BufferSizes {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension ReachProtocol.ReachMessageTypes {
+  public var name: Swift.String {
+    get
+  }
+}
+extension ReachProtocol.ErrorCodes {
+  public var name: Swift.String {
+    get
+  }
+}
+extension ReachProtocol.ServiceIds {
+  public var name: Swift.String {
+    get
+  }
+}
+extension ReachProtocol.ParameterDataType {
+  public var name: Swift.String {
+    get
+  }
+}
+extension ReachProtocol.AccessLevel {
+  public var description: Swift.String {
+    get
+  }
+  public func canRead() -> Swift.Bool
+  public func canWrite() -> Swift.Bool
+}
+extension ReachProtocol.ParameterValue {
+  public static let floatFormatter: Foundation.NumberFormatter
+  public func displayValue(parameter: ReachProtocol.ParameterInfo) -> Swift.String
+}
+extension ReachProtocol.ParameterInfo {
+  public var type: ReachProtocol.ParameterDataType {
+    get
+  }
+  public var units: Swift.String? {
+    get
+  }
+  public var rangeMinDescription: Swift.String? {
+    get
+  }
+  public var rangeMaxDescription: Swift.String? {
+    get
+  }
+  public var extensionId: Swift.UInt32? {
+    get
+  }
+  public var allowedCharacters: Foundation.CharacterSet {
+    get
+  }
+  public var keyboardType: UIKit.UIKeyboardType {
+    get
+  }
+  public func createValue(value: Swift.String) throws -> ReachProtocol.ParameterValue
+}
+extension ReachProtocol.StorageLocation {
+  public var name: Swift.String {
+    get
+  }
+}
+public protocol TransportModule {
+  var onMessage: Combine.PassthroughSubject<Foundation.Data, Swift.Never> { get }
+  #if compiler(>=5.3) && $AsyncAwait
+  func send(data: Foundation.Data) async throws
+  #endif
+  func receivedBytes(data: Foundation.Data)
+}
+extension Foundation.Data {
+  public enum Endianness {
+    case big
+    case little
+    public static func == (a: Foundation.Data.Endianness, b: Foundation.Data.Endianness) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init?(hexString: Swift.String, endianness: Foundation.Data.Endianness = .little)
+  public func hexString(endianness: Foundation.Data.Endianness, trim: Swift.Bool = false) -> Swift.String
+}
+public struct ParameterContainer {
+  public let parameterInfo: ReachProtocol.ParameterInfo
+  public let parameterValue: ReachProtocol.ParameterValue
+  public var displayValue: Swift.String {
+    get
+  }
+  public init(parameterInfo: ReachProtocol.ParameterInfo, parameterValue: ReachProtocol.ParameterValue)
+}
+open class ReachError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var failureReason: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil, underlyingError: (any Swift.Error)? = nil)
+  @objc deinit
+}
+public struct ParameterDescriptions : Swift.Codable {
+  public let info: [Swift.UInt32 : ReachProtocol.ParameterInfo]
+  public let enums: [Swift.UInt32 : Swift.Array<ReachProtocol.ParamExKey>]
+  public let hash: Swift.UInt32
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class Request {
+  public init(onMessage: @escaping (any SwiftProtobuf.Message) -> Swift.Void, timeout: Swift.Int)
+  public func wait() -> PromiseKit.Promise<Swift.Void>
+  #if compiler(>=5.3) && $AsyncAwait
+  public func wait() async throws
+  #endif
+  @objc deinit
+}
+public enum ReachProto_MAJOR_Version : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case majorVersion
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ReachProto_MAJOR_Version : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ReachProto_MAJOR_Version]
+  public typealias AllCases = [ReachProtocol.ReachProto_MAJOR_Version]
+}
+public enum ReachProto_MINOR_Version : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case minorV0
+  case minorVersion
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ReachProto_MINOR_Version : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ReachProto_MINOR_Version]
+  public typealias AllCases = [ReachProtocol.ReachProto_MINOR_Version]
+}
+public enum ReachProto_PATCH_Version : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case patchV0
+  case patchVersion
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ReachProto_PATCH_Version : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ReachProto_PATCH_Version]
+  public typealias AllCases = [ReachProtocol.ReachProto_PATCH_Version]
+}
+public enum ReachMessageTypes : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case invalid
+  case errorReport
+  case ping
+  case getDeviceInfo
+  case discoverParameters
+  case discoverParamEx
+  case readParameters
+  case writeParameters
+  case parameterNotification
+  case discoverNotifications
+  case paramEnableNotify
+  case paramDisableNotify
+  case discoverFiles
+  case transferInit
+  case transferData
+  case transferDataNotification
+  case eraseFile
+  case discoverCommands
+  case sendCommand
+  case cliNotification
+  case discoverStreams
+  case openStream
+  case closeStream
+  case streamDataNotification
+  case setTime
+  case getTime
+  case discoverWifi
+  case wifiConnect
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ReachMessageTypes : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ReachMessageTypes]
+  public typealias AllCases = [ReachProtocol.ReachMessageTypes]
+}
+public enum ServiceIds : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case noSvcID
+  case parameterRepo
+  case files
+  case streams
+  case commands
+  case cli
+  case time
+  case wifi
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ServiceIds : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ServiceIds]
+  public typealias AllCases = [ReachProtocol.ServiceIds]
+}
+public enum EndpointIds : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case noEndpoints
+  case one
+  case two
+  case three
+  case four
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.EndpointIds : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.EndpointIds]
+  public typealias AllCases = [ReachProtocol.EndpointIds]
+}
+public enum ParameterDataType : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case uint32
+  case int32
+  case float32
+  case uint64
+  case int64
+  case float64
+  case bool
+  case string
+  case enumeration
+  case bitField
+  case byteArray
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterDataType : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ParameterDataType]
+  public typealias AllCases = [ReachProtocol.ParameterDataType]
+}
+public enum AccessLevel : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case noAccess
+  case read
+  case write
+  case readWrite
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.AccessLevel : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.AccessLevel]
+  public typealias AllCases = [ReachProtocol.AccessLevel]
+}
+public enum StorageLocation : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case invalid
+  case ram
+  case nonvolatile
+  case ramExtended
+  case nonvolatileExtended
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StorageLocation : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.StorageLocation]
+  public typealias AllCases = [ReachProtocol.StorageLocation]
+}
+public enum WiFiSecurity : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case open
+  case wep
+  case wpa
+  case wpa2
+  case wpa3
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.WiFiSecurity : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.WiFiSecurity]
+  public typealias AllCases = [ReachProtocol.WiFiSecurity]
+}
+public enum WiFiBand : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case noBand
+  case band2
+  case band5
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.WiFiBand : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.WiFiBand]
+  public typealias AllCases = [ReachProtocol.WiFiBand]
+}
+public enum ErrorCodes : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case noError
+  case noData
+  case readFailed
+  case writeFailed
+  case notImplemented
+  case reserved1
+  case reserved2
+  case permissionDenied
+  case bufferTooSmall
+  case invalidParameter
+  case checksumMismatch
+  case decodingFailed
+  case encodingFailed
+  case invalidState
+  case noResponse
+  case badFile
+  case packetCountErr
+  case challengeFailed
+  case reserved3
+  case noResource
+  case invalidID
+  case incomplete
+  case abort
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ErrorCodes : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.ErrorCodes]
+  public typealias AllCases = [ReachProtocol.ErrorCodes]
+}
+public enum FileTransferState : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case fileTransferInvalid
+  case idle
+  case init_
+  case data
+  case complete
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileTransferState : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.FileTransferState]
+  public typealias AllCases = [ReachProtocol.FileTransferState]
+}
+public enum SizesOffsets : SwiftProtobuf.Enum {
+  public typealias RawValue = Swift.Int
+  case maxMessageSizeOffset
+  case bigDataBufferSizeOffset
+  case parameterBufferCountOffset
+  case numParamsInResponseOffset
+  case descriptionLenOffset
+  case maxParamBytesOffset
+  case paramInfoDescriptionLenOffset
+  case mediumStringLenOffset
+  case shortStringLenOffset
+  case paramNotifyConfigCountOffset
+  case numDescriptorsInResponseOffset
+  case numParamNotificationsOffset
+  case numCommandsInResponseOffset
+  case countParamDescInResponseOffset
+  case structureSize
+  case UNRECOGNIZED(Swift.Int)
+  public init()
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.SizesOffsets : Swift.CaseIterable {
+  public static let allCases: [ReachProtocol.SizesOffsets]
+  public typealias AllCases = [ReachProtocol.SizesOffsets]
+}
+public struct ReachMessageHeader {
+  public var messageType: Swift.UInt32
+  public var endpointID: Swift.UInt32
+  public var clientID: Swift.UInt32
+  public var remainingObjects: Swift.UInt32
+  public var transactionID: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ReachMessage {
+  public var header: ReachProtocol.ReachMessageHeader {
+    get
+    set
+  }
+  public var hasHeader: Swift.Bool {
+    get
+  }
+  public mutating func clearHeader()
+  public var payload: Foundation.Data
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct AhsokaMessageHeader {
+  public var messageType: Swift.Int32
+  public var transactionID: Swift.Int32
+  public var clientID: Foundation.Data
+  public var remainingObjects: Swift.Int32
+  public var endpointID: Swift.UInt32
+  public var isMessageCompressed: Swift.Bool
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ErrorReport {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct PingRequest {
+  public var echoData: Foundation.Data
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct PingResponse {
+  public var echoData: Foundation.Data
+  public var signalStrength: Swift.Int32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DeviceInfoRequest {
+  public var challengeKey: Swift.String {
+    get
+    set
+  }
+  public var hasChallengeKey: Swift.Bool {
+    get
+  }
+  public mutating func clearChallengeKey()
+  public var clientProtocolVersion: Swift.String
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DeviceInfoResponse {
+  public var deviceName: Swift.String
+  public var manufacturer: Swift.String
+  public var deviceDescription: Swift.String
+  public var firmwareVersion: Swift.String
+  public var protocolVersionString: Swift.String
+  public var services: Swift.UInt32
+  public var parameterMetadataHash: Swift.UInt32
+  public var applicationIdentifier: Foundation.Data {
+    get
+    set
+  }
+  public var hasApplicationIdentifier: Swift.Bool {
+    get
+  }
+  public mutating func clearApplicationIdentifier()
+  public var endpoints: Swift.UInt32
+  public var sizesStruct: Foundation.Data
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterInfoRequest {
+  public var parameterIds: [Swift.UInt32]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterInfoResponse {
+  public var parameterInfos: [ReachProtocol.ParameterInfo]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct Uint32ParameterInfo {
+  public var rangeMin: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct Int32ParameterInfo {
+  public var rangeMin: Swift.Int32 {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.Int32 {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.Int32 {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct Float32ParameterInfo {
+  public var rangeMin: Swift.Float {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.Float {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.Float {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var precision: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasPrecision: Swift.Bool {
+    get
+  }
+  public mutating func clearPrecision()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct Uint64ParameterInfo {
+  public var rangeMin: Swift.UInt64 {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.UInt64 {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.UInt64 {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct Int64ParameterInfo {
+  public var rangeMin: Swift.Int64 {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.Int64 {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.Int64 {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct Float64ParameterInfo {
+  public var rangeMin: Swift.Double {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.Double {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.Double {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var precision: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasPrecision: Swift.Bool {
+    get
+  }
+  public mutating func clearPrecision()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct BoolParameterInfo {
+  public var defaultValue: Swift.Bool {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var peiID: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasPeiID: Swift.Bool {
+    get
+  }
+  public mutating func clearPeiID()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct StringParameterInfo {
+  public var defaultValue: Swift.String {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var maxSize: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct EnumParameterInfo {
+  public var rangeMin: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasRangeMin: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMin()
+  public var rangeMax: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasRangeMax: Swift.Bool {
+    get
+  }
+  public mutating func clearRangeMax()
+  public var defaultValue: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var peiID: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasPeiID: Swift.Bool {
+    get
+  }
+  public mutating func clearPeiID()
+  public var units: Swift.String {
+    get
+    set
+  }
+  public var hasUnits: Swift.Bool {
+    get
+  }
+  public mutating func clearUnits()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct BitfieldParameterInfo {
+  public var defaultValue: Swift.UInt64 {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var bitsAvailable: Swift.UInt32
+  public var peiID: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasPeiID: Swift.Bool {
+    get
+  }
+  public mutating func clearPeiID()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ByteArrayParameterInfo {
+  public var defaultValue: Foundation.Data {
+    get
+    set
+  }
+  public var hasDefaultValue: Swift.Bool {
+    get
+  }
+  public mutating func clearDefaultValue()
+  public var maxSize: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterInfo {
+  public var id: Swift.UInt32
+  public var name: Swift.String
+  public var description_p: Swift.String {
+    get
+    set
+  }
+  public var hasDescription_p: Swift.Bool {
+    get
+  }
+  public mutating func clearDescription_p()
+  public var access: ReachProtocol.AccessLevel
+  public var storageLocation: ReachProtocol.StorageLocation
+  public var desc: ReachProtocol.ParameterInfo.OneOf_Desc?
+  public var uint32Desc: ReachProtocol.Uint32ParameterInfo {
+    get
+    set
+  }
+  public var int32Desc: ReachProtocol.Int32ParameterInfo {
+    get
+    set
+  }
+  public var float32Desc: ReachProtocol.Float32ParameterInfo {
+    get
+    set
+  }
+  public var uint64Desc: ReachProtocol.Uint64ParameterInfo {
+    get
+    set
+  }
+  public var int64Desc: ReachProtocol.Int64ParameterInfo {
+    get
+    set
+  }
+  public var float64Desc: ReachProtocol.Float64ParameterInfo {
+    get
+    set
+  }
+  public var boolDesc: ReachProtocol.BoolParameterInfo {
+    get
+    set
+  }
+  public var stringDesc: ReachProtocol.StringParameterInfo {
+    get
+    set
+  }
+  public var enumDesc: ReachProtocol.EnumParameterInfo {
+    get
+    set
+  }
+  public var bitfieldDesc: ReachProtocol.BitfieldParameterInfo {
+    get
+    set
+  }
+  public var bytearrayDesc: ReachProtocol.ByteArrayParameterInfo {
+    get
+    set
+  }
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public enum OneOf_Desc : Swift.Equatable {
+    case uint32Desc(ReachProtocol.Uint32ParameterInfo)
+    case int32Desc(ReachProtocol.Int32ParameterInfo)
+    case float32Desc(ReachProtocol.Float32ParameterInfo)
+    case uint64Desc(ReachProtocol.Uint64ParameterInfo)
+    case int64Desc(ReachProtocol.Int64ParameterInfo)
+    case float64Desc(ReachProtocol.Float64ParameterInfo)
+    case boolDesc(ReachProtocol.BoolParameterInfo)
+    case stringDesc(ReachProtocol.StringParameterInfo)
+    case enumDesc(ReachProtocol.EnumParameterInfo)
+    case bitfieldDesc(ReachProtocol.BitfieldParameterInfo)
+    case bytearrayDesc(ReachProtocol.ByteArrayParameterInfo)
+    public static func == (a: ReachProtocol.ParameterInfo.OneOf_Desc, b: ReachProtocol.ParameterInfo.OneOf_Desc) -> Swift.Bool
+  }
+  public init()
+}
+public struct ParamExKey {
+  public var id: Swift.UInt32
+  public var name: Swift.String
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParamExInfoResponse {
+  public var dataType: ReachProtocol.ParameterDataType
+  public var keys: [ReachProtocol.ParamExKey]
+  public var peiID: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterRead {
+  public var parameterIds: [Swift.UInt32]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterReadResponse {
+  public var values: [ReachProtocol.ParameterValue]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterWrite {
+  public var values: [ReachProtocol.ParameterValue]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterWriteResponse {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterNotifyConfig {
+  public var parameterID: Swift.UInt32
+  public var minimumNotificationPeriod: Swift.UInt32
+  public var maximumNotificationPeriod: Swift.UInt32
+  public var minimumDelta: Swift.Float
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterEnableNotifications {
+  public var configs: [ReachProtocol.ParameterNotifyConfig]
+  public var disableAllFirst: Swift.Bool
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterDisableNotifications {
+  public var parameterIds: [Swift.UInt32]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterNotifyConfigResponse {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverParameterNotifications {
+  public var parameterIds: [Swift.UInt32]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverParameterNotificationsResponse {
+  public var configs: [ReachProtocol.ParameterNotifyConfig]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterNotification {
+  public var values: [ReachProtocol.ParameterValue]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ParameterValue {
+  public var parameterID: Swift.UInt32
+  public var timestamp: Swift.UInt32
+  public var value: ReachProtocol.ParameterValue.OneOf_Value?
+  public var uint32Value: Swift.UInt32 {
+    get
+    set
+  }
+  public var int32Value: Swift.Int32 {
+    get
+    set
+  }
+  public var float32Value: Swift.Float {
+    get
+    set
+  }
+  public var uint64Value: Swift.UInt64 {
+    get
+    set
+  }
+  public var int64Value: Swift.Int64 {
+    get
+    set
+  }
+  public var float64Value: Swift.Double {
+    get
+    set
+  }
+  public var boolValue: Swift.Bool {
+    get
+    set
+  }
+  public var stringValue: Swift.String {
+    get
+    set
+  }
+  public var enumValue: Swift.UInt32 {
+    get
+    set
+  }
+  public var bitfieldValue: Swift.UInt64 {
+    get
+    set
+  }
+  public var bytesValue: Foundation.Data {
+    get
+    set
+  }
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public enum OneOf_Value : Swift.Equatable {
+    case uint32Value(Swift.UInt32)
+    case int32Value(Swift.Int32)
+    case float32Value(Swift.Float)
+    case uint64Value(Swift.UInt64)
+    case int64Value(Swift.Int64)
+    case float64Value(Swift.Double)
+    case boolValue(Swift.Bool)
+    case stringValue(Swift.String)
+    case enumValue(Swift.UInt32)
+    case bitfieldValue(Swift.UInt64)
+    case bytesValue(Foundation.Data)
+    public static func == (a: ReachProtocol.ParameterValue.OneOf_Value, b: ReachProtocol.ParameterValue.OneOf_Value) -> Swift.Bool
+  }
+  public init()
+}
+public struct DiscoverFiles {
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverFilesResponse {
+  public var fileInfos: [ReachProtocol.FileInfo]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileInfo {
+  public var fileID: Swift.UInt32
+  public var fileName: Swift.String
+  public var access: ReachProtocol.AccessLevel
+  public var currentSizeBytes: Swift.Int32
+  public var maximumSizeBytes: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasMaximumSizeBytes: Swift.Bool {
+    get
+  }
+  public mutating func clearMaximumSizeBytes()
+  public var storageLocation: ReachProtocol.StorageLocation
+  public var requireChecksum: Swift.Bool
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileTransferRequest {
+  public var fileID: Swift.UInt32
+  public var readWrite: Swift.UInt32
+  public var requestOffset: Swift.UInt32
+  public var transferLength: Swift.UInt32
+  public var transferID: Swift.UInt32
+  public var timeoutInMs: Swift.UInt32
+  public var requestedAckRate: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasRequestedAckRate: Swift.Bool {
+    get
+  }
+  public mutating func clearRequestedAckRate()
+  public var requireChecksum: Swift.Bool
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileTransferResponse {
+  public var result: Swift.Int32
+  public var transferID: Swift.UInt32
+  public var ackRate: Swift.UInt32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var transferLength: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileTransferData {
+  public var result: Swift.Int32
+  public var transferID: Swift.UInt32
+  public var messageNumber: Swift.UInt32
+  public var messageData: Foundation.Data
+  public var checksum: Swift.Int32 {
+    get
+    set
+  }
+  public var hasChecksum: Swift.Bool {
+    get
+  }
+  public mutating func clearChecksum()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileTransferDataNotification {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var isComplete: Swift.Bool
+  public var transferID: Swift.UInt32
+  public var retryOffset: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileEraseRequest {
+  public var fileID: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct FileEraseResponse {
+  public var fileID: Swift.UInt32
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverStreams {
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverStreamsResponse {
+  public var streams: [ReachProtocol.StreamInfo]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct StreamInfo {
+  public var streamID: Swift.UInt32
+  public var access: ReachProtocol.AccessLevel
+  public var name: Swift.String
+  public var description_p: Swift.String
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct StreamOpen {
+  public var streamID: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct StreamResponse {
+  public var streamID: Swift.UInt32
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct StreamClose {
+  public var streamID: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct StreamData {
+  public var streamID: Swift.UInt32
+  public var rollCount: Swift.UInt32
+  public var messageData: Foundation.Data
+  public var checksum: Swift.Int32 {
+    get
+    set
+  }
+  public var hasChecksum: Swift.Bool {
+    get
+  }
+  public mutating func clearChecksum()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverCommands {
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverCommandsResponse {
+  public var availableCommands: [ReachProtocol.CommandInfo]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct CommandInfo {
+  public var id: Swift.UInt32
+  public var name: Swift.String
+  public var description_p: Swift.String {
+    get
+    set
+  }
+  public var hasDescription_p: Swift.Bool {
+    get
+  }
+  public mutating func clearDescription_p()
+  public var timeout: Swift.UInt32 {
+    get
+    set
+  }
+  public var hasTimeout: Swift.Bool {
+    get
+  }
+  public mutating func clearTimeout()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct SendCommand {
+  public var commandID: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct SendCommandResponse {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct CLIData {
+  public var messageData: Swift.String
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct TimeSetRequest {
+  public var secondsUtc: Swift.Int64
+  public var timezone: Swift.Int32 {
+    get
+    set
+  }
+  public var hasTimezone: Swift.Bool {
+    get
+  }
+  public mutating func clearTimezone()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct TimeSetResponse {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct TimeGetRequest {
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct TimeGetResponse {
+  public var result: Swift.Int32
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var secondsUtc: Swift.Int64
+  public var timezone: Swift.Int32 {
+    get
+    set
+  }
+  public var hasTimezone: Swift.Bool {
+    get
+  }
+  public mutating func clearTimezone()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct ConnectionDescription {
+  public var ssid: Swift.String
+  public var isConnected: Swift.Bool
+  public var signalStrength: Swift.Int32 {
+    get
+    set
+  }
+  public var hasSignalStrength: Swift.Bool {
+    get
+  }
+  public mutating func clearSignalStrength()
+  public var sec: ReachProtocol.WiFiSecurity {
+    get
+    set
+  }
+  public var hasSec: Swift.Bool {
+    get
+  }
+  public mutating func clearSec()
+  public var band: ReachProtocol.WiFiBand {
+    get
+    set
+  }
+  public var hasBand: Swift.Bool {
+    get
+  }
+  public mutating func clearBand()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverWiFi {
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct DiscoverWiFiResponse {
+  public var result: Swift.Int32
+  public var cd: [ReachProtocol.ConnectionDescription]
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct WiFiConnectionRequest {
+  public var ssid: Swift.String
+  public var connect: Swift.Bool
+  public var disconnect: Swift.Bool
+  public var password: Swift.String {
+    get
+    set
+  }
+  public var hasPassword: Swift.Bool {
+    get
+  }
+  public mutating func clearPassword()
+  public var autoconnect: Swift.Bool {
+    get
+    set
+  }
+  public var hasAutoconnect: Swift.Bool {
+    get
+  }
+  public mutating func clearAutoconnect()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct WiFiConnectionResponse {
+  public var result: Swift.Int32
+  public var connected: Swift.Bool
+  public var resultMessage: Swift.String {
+    get
+    set
+  }
+  public var hasResultMessage: Swift.Bool {
+    get
+  }
+  public mutating func clearResultMessage()
+  public var signalStrength: Swift.Int32 {
+    get
+    set
+  }
+  public var hasSignalStrength: Swift.Bool {
+    get
+  }
+  public mutating func clearSignalStrength()
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+public struct BufferSizes {
+  public var maxMessageSize: Swift.UInt32
+  public var bigDataBufferSize: Swift.UInt32
+  public var parameterBufferCount: Swift.UInt32
+  public var numParamsInResponse: Swift.UInt32
+  public var descriptionLen: Swift.UInt32
+  public var maxParamBytes: Swift.UInt32
+  public var paramInfoDescriptionLen: Swift.UInt32
+  public var mediumStringLen: Swift.UInt32
+  public var shortStringLen: Swift.UInt32
+  public var numDescriptorsInResponse: Swift.UInt32
+  public var numParamNotifications: Swift.UInt32
+  public var numCommandsInResponse: Swift.UInt32
+  public var countParamDescInResponse: Swift.UInt32
+  public var paramNotifyConfigCount: Swift.UInt32
+  public var unknownFields: SwiftProtobuf.UnknownStorage
+  public init()
+}
+extension ReachProtocol.ReachProto_MAJOR_Version : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ReachProto_MINOR_Version : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ReachProto_PATCH_Version : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ReachMessageTypes : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ServiceIds : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.EndpointIds : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterDataType : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.AccessLevel : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StorageLocation : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.WiFiSecurity : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.WiFiBand : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ErrorCodes : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileTransferState : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.SizesOffsets : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ReachMessageHeader : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ReachMessage : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.AhsokaMessageHeader : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ErrorReport : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.PingRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.PingResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DeviceInfoRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DeviceInfoResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterInfoRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterInfoResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.Uint32ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.Int32ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.Float32ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.Uint64ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.Int64ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.Float64ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.BoolParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StringParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.EnumParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.BitfieldParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ByteArrayParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterInfo.OneOf_Desc : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParamExKey : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParamExInfoResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterRead : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterReadResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterWrite : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterWriteResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterNotifyConfig : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterEnableNotifications : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterDisableNotifications : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterNotifyConfigResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverParameterNotifications : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverParameterNotificationsResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterNotification : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterValue : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ParameterValue.OneOf_Value : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverFiles : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverFilesResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileTransferRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileTransferResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileTransferData : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileTransferDataNotification : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileEraseRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.FileEraseResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverStreams : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverStreamsResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StreamInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StreamOpen : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StreamResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StreamClose : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.StreamData : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverCommands : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverCommandsResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.CommandInfo : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.SendCommand : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.SendCommandResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.CLIData : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.TimeSetRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.TimeSetResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.TimeGetRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.TimeGetResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ConnectionDescription : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverWiFi : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.DiscoverWiFiResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.WiFiConnectionRequest : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.WiFiConnectionResponse : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.BufferSizes : @unchecked Swift.Sendable {
+}
+extension ReachProtocol.ReachProto_MAJOR_Version : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ReachProto_MINOR_Version : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ReachProto_PATCH_Version : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ReachMessageTypes : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ServiceIds : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.EndpointIds : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ParameterDataType : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.AccessLevel : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.StorageLocation : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.WiFiSecurity : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.WiFiBand : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ErrorCodes : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.FileTransferState : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.SizesOffsets : SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+}
+extension ReachProtocol.ReachMessageHeader : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ReachMessageHeader, rhs: ReachProtocol.ReachMessageHeader) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ReachMessage : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ReachMessage, rhs: ReachProtocol.ReachMessage) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.AhsokaMessageHeader : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.AhsokaMessageHeader, rhs: ReachProtocol.AhsokaMessageHeader) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ErrorReport : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ErrorReport, rhs: ReachProtocol.ErrorReport) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.PingRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.PingRequest, rhs: ReachProtocol.PingRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.PingResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.PingResponse, rhs: ReachProtocol.PingResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DeviceInfoRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DeviceInfoRequest, rhs: ReachProtocol.DeviceInfoRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DeviceInfoResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DeviceInfoResponse, rhs: ReachProtocol.DeviceInfoResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterInfoRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterInfoRequest, rhs: ReachProtocol.ParameterInfoRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterInfoResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterInfoResponse, rhs: ReachProtocol.ParameterInfoResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.Uint32ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.Uint32ParameterInfo, rhs: ReachProtocol.Uint32ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.Int32ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.Int32ParameterInfo, rhs: ReachProtocol.Int32ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.Float32ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.Float32ParameterInfo, rhs: ReachProtocol.Float32ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.Uint64ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.Uint64ParameterInfo, rhs: ReachProtocol.Uint64ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.Int64ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.Int64ParameterInfo, rhs: ReachProtocol.Int64ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.Float64ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.Float64ParameterInfo, rhs: ReachProtocol.Float64ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.BoolParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.BoolParameterInfo, rhs: ReachProtocol.BoolParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StringParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.StringParameterInfo, rhs: ReachProtocol.StringParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.EnumParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.EnumParameterInfo, rhs: ReachProtocol.EnumParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.BitfieldParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.BitfieldParameterInfo, rhs: ReachProtocol.BitfieldParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ByteArrayParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ByteArrayParameterInfo, rhs: ReachProtocol.ByteArrayParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterInfo, rhs: ReachProtocol.ParameterInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParamExKey : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParamExKey, rhs: ReachProtocol.ParamExKey) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParamExInfoResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParamExInfoResponse, rhs: ReachProtocol.ParamExInfoResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterRead : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterRead, rhs: ReachProtocol.ParameterRead) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterReadResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterReadResponse, rhs: ReachProtocol.ParameterReadResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterWrite : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterWrite, rhs: ReachProtocol.ParameterWrite) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterWriteResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterWriteResponse, rhs: ReachProtocol.ParameterWriteResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterNotifyConfig : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterNotifyConfig, rhs: ReachProtocol.ParameterNotifyConfig) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterEnableNotifications : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterEnableNotifications, rhs: ReachProtocol.ParameterEnableNotifications) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterDisableNotifications : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterDisableNotifications, rhs: ReachProtocol.ParameterDisableNotifications) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterNotifyConfigResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterNotifyConfigResponse, rhs: ReachProtocol.ParameterNotifyConfigResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverParameterNotifications : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverParameterNotifications, rhs: ReachProtocol.DiscoverParameterNotifications) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverParameterNotificationsResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverParameterNotificationsResponse, rhs: ReachProtocol.DiscoverParameterNotificationsResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterNotification : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterNotification, rhs: ReachProtocol.ParameterNotification) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ParameterValue : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ParameterValue, rhs: ReachProtocol.ParameterValue) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverFiles : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverFiles, rhs: ReachProtocol.DiscoverFiles) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverFilesResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverFilesResponse, rhs: ReachProtocol.DiscoverFilesResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileInfo, rhs: ReachProtocol.FileInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileTransferRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileTransferRequest, rhs: ReachProtocol.FileTransferRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileTransferResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileTransferResponse, rhs: ReachProtocol.FileTransferResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileTransferData : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileTransferData, rhs: ReachProtocol.FileTransferData) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileTransferDataNotification : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileTransferDataNotification, rhs: ReachProtocol.FileTransferDataNotification) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileEraseRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileEraseRequest, rhs: ReachProtocol.FileEraseRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.FileEraseResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.FileEraseResponse, rhs: ReachProtocol.FileEraseResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverStreams : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverStreams, rhs: ReachProtocol.DiscoverStreams) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverStreamsResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverStreamsResponse, rhs: ReachProtocol.DiscoverStreamsResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StreamInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.StreamInfo, rhs: ReachProtocol.StreamInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StreamOpen : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.StreamOpen, rhs: ReachProtocol.StreamOpen) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StreamResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.StreamResponse, rhs: ReachProtocol.StreamResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StreamClose : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.StreamClose, rhs: ReachProtocol.StreamClose) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.StreamData : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.StreamData, rhs: ReachProtocol.StreamData) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverCommands : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverCommands, rhs: ReachProtocol.DiscoverCommands) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverCommandsResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverCommandsResponse, rhs: ReachProtocol.DiscoverCommandsResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.CommandInfo : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.CommandInfo, rhs: ReachProtocol.CommandInfo) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.SendCommand : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.SendCommand, rhs: ReachProtocol.SendCommand) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.SendCommandResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.SendCommandResponse, rhs: ReachProtocol.SendCommandResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.CLIData : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.CLIData, rhs: ReachProtocol.CLIData) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.TimeSetRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.TimeSetRequest, rhs: ReachProtocol.TimeSetRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.TimeSetResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.TimeSetResponse, rhs: ReachProtocol.TimeSetResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.TimeGetRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.TimeGetRequest, rhs: ReachProtocol.TimeGetRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.TimeGetResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.TimeGetResponse, rhs: ReachProtocol.TimeGetResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.ConnectionDescription : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.ConnectionDescription, rhs: ReachProtocol.ConnectionDescription) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverWiFi : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverWiFi, rhs: ReachProtocol.DiscoverWiFi) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.DiscoverWiFiResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.DiscoverWiFiResponse, rhs: ReachProtocol.DiscoverWiFiResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.WiFiConnectionRequest : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.WiFiConnectionRequest, rhs: ReachProtocol.WiFiConnectionRequest) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.WiFiConnectionResponse : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.WiFiConnectionResponse, rhs: ReachProtocol.WiFiConnectionResponse) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ReachProtocol.BufferSizes : SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: Swift.String
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap
+  public mutating func decodeMessage<D>(decoder: inout D) throws where D : SwiftProtobuf.Decoder
+  public func traverse<V>(visitor: inout V) throws where V : SwiftProtobuf.Visitor
+  public static func == (lhs: ReachProtocol.BufferSizes, rhs: ReachProtocol.BufferSizes) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class FileTransferInfo {
+  @Combine.Published @_projectedValueProperty($transferPercent) public var transferPercent: Swift.Double {
+    get
+  }
+  public var $transferPercent: Combine.Published<Swift.Double>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($bytesTransferred) public var bytesTransferred: Swift.Int {
+    get
+  }
+  public var $bytesTransferred: Combine.Published<Swift.Int>.Publisher {
+    get
+  }
+  final public let transferSize: Swift.UInt32
+  #if compiler(>=5.3) && $AsyncAwait
+  public func wait() async throws -> Swift.Bool
+  #endif
+  public func cancel()
+  @objc deinit
+}
+final public class DeviceAccess {
+  final public let transportModule: any ReachProtocol.TransportModule
+  final public let onMessage: Combine.AnyPublisher<ReachProtocol.ReachMessage, Swift.Never>
+  final public let onCLINotification: Combine.AnyPublisher<ReachProtocol.CLIData, Swift.Never>
+  final public let onMessageError: Combine.AnyPublisher<ReachProtocol.ReachError, Swift.Never>
+  final public let jsonDebug: Combine.AnyPublisher<(Swift.String, Swift.String), Swift.Never>
+  final public var fileTransferAckRate: Swift.UInt32 {
+    get
+    set
+  }
+  final public var timeout: Swift.Int {
+    get
+    set
+  }
+  final public var deviceInfo: ReachProtocol.DeviceInfoResponse? {
+    get
+  }
+  final public var bufferSizes: ReachProtocol.BufferSizes? {
+    get
+  }
+  final public var parameterDescriptions: ReachProtocol.ParameterDescriptions? {
+    get
+  }
+  final public var fileDescriptors: [Swift.UInt32 : ReachProtocol.FileInfo]? {
+    get
+  }
+  final public var commands: ReachProtocol.DiscoverCommandsResponse? {
+    get
+  }
+  final public var timezone: Swift.Int32? {
+    get
+  }
+  final public var timeOffset: Swift.Double? {
+    get
+  }
+  final public var clientId: Swift.UInt32 {
+    get
+  }
+  final public var ahsokaHeader: Swift.Bool
+  public init(transportModule: any ReachProtocol.TransportModule, ahsokaHeader: Swift.Bool = true)
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func send(payload: Foundation.Data, messageType: Swift.UInt32, endpoint: Swift.UInt32? = nil) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func sendRequest(payload: Foundation.Data, messageType: Swift.UInt32, endpoint: Swift.UInt32? = nil, onMessage: @escaping (any SwiftProtobuf.Message) -> Swift.Void) async throws -> ReachProtocol.Request
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  final public func getDeviceInfo() async throws -> ReachProtocol.DeviceInfoResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  final public func ping(data: Foundation.Data? = nil) async throws -> ReachProtocol.PingResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func discoverParameters(parameterIds: [Swift.UInt32]? = nil, forceFetch: Swift.Bool = false) async throws -> ReachProtocol.ParameterDescriptions
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func readParameters(parameterIds: [Swift.UInt32]? = nil) async throws -> ReachProtocol.ParameterReadResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func writeParameters(parameterValues: [ReachProtocol.ParameterValue]) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getFileDescriptors() async throws -> [ReachProtocol.FileInfo]
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func readFile(id: Swift.UInt32, url: Foundation.URL, offset: Swift.UInt32 = 0, length: Swift.UInt32? = nil) async throws -> ReachProtocol.FileTransferInfo
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func writeFile(url: Foundation.URL, id: Swift.UInt32, offset: Swift.UInt32 = 0) async throws -> ReachProtocol.FileTransferInfo
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func discoverCommands() async throws -> ReachProtocol.DiscoverCommandsResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func sendCommand(_ command: ReachProtocol.CommandInfo) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func sendCLIData(data: Swift.String) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func setTime(time: Foundation.Date, timezoneOffset: Swift.Int32? = nil) async throws -> ReachProtocol.TimeSetResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getTime() async throws -> ReachProtocol.TimeGetResponse
+  #endif
+  final public func deviceTime() -> Foundation.Date?
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func discoverWifi() async throws -> ReachProtocol.DiscoverWiFiResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func connectWifi(ssid: Swift.String, password: Swift.String? = nil, autoconnect: Swift.Bool? = nil) async throws -> ReachProtocol.WiFiConnectionResponse
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func disconnectWifi(ssid: Swift.String) async throws -> ReachProtocol.WiFiConnectionResponse
+  #endif
+  @objc deinit
+}
+extension Foundation.Data.Endianness : Swift.Equatable {}
+extension Foundation.Data.Endianness : Swift.Hashable {}

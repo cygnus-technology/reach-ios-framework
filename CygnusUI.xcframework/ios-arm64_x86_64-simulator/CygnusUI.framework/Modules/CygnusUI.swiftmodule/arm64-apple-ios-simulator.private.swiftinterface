@@ -1,0 +1,1679 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CygnusUI
+import AVFoundation
+import AVKit
+import Combine
+@_exported import CygnusUI
+import DeveloperToolsSupport
+import Foundation
+import MobileCoreServices
+import Photos
+import PromiseKit
+import ReachProtocol
+import RemoteSupport
+import Swift
+import SwiftUI
+import Toast_Swift
+import UIKit
+import UniformTypeIdentifiers
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol NibLoadable {
+  static var nibName: Swift.String { get }
+}
+extension CygnusUI.NibLoadable where Self : UIKit.UIView {
+  public static var nibName: Swift.String {
+    get
+  }
+  public static var nib: UIKit.UINib {
+    get
+  }
+  public func setupFromNib()
+}
+@_hasMissingDesignatedInitializers public class ANSI {
+  public enum Colors : Swift.String, Swift.CaseIterable {
+    case black
+    case red
+    case green
+    case yellow
+    case blue
+    case magenta
+    case cyan
+    case white
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CygnusUI.ANSI.Colors]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CygnusUI.ANSI.Colors] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum BrightColors : Swift.String, Swift.CaseIterable {
+    case black
+    case red
+    case green
+    case yellow
+    case blue
+    case magenta
+    case cyan
+    case white
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CygnusUI.ANSI.BrightColors]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CygnusUI.ANSI.BrightColors] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Style : Swift.String, Swift.CaseIterable {
+    case bold
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CygnusUI.ANSI.Style]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CygnusUI.ANSI.Style] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static func styleText(_ string: Swift.String) -> Foundation.NSAttributedString
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportVideoViewController : UIKit.UIViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var inactiveView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activeView: WebRTC.RTCMTLVideoView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var shareButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var endButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cameraActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cameraButtons: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var drawImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var drawImageViewWidth: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var drawImageViewHeight: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var switchCameraButton: CygnusUI.CircleButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var screenshotButton: CygnusUI.CircleButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var screenRecordButton: CygnusUI.CircleButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var recordingView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var recordingTimeLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var remoteSupport: RemoteSupport.RemoteSupportClient? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var videoController: (any RemoteSupport.CameraStreamController)? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var bag: Swift.Set<Combine.AnyCancellable>
+  @_Concurrency.MainActor(unsafe) public var screenshot: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) public var recordingUrl: Foundation.URL?
+  @_Concurrency.MainActor(unsafe) public var recordingTimer: Foundation.Timer?
+  @_Concurrency.MainActor(unsafe) public var drawImageViewSize: CoreFoundation.CGSize {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var durationFormatter: Foundation.DateComponentsFormatter
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func shareButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func endButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func switchCameraTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func screenshotButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func screenRecordButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func startRecording()
+  @_Concurrency.MainActor(unsafe) open func stopRecording()
+  @_Concurrency.MainActor(unsafe) open func screenDraw()
+  @_Concurrency.MainActor(unsafe) open func videoToggled(_ isOn: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func recordingStateChanged(_ state: CygnusUI.MediaRecordingState)
+  @_Concurrency.MainActor(unsafe) open func stopVideoStream()
+  @_Concurrency.MainActor(unsafe) open func sendStart()
+  @_Concurrency.MainActor(unsafe) open func sendStop()
+  @_Concurrency.MainActor(unsafe) open func setRecordingTime(_ seconds: Foundation.TimeInterval, maxSeconds: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) open func navigateToMediaPreview()
+  @_Concurrency.MainActor(unsafe) open func handleNotification(_ args: RemoteSupport.NotificationEventArgs)
+  @_Concurrency.MainActor(unsafe) open func handleVideoCapture(_ args: RemoteSupport.VideoCaptureEventArgs)
+  @_Concurrency.MainActor(unsafe) open func handleVideoCaptureError(_ error: any Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.SupportVideoViewController : WebRTC.RTCVideoViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func videoView(_ videoView: any WebRTC.RTCVideoRenderer, didChangeVideoSize size: CoreFoundation.CGSize)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportOptionsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var connectDevice: (() -> Swift.Void)!
+  @_Concurrency.MainActor(unsafe) public var disconnectDevice: (() -> Swift.Void)!
+  @_Concurrency.MainActor(unsafe) public var endSupport: (() -> Swift.Void)!
+  @_Concurrency.MainActor(unsafe) public var connectedDevice: (any CygnusUI.Device)? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func endSupportButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func deviceButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ConnectDeviceViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) open var supportSessionConnect: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var supportSessionParameters: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var isPrecededByConnectDeviceViewController: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var bleDelegateId: Swift.String
+  @_Concurrency.MainActor(unsafe) open var reconnecting: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var connectedDevice: (any CygnusUI.Device)!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor(unsafe) open func connect() async throws
+  #endif
+  @_Concurrency.MainActor(unsafe) open func shouldDisconnectOnDisappear() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func afterInitialConnect()
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor(unsafe) open func reconnect() async
+  #endif
+  @objc @_Concurrency.MainActor(unsafe) open func initiateReconnect()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachWiFiTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var connectedLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var nameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var securityLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) open func setConnectionInfo(_ connectionInfo: ReachProtocol.ConnectionDescription)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol CommandDelegate : AnyObject {
+  func sendCommand(_ command: ReachProtocol.CommandInfo)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachCommandsViewController : CygnusUI.ReachServiceViewController, CygnusUI.CommandDelegate, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) open func sendCommand(_ command: ReachProtocol.CommandInfo)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachCommandsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+}
+public struct ErrorResponse : Swift.Codable, Foundation.LocalizedError {
+  public var message: Swift.String
+  public var statusCode: Swift.Int
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case message
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachCLIViewController : CygnusUI.ReachServiceViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliTextView: UIKit.UITextView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliInput: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliSendButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliBottomConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func cliSendButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachCLIViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+extension CygnusUI.ReachCLIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func keyboardNotification(notification: Foundation.NSNotification)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportReconnectDialogController : UIKit.UIViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var dialogView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct SupportTabItem {
+  public let controllerCreator: () -> any CygnusUI.SupportTabViewController
+  public let tabBarItemCreator: () -> UIKit.UITabBarItem
+  public init(controllerCreator: @escaping () -> any CygnusUI.SupportTabViewController, tabBarItemCreator: @escaping () -> UIKit.UITabBarItem)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachFileDescriptorTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var idLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var nameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var storageLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) open func setFileInfo(_ fileInfo: ReachProtocol.FileInfo)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachServiceViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var reachViewDelegate: (any CygnusUI.ReachViewDelegate)!
+  @_Concurrency.MainActor(unsafe) public var reachDevice: any CygnusUI.ReachEnabled {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct ReachService {
+  public let name: Swift.String
+  public let icon: UIKit.UIImage
+  public let serviceId: ReachProtocol.ServiceIds
+}
+extension ReachProtocol.ServiceIds {
+  public var serviceSummary: CygnusUI.ReachService? {
+    get
+  }
+}
+extension ReachProtocol.DeviceInfoResponse {
+  public var serviceSummaries: [CygnusUI.ReachService] {
+    get
+  }
+}
+extension UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func showAlert(title: Swift.String? = nil, message: Swift.String?, buttonTitle: Swift.String = "Ok", action: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+}
+extension UIKit.UIAlertController {
+  @_Concurrency.MainActor(unsafe) public static var topLevelViewController: UIKit.UIViewController? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static func showAlert(_ alert: UIKit.UIAlertController)
+  @_Concurrency.MainActor(unsafe) public static func showAlert(title: Swift.String? = nil, message: Swift.String?, buttonTitle: Swift.String = "Ok", action: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+}
+extension UIKit.UITextField {
+  public enum PaddingSide {
+    case left(CoreFoundation.CGFloat)
+    case right(CoreFoundation.CGFloat)
+    case both(CoreFoundation.CGFloat)
+  }
+  @_Concurrency.MainActor(unsafe) public func addPadding(_ padding: UIKit.UITextField.PaddingSide)
+}
+extension UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) public func scrollToBottom(animated: Swift.Bool = true)
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String, alpha: CoreFoundation.CGFloat = 1.0)
+  public func image(_ size: CoreFoundation.CGSize = CGSize(width: 1, height: 1), cornerRadius: CoreFoundation.CGFloat = 0) -> UIKit.UIImage
+}
+extension UIKit.UIImage {
+  public func rounded(radius: CoreFoundation.CGFloat) -> UIKit.UIImage
+}
+extension QuartzCore.CALayer {
+  public func addShadow(bounds: CoreFoundation.CGRect, cornerRadius: CoreFoundation.CGFloat)
+}
+public enum FileAccessState : Swift.Equatable {
+  case list
+  case details(ReachProtocol.FileInfo)
+  case fileSelect
+  case upload(ReachProtocol.FileTransferInfo)
+  case download(ReachProtocol.FileTransferInfo)
+  case transferComplete(Swift.Bool)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: CygnusUI.FileAccessState, rhs: CygnusUI.FileAccessState) -> Swift.Bool
+}
+public class FileAccessViewModel {
+  @Combine.Published @_projectedValueProperty($fileAccessState) public var fileAccessState: CygnusUI.FileAccessState {
+    get
+  }
+  public var $fileAccessState: Combine.Published<CygnusUI.FileAccessState>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($selectedFileInfo) public var selectedFileInfo: ReachProtocol.FileInfo? {
+    get
+  }
+  public var $selectedFileInfo: Combine.Published<ReachProtocol.FileInfo?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($selectedUploadUrl) public var selectedUploadUrl: Foundation.URL? {
+    get
+  }
+  public var $selectedUploadUrl: Combine.Published<Foundation.URL?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($fileTransfer) public var fileTransfer: ReachProtocol.FileTransferInfo? {
+    get
+  }
+  public var $fileTransfer: Combine.Published<ReachProtocol.FileTransferInfo?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($fileDescriptors) public var fileDescriptors: [ReachProtocol.FileInfo]? {
+    get
+  }
+  public var $fileDescriptors: Combine.Published<[ReachProtocol.FileInfo]?>.Publisher {
+    get
+  }
+  final public let downloadedFileReady: Combine.AnyPublisher<Foundation.URL, Swift.Never>
+  public init(delegate: any CygnusUI.ReachDeviceDelegate)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getFileDescriptors() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readFile() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func writeFile() async throws
+  #endif
+  public func selectFileInfo(_ fileInfo: ReachProtocol.FileInfo?)
+  public func setUploadUrl(_ url: Foundation.URL?)
+  public func setFileAccessState(_ state: CygnusUI.FileAccessState)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachFileAccessViewController : CygnusUI.ReachServiceViewController, UIKit.UIDocumentPickerDelegate, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var backButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var listActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var listHeader: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var detailsContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var downloadFileButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var uploadFileButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileIdLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileNameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileAccessLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileSizeLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileStorageLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileMaxSizeLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileMaxSizeContainer: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var uploadButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var selectFileButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var transferContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileTransferActionLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileUploadingNameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var transferCompletionCheckmark: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var transferProgressView: UIKit.UIProgressView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fileTransferSizeLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var doneButton: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) public var viewModel: CygnusUI.FileAccessViewModel!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func backButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func downloadFileButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func uploadFileButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func selectFileButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func uploadButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func cancelButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func doneButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func pickFile(_ fileInfo: ReachProtocol.FileInfo)
+  @_Concurrency.MainActor(unsafe) @objc open func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachFileAccessViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public enum WiFiViewState : Swift.Equatable {
+  case list
+  case details(ReachProtocol.ConnectionDescription)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: CygnusUI.WiFiViewState, b: CygnusUI.WiFiViewState) -> Swift.Bool
+}
+public class WiFiViewModel {
+  @Combine.Published @_projectedValueProperty($wifiViewState) public var wifiViewState: CygnusUI.WiFiViewState {
+    get
+  }
+  public var $wifiViewState: Combine.Published<CygnusUI.WiFiViewState>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($selectedWifiInfo) public var selectedWifiInfo: ReachProtocol.ConnectionDescription? {
+    get
+  }
+  public var $selectedWifiInfo: Combine.Published<ReachProtocol.ConnectionDescription?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($connectResponse) public var connectResponse: ReachProtocol.WiFiConnectionResponse? {
+    get
+  }
+  public var $connectResponse: Combine.Published<ReachProtocol.WiFiConnectionResponse?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($wifiDescriptors) public var wifiDescriptors: [ReachProtocol.ConnectionDescription]? {
+    get
+  }
+  public var $wifiDescriptors: Combine.Published<[ReachProtocol.ConnectionDescription]?>.Publisher {
+    get
+  }
+  public init(delegate: any CygnusUI.ReachDeviceDelegate)
+  public func selectWifiInfo(_ wifiInfo: ReachProtocol.ConnectionDescription?)
+  public func setWifiViewState(_ state: CygnusUI.WiFiViewState)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getWifiDescriptors() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func reset() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func connectWifi(_ password: Swift.String? = nil, _ autoconnect: Swift.Bool? = nil) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func disconnectWifi() async throws
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachInfoCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var nameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var connectionStatusIndicator: CygnusUI.ConnectionStatusIndicator!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var expandIcon: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var extraInfoDivider: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var extraInfoStackView: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var manufacturerLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var firmwareLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var deviceDescriptionLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var protocolVersionLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var servicesLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterHashLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var maxMessageSizeLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bigDataBufferSizeLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterBufferCountLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var numParamsInResponseLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var deviceDescriptionLengthLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var maxParamBytesLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var paramInfoDescriptionLengthLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediumStringLengthLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var shortStringLengthLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var numDescriptorsInResponseLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var numParamNotificationsLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var numCommandsInResponseLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var countParamDescInResponseLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var paramNotifyConfigCountLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var isExpanded: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var status: CygnusUI.ConnectionStatus {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func preferredLayoutAttributesFitting(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes) -> UIKit.UICollectionViewLayoutAttributes
+  @_Concurrency.MainActor(unsafe) open func setDeviceInfoValues(_ deviceAccess: ReachProtocol.DeviceAccess)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum Colors {
+  case accent
+  case background
+  case border
+  case lightGray
+  case gray
+  case grayText
+  case green
+  case primary
+  case primaryText
+  case raisedBackground
+  case red
+  case warning
+  public var color: UIKit.UIColor {
+    get
+  }
+  public static func == (a: CygnusUI.Colors, b: CygnusUI.Colors) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class RemoteSupportUI {
+  public static let defaultDeviceViewController: (any CygnusUI.Device) -> UIKit.UIViewController
+  public static let defaultSessionTabs: [CygnusUI.SupportTabItem]
+  public static let shared: CygnusUI.RemoteSupportUI
+  final public var deviceService: (any CygnusUI.DeviceService)?
+  final public var remoteSupportUrl: Swift.String
+  final public var apiKey: Swift.String
+  final public var enableReachDeviceFiltering: Swift.Bool
+  final public var sessionTabs: [CygnusUI.SupportTabItem]
+  final public var viewControllerForDevice: (any CygnusUI.Device) -> UIKit.UIViewController
+  final public func configure(deviceService: any CygnusUI.DeviceService, remoteSupportUrl: Swift.String, apiKey: Swift.String, enableReachDeviceFiltering: Swift.Bool = false, sessionTabs: [CygnusUI.SupportTabItem] = RemoteSupportUI.defaultSessionTabs, viewControllerForDevice: @escaping (any CygnusUI.Device) -> UIKit.UIViewController = RemoteSupportUI.defaultDeviceViewController)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportChatViewController : UIKit.UIViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var noMessageView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bottomConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sendButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var chatTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sendActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cameraButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediaViewHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediaImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediaImageViewWidth: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediaViewSpacerHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediaImageViewHeightComparisonConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor(unsafe) public var logger: CygnusUI.TextViewLogger {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var messages: [CygnusUI.ChatMessage] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didReceiveMemoryWarning()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func sendButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func cameraButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.SupportChatViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didEndDisplaying cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension CygnusUI.SupportChatViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+extension CygnusUI.SupportChatViewController : UIKit.UINavigationControllerDelegate, UIKit.UIImagePickerControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+}
+extension CygnusUI.SupportChatViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func keyboardNotification(notification: Foundation.NSNotification)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportSessionViewController : UIKit.UITabBarController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var minimizeButton: UIKit.UIBarButtonItem!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var moreBarButton: UIKit.UIBarButtonItem!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var deviceStatusIndicator: CygnusUI.ConnectionStatusIndicator!
+  @_Concurrency.MainActor(unsafe) public var logger: CygnusUI.TextViewLogger {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func minimizeTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.SupportSessionViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func adaptivePresentationStyle(for controller: UIKit.UIPresentationController, traitCollection: UIKit.UITraitCollection) -> UIKit.UIModalPresentationStyle
+}
+public enum Tabs : Swift.Int {
+  case device
+  case messaging
+  case videoShare
+  case screenShare
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportChatTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var messageLabel: CygnusUI.ChatTextView?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var messageImageView: UIKit.UIImageView?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var imageViewWidthConstraint: UIKit.NSLayoutConstraint?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var imageViewHeightConstraint: UIKit.NSLayoutConstraint?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var videoContainerView: UIKit.UIView?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var videoHeightConstraint: UIKit.NSLayoutConstraint?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var videoWidthConstraint: UIKit.NSLayoutConstraint?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var videoPlayImageView: UIKit.UIImageView?
+  @_Concurrency.MainActor(unsafe) public var loading: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func addImage(_ image: UIKit.UIImage, bounds: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) open func addVideo(from player: AVFoundation.AVPlayer, bounds: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor(unsafe) open func toggleVideo()
+  @_Concurrency.MainActor(unsafe) open func stopVideo()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension AVFoundation.AVPlayer {
+  public var isPlaying: Swift.Bool {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class VideoRecorder : ObjectiveC.NSObject, WebRTC.RTCVideoRenderer {
+  public static var maxSnippetTime: Swift.Double
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor open func takeScreenshot() async throws -> UIKit.UIImage
+  #endif
+  open func captureVideo(to url: Foundation.URL) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  open func stopCapture() async
+  #endif
+  @objc open func renderFrame(_ frame: WebRTC.RTCVideoFrame?)
+  @objc open func setSize(_ size: CoreFoundation.CGSize)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol StoryboardView : UIKit.UIViewController {
+  static var storyboardIdentifier: Swift.String { get }
+}
+public protocol ParameterWriteDelegate : AnyObject {
+  func valueChanged(parameter: ReachProtocol.ParameterInfo, value: Swift.String)
+  func displayBitfield(parameter: ReachProtocol.ParameterInfo, cases: [ReachProtocol.ParamExKey])
+  #if compiler(>=5.3) && $AsyncAwait
+  @discardableResult
+  func writeParameter(value: ReachProtocol.ParameterValue, newValue: Swift.String) async -> Swift.Bool
+  #endif
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachParametersViewController : CygnusUI.ReachServiceViewController, CygnusUI.ParameterWriteDelegate, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var collectionView: UIKit.UICollectionView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) public var parameterDescriptions: ReachProtocol.ParameterDescriptions!
+  @_Concurrency.MainActor(unsafe) public var parameterValues: [ReachProtocol.ParameterValue]
+  @_Concurrency.MainActor(unsafe) public var editedValues: [Swift.UInt32 : Swift.String]
+  @_Concurrency.MainActor(unsafe) public var bitfieldParameter: ReachProtocol.ParameterInfo?
+  @_Concurrency.MainActor(unsafe) public var bitfieldCases: [ReachProtocol.ParamExKey]?
+  @_Concurrency.MainActor(unsafe) public var bag: Swift.Set<Combine.AnyCancellable>
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func refreshButtonTapped(_ sender: Any)
+  @objc @_Concurrency.MainActor(unsafe) open func keyboardWillShow(_ notification: Foundation.Notification)
+  @objc @_Concurrency.MainActor(unsafe) open func keyboardWillHide(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor(unsafe) open func valueChanged(parameter: ReachProtocol.ParameterInfo, value: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func displayBitfield(parameter: ReachProtocol.ParameterInfo, cases: [ReachProtocol.ParamExKey])
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor(unsafe) open func writeParameter(value: ReachProtocol.ParameterValue, newValue: Swift.String) async -> Swift.Bool
+  #endif
+  @_Concurrency.MainActor(unsafe) open func readParameters()
+  @_Concurrency.MainActor(unsafe) open func setParameterValues(descriptions: ReachProtocol.ParameterDescriptions, _ parameterValues: [ReachProtocol.ParameterValue])
+  @_Concurrency.MainActor(unsafe) open func handleParameterNotification(_ message: ReachProtocol.ReachMessage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachParametersViewController : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) public func updateParameterCell(index: Swift.Int, cell: CygnusUI.ParameterCollectionViewCell?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BitfieldViewController : UIKit.UIViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var tableViewHeight: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var writeButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) public var parameter: ReachProtocol.ParameterInfo!
+  @_Concurrency.MainActor(unsafe) public var enumCases: [ReachProtocol.ParamExKey]!
+  @_Concurrency.MainActor(unsafe) public var value: ReachProtocol.ParameterValue!
+  @_Concurrency.MainActor(unsafe) weak public var writeDelegate: (any CygnusUI.ParameterWriteDelegate)!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func cancelButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func writeValueTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.BitfieldViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didDeselectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_Concurrency.MainActor(unsafe) open class ChatTextView : UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) final public let topInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public let bottomInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public let leftInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public let rightInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol ReachWiFiViewDelegate : AnyObject {
+  func submitPasswordButtonTapped(_ password: Swift.String?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachWiFiViewController : CygnusUI.ReachServiceViewController, CygnusUI.StoryboardView, CygnusUI.ReachWiFiViewDelegate {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var backButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var listActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var listHeader: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var detailsContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var connectButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var disconnectButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var wifiNameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var wifiConnectedLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var wifiSignalStrengthLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var wifiSecurityLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var wifiBandLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var autoconnectContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var autoconnectSwitch: UIKit.UISwitch!
+  @_Concurrency.MainActor(unsafe) public var viewModel: CygnusUI.WiFiViewModel!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func cancelButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func getPassword()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func backButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func connectWifi(_ password: Swift.String)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func connectButtonTapped()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func disconnectButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func submitPasswordButtonTapped(_ password: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachWiFiViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public enum Storyboards {
+  case devices
+  case supportSession
+  case reach
+  public var storyboard: UIKit.UIStoryboard {
+    get
+  }
+  public static func == (a: CygnusUI.Storyboards, b: CygnusUI.Storyboards) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol SupportTabViewController : UIKit.UIViewController {
+}
+extension CygnusUI.SupportTabViewController {
+  public var remoteSupport: RemoteSupport.RemoteSupportClient? {
+    get
+  }
+  public func showError(message: Swift.String, duration: Foundation.TimeInterval = .infinity)
+}
+@_hasMissingDesignatedInitializers public class SupportService {
+  public static let shared: CygnusUI.SupportService
+  final public let onSessionEnded: Combine.AnyPublisher<Swift.Void, Swift.Never>
+  final public let onMessage: Combine.AnyPublisher<CygnusUI.ChatMessage, Swift.Never>
+  final public let onMessageError: Combine.AnyPublisher<Swift.Int, Swift.Never>
+  final public let onReloadMessage: Combine.AnyPublisher<CygnusUI.ChatMessage, Swift.Never>
+  final public let onVideoRecordingFinished: Combine.AnyPublisher<Foundation.URL, Swift.Never>
+  @Combine.Published @_projectedValueProperty($isVideoShareOn) public var isVideoShareOn: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isVideoShareOn: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isScreenShareOn) public var isScreenShareOn: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isScreenShareOn: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($messages) public var messages: [CygnusUI.ChatMessage] {
+    get
+  }
+  public var $messages: Combine.Published<[CygnusUI.ChatMessage]>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($deviceStatus) public var deviceStatus: CygnusUI.ConnectionStatus {
+    get
+  }
+  public var $deviceStatus: Combine.Published<CygnusUI.ConnectionStatus>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($remoteSupport) public var remoteSupport: RemoteSupport.RemoteSupportClient? {
+    get
+  }
+  public var $remoteSupport: Combine.Published<RemoteSupport.RemoteSupportClient?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($recordingState) public var recordingState: CygnusUI.MediaRecordingState {
+    get
+  }
+  public var $recordingState: Combine.Published<CygnusUI.MediaRecordingState>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($selectedDevice) public var selectedDevice: (any CygnusUI.Device)? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+  }
+  public var $selectedDevice: Combine.Published<(any CygnusUI.Device)?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public var sessionActive: Swift.Bool {
+    get
+  }
+  public var sessionPin: Swift.String? {
+    get
+  }
+  public var logger: CygnusUI.TextViewLogger {
+    get
+  }
+  public var videoController: (any RemoteSupport.CameraStreamController)? {
+    get
+  }
+  public var screenController: (any RemoteSupport.ScreenCaptureController)? {
+    get
+  }
+  public var isCameraFrontFacing: Swift.Bool {
+    get
+  }
+  public var knownCompanyIds: [Swift.Int : Swift.String] {
+    get
+  }
+  public var screenDrawLines: [[CoreFoundation.CGPoint]] {
+    get
+  }
+  public func connectToSession(remoteSupportUrl: Swift.String, pin: Swift.String, apiKey: Swift.String) -> PromiseKit.Promise<Swift.Void>
+  public func hostSession(remoteSupportUrl: Swift.String, apiKey: Swift.String) -> PromiseKit.Promise<Swift.String>
+  public func endSession()
+  public func tearDown()
+  public func disconnectDevice()
+  @objc deinit
+}
+extension CygnusUI.SupportService {
+  public func startVideoStream() -> Swift.Bool
+  public func stopVideoStream()
+  public func flipCamera() -> PromiseKit.Promise<Swift.Void>
+  public func takeScreenshot(mediaType: CygnusUI.MediaSharingType = .video) -> PromiseKit.Promise<UIKit.UIImage>
+  public func sendScreenshot(_ image: UIKit.UIImage, requested: Swift.Bool) -> PromiseKit.Promise<Swift.Void>
+  public func createVideoRecordingUrl() -> Foundation.URL
+  public func startVideoRecording(url: Foundation.URL, mediaType: CygnusUI.MediaSharingType = .video, context: RemoteSupport.RSCommandContext? = nil) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func stopVideoRecording(mediaType: CygnusUI.MediaSharingType = .video, context: RemoteSupport.RSCommandContext? = nil) async
+  #endif
+  public func sendVideoRecording(_ url: Foundation.URL, requested: Swift.Bool) -> PromiseKit.Promise<Swift.Void>
+  public func addScreenDrawLines(_ lines: [CoreFoundation.CGPoint], expiration: Swift.Double = 0.8, onLinesExpired: @escaping () -> Swift.Void)
+  public func removeScreenDrawLines(at index: Swift.Int)
+  public func generateScreenDrawImage(size: CoreFoundation.CGSize) -> UIKit.UIImage
+}
+extension CygnusUI.SupportService {
+  public func startScreenShare() -> Swift.Bool
+  public func stopScreenShare()
+}
+extension CygnusUI.SupportService {
+  public func sendMessage(_ message: Swift.String) -> PromiseKit.Promise<Swift.Void>
+  public func sendImage(_ image: UIKit.UIImage) -> PromiseKit.Promise<Swift.Void>
+  public func sendVideo(_ url: Foundation.URL) -> PromiseKit.Promise<Swift.Void>
+  public func clearMessages()
+}
+@objc @_Concurrency.MainActor(unsafe) open class PrimaryButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum DeviceSortCriteria {
+  case alphabetically
+  case signalStrength
+  public static func == (a: CygnusUI.DeviceSortCriteria, b: CygnusUI.DeviceSortCriteria) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AvailableDevicesViewController : UIKit.UIViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var searchBar: UIKit.UISearchBar!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sortButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var reachButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bottomConstraint: UIKit.NSLayoutConstraint!
+  @_Concurrency.MainActor(unsafe) public var sortCriteria: CygnusUI.DeviceSortCriteria
+  @_Concurrency.MainActor(unsafe) public var initialLoadComplete: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var deviceService: (any CygnusUI.DeviceService)? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var supportSessionConnect: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var bleDelegateId: Swift.String
+  @_Concurrency.MainActor(unsafe) public var scannedDevices: [any CygnusUI.Device]
+  @_Concurrency.MainActor(unsafe) public var reachFilter: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var queryText: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func sortButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func reachButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func closeButtonTapped(_ sender: Any)
+  @objc @_Concurrency.MainActor(unsafe) open func reloadDevices()
+  @_Concurrency.MainActor(unsafe) open func listenToRssi(device: any CygnusUI.Device)
+  @_Concurrency.MainActor(unsafe) open func setDevices()
+  @_Concurrency.MainActor(unsafe) open func reloadTableView()
+  @_Concurrency.MainActor(unsafe) open func sortDevices()
+  @_Concurrency.MainActor(unsafe) open func navigateToDeviceView(device: any CygnusUI.Device)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.AvailableDevicesViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension CygnusUI.AvailableDevicesViewController : UIKit.UISearchBarDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+}
+extension CygnusUI.AvailableDevicesViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@objc @IBDesignable @_Concurrency.MainActor(unsafe) open class OutlineButton : UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var customBorderColor: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ParameterCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterNameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterIdLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterDescriptionLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterTypeLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterBoundsLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sendButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sendActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var dropdownIcon: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var extraInfoStackView: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var extraInfoDivider: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterSwitchContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterSwitch: UIKit.UISwitch!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var parameterSwitchActivityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) weak public var writeDelegate: (any CygnusUI.ParameterWriteDelegate)!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func preferredLayoutAttributesFitting(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes) -> UIKit.UICollectionViewLayoutAttributes
+  @_Concurrency.MainActor(unsafe) open func setParameter(container: ReachProtocol.ParameterContainer, editedValue: Swift.String?, enumCases: [ReachProtocol.ParamExKey]?)
+  @_Concurrency.MainActor(unsafe) open func setExpanded(_ expanded: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func sendButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func parameterSwitchValueChanged(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ParameterCollectionViewCell : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension CygnusUI.ParameterCollectionViewCell : UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachTimeViewController : CygnusUI.ReachServiceViewController, UIKit.UIDocumentPickerDelegate, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var utcCurrentLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var rawLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var nonTimezonedView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var localLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var utcLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var deviceLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var timezonedView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var viewModel: CygnusUI.TimeViewModel!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func utcButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func localButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func refreshButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportDeviceViewController : UIKit.UIViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var inactiveView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var logTextView: UIKit.UITextView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var deviceButton: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) public var logger: CygnusUI.TextViewLogger {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var connectedDevice: (any CygnusUI.Device)? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func deviceButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachDiagnosticViewController : CygnusUI.ConnectDeviceViewController, CygnusUI.ReachViewDelegate {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var deviceStackView: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var loadingStackView: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var reachScrollView: UIKit.UIScrollView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var debugContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var debugTextView: UIKit.UITextView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var debugFormatOptionsView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var fontSizeSlider: UIKit.UISlider!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliTextView: UIKit.UITextView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliInput: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliSendButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cliBottomConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var pingNumTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var pingLengthTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var pingButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var readFileButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var readOffsetTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var readLengthTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var readAckRateTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var readActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var writeFileButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var writeOffsetTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var writeLengthTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var writeAckRateTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var writeActivityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sendCommandButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var connectWifiButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var ssidTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var passwordTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var disconnectWifiButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var ssidTextFieldDisconnect: UIKit.UITextField!
+  @_Concurrency.MainActor(unsafe) public var reachDevice: any CygnusUI.ReachEnabled {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) override open func afterInitialConnect()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @objc @_Concurrency.MainActor(unsafe) open func keyboardNotification(notification: Foundation.NSNotification)
+  @objc @_Concurrency.MainActor(unsafe) open func debugViewButtonTapped()
+  @objc @_Concurrency.MainActor(unsafe) open func terminalButtonTapped()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func getDeviceInfoButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func discoverParametersButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func pingButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func fileDescriptorsButtonTapped(_ sender: Any)
+  @objc @_Concurrency.MainActor(unsafe) open func readFileButtonTapped()
+  @objc @_Concurrency.MainActor(unsafe) open func writeFileButtonTapped()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func discoverCommandsButtonTapped(_ sender: Any)
+  @objc @_Concurrency.MainActor(unsafe) open func commandButtonTapped()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func getTimeButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func discoverWifiButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func connectWifiButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func disconnectWifiButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func sliderValueChanged(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func clearTextButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func expandButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func cliSendButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func showError(_ error: any Swift.Error, in view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachDiagnosticViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+public protocol Device {
+  var name: Swift.String? { get set }
+  var identifier: Swift.String { get }
+  var connectionStatusSubject: Combine.CurrentValueSubject<CygnusUI.ConnectionStatus, Swift.Never> { get }
+  var rssiSubject: Combine.CurrentValueSubject<Swift.Int, Swift.Never> { get }
+  var rssiBucket: CygnusUI.DeviceRssiType { get }
+  var isValid: Swift.Bool { get }
+  var isReachEnabled: Swift.Bool { get }
+  #if compiler(>=5.3) && $AsyncAwait
+  func connect() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func disconnect() async throws
+  #endif
+  func createSummary() -> CygnusUI.DeviceSummary
+}
+extension CygnusUI.Device {
+  public func createSummary() -> CygnusUI.DeviceSummary
+}
+public enum DeviceRssiType : Swift.Int {
+  case noSignal
+  case poor
+  case fair
+  case good
+  public init(rssi: Swift.Int)
+  public var image: UIKit.UIImage {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BitfieldTableViewCell : UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public let maxDebugLength: Swift.Int
+public let maxCLILength: Swift.Int
+public protocol ReachDeviceDelegate : AnyObject {
+  var reachDevice: any CygnusUI.ReachEnabled { get }
+}
+public protocol ReachViewDelegate : CygnusUI.ReachDeviceDelegate {
+  func showError(_ error: any Swift.Error, in view: UIKit.UIView)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachViewController : CygnusUI.ConnectDeviceViewController, CygnusUI.ReachViewDelegate, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var loadingStackView: UIKit.UIStackView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var collectionView: UIKit.UICollectionView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var moreBarButtonItem: UIKit.UIBarButtonItem!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sessionButtonContainer: UIKit.UIView?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sessionButton: UIKit.UIButton?
+  @Combine.Published @_projectedValueProperty($deviceInfoExpanded) @_Concurrency.MainActor(unsafe) public var deviceInfoExpanded: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  @_Concurrency.MainActor(unsafe) public var $deviceInfoExpanded: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($services) @_Concurrency.MainActor(unsafe) public var services: [CygnusUI.ReachService] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  @_Concurrency.MainActor(unsafe) public var $services: Combine.Published<[CygnusUI.ReachService]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var reachDevice: any CygnusUI.ReachEnabled {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor(unsafe) override open func connect() async throws
+  #endif
+  @_Concurrency.MainActor(unsafe) override open func afterInitialConnect()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func supportButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func showMenuItems()
+  @_Concurrency.MainActor(unsafe) open func showError(_ error: any Swift.Error, in view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.ReachViewController : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+open class DeviceSummary : Swift.Codable {
+  final public let name: Swift.String
+  final public let identifier: Swift.String
+  final public let connectionStrength: Swift.Int
+  final public let status: CygnusUI.ConnectionStatus
+  public init(name: Swift.String, identifier: Swift.String, connectionStrength: Swift.Int, status: CygnusUI.ConnectionStatus)
+  @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct DeviceList : Swift.Codable {
+  public let devices: [CygnusUI.DeviceSummary]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ConnectRequest : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ConnectionStatus : Swift.String, Swift.Codable {
+  case connected
+  case disconnected
+  case reconnecting
+  public var color: UIKit.UIColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class ConnectionStatusIndicator : UIKit.UIView, CygnusUI.NibLoadable {
+  @_Concurrency.MainActor(unsafe) public var connectionStatus: CygnusUI.ConnectionStatus {
+    get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var includeLabel: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var statusView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var statusLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func setStatus(to status: CygnusUI.ConnectionStatus, text: Swift.String? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachCommandTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var commandButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) weak public var commandDelegate: (any CygnusUI.CommandDelegate)!
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func commandButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func setCommand(_ command: ReachProtocol.CommandInfo)
+  @_Concurrency.MainActor(unsafe) open func setLoading(_ loading: Swift.Bool)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class DragHandle : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PasswordEntryDialogController : UIKit.UIViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any CygnusUI.ReachWiFiViewDelegate)?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var dialogView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var passwordEntry: UIKit.UITextField!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SetupSupportViewController : UIKit.UIViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var pinTextField: UIKit.UITextField!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var continueButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bottomConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var remoteSupportImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var hostButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var contextMenuButton: UIKit.UIBarButtonItem!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CygnusUI.SetupSupportViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+public class ChatMessage {
+  public var id: Swift.Int
+  public var sent: Swift.Bool
+  public var loading: Swift.Bool
+  public var message: Swift.String?
+  public var image: UIKit.UIImage?
+  public var player: AVFoundation.AVPlayer?
+  public init(id: Swift.Int = -1, sent: Swift.Bool, loading: Swift.Bool = false, message: Swift.String? = nil, image: UIKit.UIImage? = nil, player: AVFoundation.AVPlayer? = nil)
+  @objc deinit
+}
+public enum MessageCategory : Swift.UInt16 {
+  case image
+  case video
+  case screenshot
+  case videoRecording
+  case startSharing
+  case stopSharing
+  case screenDrawing
+  case swapTool
+  case requestDeviceList
+  case connectToDevice
+  case disconnectFromDevice
+  case deviceSummary
+  case reachProtocol
+  public init?(rawValue: Swift.UInt16)
+  public typealias RawValue = Swift.UInt16
+  public var rawValue: Swift.UInt16 {
+    get
+  }
+}
+public enum MediaSharingType : Swift.Int32 {
+  case video
+  case screen
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+public enum MediaStateChange : Swift.Int32 {
+  case start
+  case end
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+public enum MediaRecordingState {
+  case notActive
+  case recording
+  case remoteRecording
+  public static func == (a: CygnusUI.MediaRecordingState, b: CygnusUI.MediaRecordingState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum MessageErrors : RemoteSupport.RSErrorResponse {
+  case invalidState
+  case deviceConnectionError
+  case mediaShareError
+  case jsonParseError
+  case userTimeout
+  case shareInputError
+  case shareProcessingError(message: Swift.String)
+  case shareDistributionError(message: Swift.String)
+  public var message: Swift.String {
+    get
+  }
+  public var statusCode: Swift.UInt32 {
+    get
+  }
+}
+public enum TimeViewState : Swift.Equatable {
+  case timezoned
+  case nonTimezoned
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: CygnusUI.TimeViewState, rhs: CygnusUI.TimeViewState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class TimeViewModel {
+  @Combine.Published @_projectedValueProperty($timeViewState) public var timeViewState: CygnusUI.TimeViewState {
+    get
+  }
+  public var $timeViewState: Combine.Published<CygnusUI.TimeViewState>.Publisher {
+    get
+  }
+  public init(delegate: any CygnusUI.ReachDeviceDelegate)
+  public func setTimeViewState(_ state: CygnusUI.TimeViewState)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getTime() async throws
+  #endif
+  @objc deinit
+}
+@objc public class TextViewLogger : ObjectiveC.NSObject, RemoteSupport.Logger {
+  weak public var textView: UIKit.UITextView? {
+    get
+    set
+  }
+  public var isContentOverflowing: Swift.Bool {
+    get
+  }
+  public init(textView: UIKit.UITextView? = nil)
+  public func clearText()
+  public func scrollToBottom()
+  public func trace(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func debug(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func error(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func info(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func warn(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  @objc deinit
+}
+extension CygnusUI.TextViewLogger : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SupportScreenShareViewController : UIKit.UIViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
+  @_Concurrency.MainActor(unsafe) public static var storyboardIdentifier: Swift.String {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var inactiveView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activeView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var shareButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var endButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) public var remoteSupport: RemoteSupport.RemoteSupportClient? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var screenController: (any RemoteSupport.ScreenCaptureController)? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var bag: Swift.Set<Combine.AnyCancellable>
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func shareButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func endButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) open func screenToggled(_ isOn: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func stopScreenShare()
+  @_Concurrency.MainActor(unsafe) open func sendStart()
+  @_Concurrency.MainActor(unsafe) open func sendStop()
+  @_Concurrency.MainActor(unsafe) open func handleScreenCapture(_ args: RemoteSupport.ScreenCaptureEventArgs)
+  @_Concurrency.MainActor(unsafe) open func handleScreenCaptureError(_ error: any Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CircleButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol DeviceService {
+  var devices: Combine.CurrentValueSubject<[Swift.String : any CygnusUI.Device], Swift.Never> { get }
+  #if compiler(>=5.3) && $AsyncAwait
+  func startSearching() async throws
+  #endif
+  func stopSearching()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ReachServiceCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var icon: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var nameLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func preferredLayoutAttributesFitting(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes) -> UIKit.UICollectionViewLayoutAttributes
+  @_Concurrency.MainActor(unsafe) open func setService(_ service: CygnusUI.ReachService)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol ReachEnabled {
+  var deviceAccess: ReachProtocol.DeviceAccess { get }
+}
+public protocol ReachDiagnostic : CygnusUI.ReachEnabled {
+  var lastBytesReceived: Foundation.Data { get }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class MediaPreviewViewController : UIKit.UIViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var screenshotImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var containerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var sendButton: CygnusUI.CircleButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var closeButton: CygnusUI.CircleButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var activityIndicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) public var screenshot: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) public var videoUrl: Foundation.URL?
+  @_Concurrency.MainActor(unsafe) public var onComplete: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onError: ((any Swift.Error) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func sendButtonTapped(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) open func closeButtonTapped(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum Assets {
+  case cancel
+  case cancelRed
+  case chat
+  case chatDisabled
+  case cli
+  case close
+  case code
+  case commands
+  case expandMore
+  case expandLess
+  case fileAccess
+  case moreVertical
+  case parameters
+  case sendDisabled
+  case sendEnabled
+  case screenShare
+  case screenShareActive
+  case screenShareDisabled
+  case terminal
+  case time
+  case update
+  case updateDisabled
+  case video
+  case videoActive
+  case videoDisabled
+  case wifi
+  case x
+  public var image: UIKit.UIImage {
+    get
+  }
+  public static func == (a: CygnusUI.Assets, b: CygnusUI.Assets) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CygnusUI.ANSI.Colors : Swift.Equatable {}
+extension CygnusUI.ANSI.Colors : Swift.Hashable {}
+extension CygnusUI.ANSI.Colors : Swift.RawRepresentable {}
+extension CygnusUI.ANSI.BrightColors : Swift.Equatable {}
+extension CygnusUI.ANSI.BrightColors : Swift.Hashable {}
+extension CygnusUI.ANSI.BrightColors : Swift.RawRepresentable {}
+extension CygnusUI.ANSI.Style : Swift.Equatable {}
+extension CygnusUI.ANSI.Style : Swift.Hashable {}
+extension CygnusUI.ANSI.Style : Swift.RawRepresentable {}
+extension CygnusUI.ErrorResponse.CodingKeys : Swift.Equatable {}
+extension CygnusUI.ErrorResponse.CodingKeys : Swift.Hashable {}
+extension CygnusUI.ErrorResponse.CodingKeys : Swift.RawRepresentable {}
+extension CygnusUI.Colors : Swift.Equatable {}
+extension CygnusUI.Colors : Swift.Hashable {}
+extension CygnusUI.Tabs : Swift.Equatable {}
+extension CygnusUI.Tabs : Swift.Hashable {}
+extension CygnusUI.Tabs : Swift.RawRepresentable {}
+extension CygnusUI.Storyboards : Swift.Equatable {}
+extension CygnusUI.Storyboards : Swift.Hashable {}
+extension CygnusUI.DeviceSortCriteria : Swift.Equatable {}
+extension CygnusUI.DeviceSortCriteria : Swift.Hashable {}
+extension CygnusUI.DeviceRssiType : Swift.Equatable {}
+extension CygnusUI.DeviceRssiType : Swift.Hashable {}
+extension CygnusUI.DeviceRssiType : Swift.RawRepresentable {}
+extension CygnusUI.ConnectionStatus : Swift.Equatable {}
+extension CygnusUI.ConnectionStatus : Swift.Hashable {}
+extension CygnusUI.ConnectionStatus : Swift.RawRepresentable {}
+extension CygnusUI.MessageCategory : Swift.Equatable {}
+extension CygnusUI.MessageCategory : Swift.Hashable {}
+extension CygnusUI.MessageCategory : Swift.RawRepresentable {}
+extension CygnusUI.MediaSharingType : Swift.Equatable {}
+extension CygnusUI.MediaSharingType : Swift.Hashable {}
+extension CygnusUI.MediaSharingType : Swift.RawRepresentable {}
+extension CygnusUI.MediaStateChange : Swift.Equatable {}
+extension CygnusUI.MediaStateChange : Swift.Hashable {}
+extension CygnusUI.MediaStateChange : Swift.RawRepresentable {}
+extension CygnusUI.MediaRecordingState : Swift.Equatable {}
+extension CygnusUI.MediaRecordingState : Swift.Hashable {}
+extension CygnusUI.TimeViewState : Swift.Hashable {}
+extension CygnusUI.Assets : Swift.Equatable {}
+extension CygnusUI.Assets : Swift.Hashable {}

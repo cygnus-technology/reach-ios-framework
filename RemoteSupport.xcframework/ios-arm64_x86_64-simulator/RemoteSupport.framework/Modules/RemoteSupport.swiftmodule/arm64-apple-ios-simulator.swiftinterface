@@ -1,0 +1,438 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name RemoteSupport
+import AVFoundation
+import CocoaMQTT
+import Combine
+import Foundation
+import PromiseKit
+@_exported import RemoteSupport
+import ReplayKit
+import Swift
+import SystemConfiguration
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct DisconnectEventArgs {
+  public let expected: Swift.Bool
+  public init(expected: Swift.Bool)
+}
+public struct VideoCaptureEventArgs {
+  public let controller: any RemoteSupport.CameraStreamController
+  public init(controller: any RemoteSupport.CameraStreamController)
+}
+public struct ScreenCaptureEventArgs {
+  public let controller: any RemoteSupport.ScreenCaptureController
+  public init(controller: any RemoteSupport.ScreenCaptureController)
+}
+public struct NotificationEventArgs {
+  public let notification: RemoteSupport.RSNotification
+  public init(notification: RemoteSupport.RSNotification)
+}
+public struct CommandEventArgs {
+  public let command: RemoteSupport.RSCommand
+  public let context: RemoteSupport.RSCommandContext
+  public init(command: RemoteSupport.RSCommand, context: RemoteSupport.RSCommandContext)
+}
+public struct QueryEventArgs {
+  public let query: RemoteSupport.RSQuery
+  public let context: RemoteSupport.RSQueryContext
+  public init(query: RemoteSupport.RSQuery, context: RemoteSupport.RSQueryContext)
+}
+public struct PartialMessageReceivedEventArgs {
+  public let id: Swift.UInt16
+  public let category: Swift.UInt16
+  public let numChunksReceived: Swift.UInt16
+  public let totalChunks: Swift.UInt16
+  public init(id: Swift.UInt16, category: Swift.UInt16, numChunksReceived: Swift.UInt16, totalChunks: Swift.UInt16)
+}
+public struct MessageErrorEventArgs {
+  public let messageId: Swift.UInt16
+  public let category: Swift.UInt16
+  public let error: Swift.String
+  public init(messageId: Swift.UInt16, category: Swift.UInt16, error: Swift.String)
+}
+@usableFromInline
+internal protocol Scalar : Swift.Equatable {
+  associatedtype NumericValue
+  var convertedEndian: Self.NumericValue { get }
+}
+extension RemoteSupport.Scalar where Self : Swift.FixedWidthInteger {
+  @usableFromInline
+  internal var convertedEndian: Self.NumericValue {
+    get
+  }
+}
+extension Swift.Double : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.UInt64
+  @usableFromInline
+  internal var convertedEndian: Swift.UInt64 {
+    get
+  }
+}
+extension Swift.Float : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.UInt32
+  @usableFromInline
+  internal var convertedEndian: Swift.UInt32 {
+    get
+  }
+}
+extension Swift.Int : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.Int
+}
+extension Swift.Int8 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.Int8
+}
+extension Swift.Int16 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.Int16
+}
+extension Swift.Int32 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.Int32
+}
+extension Swift.Int64 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.Int64
+}
+extension Swift.UInt8 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.UInt8
+}
+extension Swift.UInt16 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.UInt16
+}
+extension Swift.UInt32 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.UInt32
+}
+extension Swift.UInt64 : RemoteSupport.Scalar {
+  public typealias NumericValue = Swift.UInt64
+}
+@objc public class RemoteSupportClient : ObjectiveC.NSObject {
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public var logger: (any RemoteSupport.Logger)? {
+    get
+    set
+  }
+  final public let onConnect: Combine.AnyPublisher<Swift.Void, Swift.Never>
+  final public let onDisconnect: Combine.AnyPublisher<RemoteSupport.DisconnectEventArgs, Swift.Never>
+  final public let onMessageError: Combine.AnyPublisher<RemoteSupport.MessageErrorEventArgs, Swift.Never>
+  final public let onPartialMessage: Combine.AnyPublisher<RemoteSupport.PartialMessageReceivedEventArgs, Swift.Never>
+  final public let onNotification: Combine.AnyPublisher<RemoteSupport.NotificationEventArgs, Swift.Never>
+  final public let onCommand: Combine.AnyPublisher<RemoteSupport.CommandEventArgs, Swift.Never>
+  final public let onQuery: Combine.AnyPublisher<RemoteSupport.QueryEventArgs, Swift.Never>
+  final public let onVideoCapture: Combine.AnyPublisher<RemoteSupport.VideoCaptureEventArgs, Swift.Never>
+  final public let onScreenCapture: Combine.AnyPublisher<RemoteSupport.ScreenCaptureEventArgs, Swift.Never>
+  final public let onVideoCaptureRemoved: Combine.AnyPublisher<Swift.Void, Swift.Never>
+  final public let onScreenCaptureRemoved: Combine.AnyPublisher<Swift.Void, Swift.Never>
+  final public let onVideoCaptureFailed: Combine.AnyPublisher<any Swift.Error, Swift.Never>
+  final public let onScreenCaptureFailed: Combine.AnyPublisher<any Swift.Error, Swift.Never>
+  public init(apiUrlBase: Swift.String, apiKey: Swift.String, retainLogs: Swift.Bool, timeout: Swift.Int = 5, logger: (any RemoteSupport.Logger)? = nil)
+  @objc deinit
+  public func initiateSupportSession() -> PromiseKit.Promise<Swift.String>
+  public func connectToSupportSession(pin: Swift.String) -> PromiseKit.Promise<Swift.Void>
+  @discardableResult
+  public func disconnect(sendDisconnect: Swift.Bool = true) -> PromiseKit.Promise<Swift.Void>
+}
+extension RemoteSupport.RemoteSupportClient {
+  public func setByteDefaults(category: Swift.UInt16, tag: Swift.String)
+  public func setLogDefaults(category: Swift.UInt16, tag: Swift.String)
+  public func setObjectDefaults(category: Swift.UInt16, tag: Swift.String)
+}
+extension RemoteSupport.RemoteSupportClient {
+  public func sendNotification(notification: RemoteSupport.RSNotification) -> PromiseKit.Promise<Swift.Void>
+  public func sendCommand(command: RemoteSupport.RSCommand, timeout: Foundation.TimeInterval = 30) -> PromiseKit.Promise<Swift.Void>
+  public func sendQuery(query: RemoteSupport.RSQuery, timeout: Swift.Double = 30, onReceived: @escaping ((_ response: RemoteSupport.RSTaggedData, _ isLastMessage: Swift.Bool) -> Swift.Void) = { _, _ in }) -> RemoteSupport.RSQueryReceipt
+  public func sendBytes(data: Foundation.Data, tag: Swift.String = DefaultTag.Bytes, category: Swift.UInt16 = DefaultCategory.Bytes) -> PromiseKit.Promise<Swift.Void>
+  public func sendChat(text: Swift.String, tag: Swift.String = DefaultTag.Chat, category: Swift.UInt16 = DefaultCategory.Chat) -> PromiseKit.Promise<Swift.Void>
+  public func sendLog(text: Swift.String, tag: Swift.String = DefaultTag.Log, category: Swift.UInt16 = DefaultCategory.Log) -> PromiseKit.Promise<Swift.Void>
+  public func sendEncodable<T>(of type: T.Type, encodable: T, tag: Swift.String = DefaultTag.Object, category: Swift.UInt16 = DefaultCategory.Object) -> PromiseKit.Promise<Swift.Void> where T : Swift.Encodable
+}
+extension RemoteSupport.RemoteSupportClient {
+  public func addVideoStream(_ configuration: RemoteSupport.CameraFormat) -> Swift.Bool
+  public func addScreenSharing(_ configuration: RemoteSupport.ScreenFormat) -> Swift.Bool
+}
+public enum WebRTCError : Foundation.LocalizedError {
+  case notInitialized
+  case connectionReset
+  case cannotFormData
+  case channelClosed
+  case failedToSendData
+  case timeout(operation: Swift.String)
+  case checksumFailed
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum RemoteSupportError : Foundation.LocalizedError {
+  case failedToInitialize(title: Swift.String, message: Swift.String)
+  case invalidUsage
+  case notImplemented(message: Swift.String)
+  case commandTimedOut(Foundation.TimeInterval)
+  case queryTimedOut(Foundation.TimeInterval)
+  case failedToSend(messageType: Swift.String)
+  case networkRequestFailed(title: Swift.String, message: Swift.String)
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var title: Swift.String {
+    get
+  }
+}
+public protocol MediaConfiguration {
+}
+public struct ScreenFormat : Swift.Codable, RemoteSupport.MediaConfiguration {
+  public let format: RemoteSupport.FrameSize
+  public init(format: RemoteSupport.FrameSize)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CameraFormat : Swift.Codable, RemoteSupport.MediaConfiguration {
+  public let cameraName: Swift.String
+  public let isFrontFacing: Swift.Bool
+  public let format: RemoteSupport.FrameFormat
+  public init(cameraName: Swift.String, isFrontFacing: Swift.Bool, format: RemoteSupport.FrameFormat)
+  public init(camera: RemoteSupport.CameraInfo, format: RemoteSupport.FrameFormat)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FrameRateRange : Swift.Codable {
+  public let min: Swift.Int
+  public let max: Swift.Int
+  public var range: Swift.ClosedRange<Swift.Int> {
+    get
+  }
+  public init(min: Swift.Int, max: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FrameSize : Swift.Equatable, Swift.Comparable, Swift.Codable {
+  public static func < (lhs: RemoteSupport.FrameSize, rhs: RemoteSupport.FrameSize) -> Swift.Bool
+  public static func == (lhs: RemoteSupport.FrameSize, rhs: RemoteSupport.FrameSize) -> Swift.Bool
+  public static func / (lhs: RemoteSupport.FrameSize, scale: Swift.Int) -> RemoteSupport.FrameSize
+  public static func * (lhs: RemoteSupport.FrameSize, scale: Swift.Int) -> RemoteSupport.FrameSize
+  public static func / (lhs: RemoteSupport.FrameSize, scale: Swift.Double) -> RemoteSupport.FrameSize
+  public static func * (lhs: RemoteSupport.FrameSize, scale: Swift.Double) -> RemoteSupport.FrameSize
+  public static func / (lhs: RemoteSupport.FrameSize, scale: Swift.Float) -> RemoteSupport.FrameSize
+  public static func * (lhs: RemoteSupport.FrameSize, scale: Swift.Float) -> RemoteSupport.FrameSize
+  public let width: Swift.Int
+  public let height: Swift.Int
+  public var size: Swift.Int {
+    get
+  }
+  public init(width: Swift.Int, height: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FrameFormat : Swift.Equatable, Swift.Comparable, Swift.Codable {
+  public static func < (lhs: RemoteSupport.FrameFormat, rhs: RemoteSupport.FrameFormat) -> Swift.Bool
+  public static func == (lhs: RemoteSupport.FrameFormat, rhs: RemoteSupport.FrameFormat) -> Swift.Bool
+  public let frameSize: RemoteSupport.FrameSize
+  public let frameRate: RemoteSupport.FrameRateRange
+  public init(frameSize: RemoteSupport.FrameSize, frameRate: RemoteSupport.FrameRateRange)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CameraInfo : Swift.Codable {
+  public let name: Swift.String
+  public let isFrontFacing: Swift.Bool
+  public var formats: [RemoteSupport.FrameFormat]
+  public init(name: Swift.String, isFrontFacing: Swift.Bool, formats: [RemoteSupport.FrameFormat])
+  public func withFormat(format: RemoteSupport.FrameFormat) -> RemoteSupport.CameraFormat
+  public static var allCameras: [AVFoundation.AVCaptureDevice] {
+    get
+  }
+  public static var allFormats: [AVFoundation.AVCaptureDevice : [AVFoundation.AVCaptureDevice.Format]] {
+    get
+  }
+  public static func getCameras() -> [RemoteSupport.CameraInfo]
+  public static func info(from devices: [AVFoundation.AVCaptureDevice]) -> [RemoteSupport.CameraInfo]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol MediaStreamController {
+  func start() -> PromiseKit.Promise<Swift.Void>
+  func stop()
+  var isStarted: Swift.Bool { get }
+  func addVideoSink(sink: any WebRTC.RTCVideoRenderer)
+  func removeVideoSink(sink: any WebRTC.RTCVideoRenderer)
+}
+public protocol CameraStreamController : RemoteSupport.MediaStreamController {
+  var cameraName: Swift.String { get set }
+  func switchCamera(_ camera: RemoteSupport.CameraFormat) -> PromiseKit.Promise<Swift.Void>
+  func changeFormat(_ format: RemoteSupport.FrameFormat) -> PromiseKit.Promise<Swift.Void>
+}
+public protocol ScreenCaptureController : RemoteSupport.MediaStreamController {
+  var format: RemoteSupport.FrameSize { get set }
+  func changeFormat(_ format: RemoteSupport.FrameSize) -> PromiseKit.Promise<Swift.Void>
+}
+public enum WebRtcClientRole : Swift.String, Swift.Encodable {
+  case offer
+  case answer
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias PrintableMap = [Swift.String : any Swift.Encodable]
+public protocol MessageCategory {
+  var value: Swift.UInt16 { get }
+}
+public protocol MessageTag {
+  var tag: Swift.String { get }
+}
+public struct DefaultTag {
+  public static var Chat: Swift.String
+  public static var Bytes: Swift.String
+  public static var Log: Swift.String
+  public static var Object: Swift.String
+}
+public struct DefaultCategory {
+  public static var Chat: Swift.UInt16
+  public static var Log: Swift.UInt16
+  public static var Bytes: Swift.UInt16
+  public static var Object: Swift.UInt16
+}
+public struct RSTaggedData {
+  public let tag: Swift.String
+  public let data: Foundation.Data
+  public init(tag: Swift.String, data: Foundation.Data)
+  public init(tag: any RemoteSupport.MessageTag, data: Foundation.Data)
+}
+public struct RSNotification {
+  public let id: Swift.UInt16
+  public let category: Swift.UInt16
+  public let data: RemoteSupport.RSTaggedData
+  public init(category: Swift.UInt16, data: RemoteSupport.RSTaggedData)
+  public init(category: any RemoteSupport.MessageCategory, data: RemoteSupport.RSTaggedData)
+}
+public enum RSAcknowledgeOn : Swift.UInt8 {
+  case received
+  case finished
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public struct RSCommand {
+  public let id: Swift.UInt16
+  public let category: Swift.UInt16
+  public let data: RemoteSupport.RSTaggedData
+  public var acknowledgeOn: RemoteSupport.RSAcknowledgeOn
+  public init(category: Swift.UInt16, data: RemoteSupport.RSTaggedData, acknowledgeOn: RemoteSupport.RSAcknowledgeOn)
+  public init(category: any RemoteSupport.MessageCategory, data: RemoteSupport.RSTaggedData, acknowledgeOn: RemoteSupport.RSAcknowledgeOn)
+}
+public struct RSCommandContext {
+  public func complete()
+  public func error(_ error: any RemoteSupport.RSErrorResponse)
+}
+public struct RSQuery {
+  public let id: Swift.UInt16
+  public let category: Swift.UInt16
+  public let data: RemoteSupport.RSTaggedData
+  public init(category: Swift.UInt16, data: RemoteSupport.RSTaggedData)
+  public init(category: any RemoteSupport.MessageCategory, data: RemoteSupport.RSTaggedData)
+}
+public struct RSQueryContext {
+  public func respond(_ data: RemoteSupport.RSTaggedData, isLastMessage: Swift.Bool = true)
+  public func error(_ error: any RemoteSupport.RSErrorResponse)
+}
+public struct RSQueryReceipt {
+  public var complete: PromiseKit.Promise<Swift.Void> {
+    get
+  }
+}
+public protocol RSErrorResponse : Foundation.LocalizedError {
+  var message: Swift.String { get }
+  var statusCode: Swift.UInt32 { get }
+}
+public struct RSError : RemoteSupport.RSErrorResponse {
+  public var message: Swift.String {
+    get
+  }
+  public var statusCode: Swift.UInt32 {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public init(message: Swift.String, statusCode: Swift.UInt32 = 0)
+}
+public protocol Logger {
+  func trace(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  func debug(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  func error(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  func info(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  func warn(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+}
+public struct WellKnownTagEncoder {
+  public static let Empty: RemoteSupport.RSTaggedData
+  public struct Text {
+    public static func encode(_ value: Swift.String) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ value: RemoteSupport.RSTaggedData) -> Swift.String?
+  }
+  public struct Bytes {
+    public static func encode(_ value: Foundation.Data) -> RemoteSupport.RSTaggedData
+    public static func decode(_ value: RemoteSupport.RSTaggedData) -> Foundation.Data?
+  }
+  public struct Json {
+    public static func encode<T>(_ value: T) throws -> RemoteSupport.RSTaggedData where T : Swift.Encodable
+    public static func decode<T>(_ value: RemoteSupport.RSTaggedData) throws -> T where T : Swift.Decodable
+  }
+  public struct Number {
+    public static func encode(_ value: Swift.Int) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ value: RemoteSupport.RSTaggedData) -> Swift.Int?
+    public static func encode(_ value: Swift.Int32) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Int32?
+    public static func encode(_ value: Swift.Int64) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Int64?
+    public static func encode(_ value: Swift.Float) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Float?
+    public static func encode(_ value: Swift.Double) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Double?
+    public static func encode<T>(type: T.Type, _ value: T, tag: RemoteSupport.WellKnownTags) -> RemoteSupport.RSTaggedData where T : Swift.ExpressibleByIntegerLiteral
+    public static func decode<T>(type: T.Type, _ data: RemoteSupport.RSTaggedData) -> T? where T : Swift.ExpressibleByIntegerLiteral
+  }
+  public struct Boolean {
+    public static func encode(_ value: Swift.Bool) -> RemoteSupport.RSTaggedData?
+    public static func decode(_ value: RemoteSupport.RSTaggedData) -> Swift.Bool?
+  }
+}
+public enum WellKnownTags : Swift.String, RemoteSupport.MessageTag {
+  public var tag: Swift.String {
+    get
+  }
+  case text
+  case bytes
+  case json
+  case int
+  case long
+  case float
+  case double
+  case boolean
+  case empty
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class PrintLogger : RemoteSupport.Logger {
+  public init()
+  public func trace(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func debug(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func error(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func info(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  public func warn(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  @objc deinit
+}
+extension RemoteSupport.WebRtcClientRole : Swift.Equatable {}
+extension RemoteSupport.WebRtcClientRole : Swift.Hashable {}
+extension RemoteSupport.WebRtcClientRole : Swift.RawRepresentable {}
+extension RemoteSupport.RSAcknowledgeOn : Swift.Equatable {}
+extension RemoteSupport.RSAcknowledgeOn : Swift.Hashable {}
+extension RemoteSupport.RSAcknowledgeOn : Swift.RawRepresentable {}
+extension RemoteSupport.WellKnownTags : Swift.Equatable {}
+extension RemoteSupport.WellKnownTags : Swift.Hashable {}
+extension RemoteSupport.WellKnownTags : Swift.RawRepresentable {}

@@ -1,0 +1,11 @@
+framework module ReachProtocol {
+  umbrella header "ReachProtocol.h"
+  export *
+
+  module * { export * }
+}
+
+module ReachProtocol.Swift {
+  header "ReachProtocol-Swift.h"
+  requires objc
+}
