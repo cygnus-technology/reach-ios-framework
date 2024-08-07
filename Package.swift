@@ -35,9 +35,9 @@ let package = Package(
         .target(
             name: "RemoteSupportTarget",
             dependencies: [
-                .target(name: "PromiseKit"),
-                .target(name: "CocoaMQTT"),
-                .target(name: "WebRTC")
+                "PromiseKit",
+                "CocoaMQTT",
+                "WebRTC"
             ],
             path: "RemoteSupportWrap"
         ),
@@ -48,7 +48,7 @@ let package = Package(
         .target(
             name: "ReachProtocolTarget",
             dependencies: [
-                .target(name: "SwiftProtobuf")
+                "SwiftProtobuf"
             ],
             path: "ReachProtocolWrap"
         ),
@@ -61,7 +61,7 @@ let package = Package(
             dependencies: [
                 .target(name: "RemoteSupport"),
                 .target(name: "ReachProtocol"),
-                .target(name: "Toast_Swift")
+                "Toast_Swift"
             ],
             path: "CygnusUIWrap"
         )
