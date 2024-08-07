@@ -48,7 +48,7 @@ let package = Package(
         .target(
             name: "ReachProtocolTarget",
             dependencies: [
-                "swift-protobuf"
+                .product(name: "SwiftProtobuf")
             ],
             path: "ReachProtocolWrap"
         ),
