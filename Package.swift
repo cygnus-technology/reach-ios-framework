@@ -9,15 +9,15 @@ let package = Package(
     products: [
         .library(
             name: "RemoteSupport",
-            targets: ["RemoteSupportTarget"]
+            targets: ["RemoteSupport"]
         ),
         .library(
             name: "ReachProtocol",
-            targets: ["ReachProtocolTarget"]
+            targets: ["ReachProtocol"]
         ),
         .library(
             name: "CygnusUI",
-            targets: ["CygnusUITarget"]
+            targets: ["CygnusUI"]
         )
     ],
     dependencies: [
@@ -29,12 +29,13 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "RemoteSupport",
+            name: "RemoteSupportFramework",
             path: "RemoteSupport.xcframework"
         ),
         .target(
-            name: "RemoteSupportTarget",
+            name: "RemoteSupport",
             dependencies: [
+                .target(name: "RemoteSupportFramework"),
                 "PromiseKit",
                 "CocoaMQTT",
                 "WebRTC"
@@ -42,25 +43,27 @@ let package = Package(
             path: "RemoteSupportWrap"
         ),
         .binaryTarget(
-            name: "ReachProtocol",
+            name: "ReachProtocolFramework",
             path: "ReachProtocol.xcframework"
         ),
         .target(
-            name: "ReachProtocolTarget",
+            name: "ReachProtocol",
             dependencies: [
+                .target(name: "ReachProtocolFramework"),
                 .product(name: "SwiftProtobuf", package: "swift-protobuf")
             ],
             path: "ReachProtocolWrap"
         ),
         .binaryTarget(
-            name: "CygnusUI",
+            name: "CygnusUIFramework",
             path: "CygnusUI.xcframework"
         ),
         .target(
-            name: "CygnusUITarget",
+            name: "CygnusUI",
             dependencies: [
-                .target(name: "RemoteSupport"),
-                .target(name: "ReachProtocol"),
+                .target(name: "RemoteSupportFramework"),
+                .target(name: "ReachProtocolFramework"),
+                .target(name: "CygnusUIFramework"),
                 .product(name: "Toast", package: "Toast-Swift")
             ],
             path: "CygnusUIWrap"
