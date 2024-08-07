@@ -48,7 +48,7 @@ let package = Package(
         .target(
             name: "ReachProtocolTarget",
             dependencies: [
-                "SwiftProtobuf"
+                "swift-protobuf"
             ],
             path: "ReachProtocolWrap"
         ),
@@ -61,7 +61,7 @@ let package = Package(
             dependencies: [
                 .target(name: "RemoteSupport"),
                 .target(name: "ReachProtocol"),
-                "Toast_Swift"
+                "Toast-Swift"
             ],
             path: "CygnusUIWrap"
         )
