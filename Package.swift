@@ -9,15 +9,15 @@ let package = Package(
     products: [
         .library(
             name: "RemoteSupport",
-            targets: ["RemoteSupportTargets"]
+            targets: ["RemoteSupportTarget"]
         ),
         .library(
             name: "ReachProtocol",
-            targets: ["ReachProtocolTargets"]
+            targets: ["ReachProtocolTarget"]
         ),
         .library(
             name: "CygnusUI",
-            targets: ["CygnusUITargets"]
+            targets: ["CygnusUITarget"]
         )
     ],
     dependencies: [
@@ -33,37 +33,37 @@ let package = Package(
             path: "RemoteSupport.xcframework"
         ),
         .target(
-            name: "RemoteSupportTargets",
+            name: "RemoteSupportTarget",
             dependencies: [
                 .target(name: "PromiseKit"),
                 .target(name: "CocoaMQTT"),
                 .target(name: "WebRTC")
             ],
-            path: "RemoteSupportTargets"
+            path: "RemoteSupportWrap"
         ),
         .binaryTarget(
             name: "ReachProtocol",
             path: "ReachProtocol.xcframework"
         ),
         .target(
-            name: "ReachProtocolTargets",
+            name: "ReachProtocolTarget",
             dependencies: [
                 .target(name: "SwiftProtobuf")
             ],
-            path: "ReachProtocolTargets"
+            path: "ReachProtocolWrap"
         ),
         .binaryTarget(
             name: "CygnusUI",
             path: "CygnusUI.xcframework"
         ),
         .target(
-            name: "CygnusUITargets",
+            name: "CygnusUITarget",
             dependencies: [
                 .target(name: "RemoteSupport"),
                 .target(name: "ReachProtocol"),
                 .target(name: "Toast_Swift")
             ],
-            path: "CygnusUITargets"
+            path: "CygnusUIWrap"
         )
     ]
 )
