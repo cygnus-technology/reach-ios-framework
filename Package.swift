@@ -61,7 +61,7 @@ let package = Package(
             dependencies: [
                 .target(name: "RemoteSupport"),
                 .target(name: "ReachProtocol"),
-                "Toast-Swift"
+                .product(name: "Toast", package: "Toast-Swift")
             ],
             path: "CygnusUIWrap"
         )
