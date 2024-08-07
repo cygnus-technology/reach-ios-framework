@@ -9,15 +9,15 @@ let package = Package(
     products: [
         .library(
             name: "RemoteSupport",
-            targets: ["RemoteSupport"]
+            targets: ["RemoteSupportTargets"]
         ),
         .library(
             name: "ReachProtocol",
-            targets: ["ReachProtocol"]
+            targets: ["ReachProtocolTargets"]
         ),
         .library(
             name: "CygnusUI",
-            targets: ["CygnusUI"]
+            targets: ["CygnusUITargets"]
         )
     ],
     dependencies: [
