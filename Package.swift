@@ -61,8 +61,8 @@ let package = Package(
         .target(
             name: "CygnusUITarget",
             dependencies: [
-                .target(name: "RemoteSupport"),
-                .target(name: "ReachProtocol"),
+                .target(name: "RemoteSupportTarget"),
+                .target(name: "ReachProtocolTarget"),
                 .target(name: "CygnusUI"),
                 .product(name: "Toast", package: "Toast-Swift")
             ],
