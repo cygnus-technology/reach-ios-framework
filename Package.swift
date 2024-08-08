@@ -9,10 +9,12 @@ let package = Package(
     products: [
         .library(
             name: "RemoteSupport",
+            type: .static,
             targets: ["RemoteSupportTarget"]
         ),
         .library(
             name: "ReachProtocol",
+            type: .static,
             targets: ["ReachProtocolTarget"]
         ),
         .library(
