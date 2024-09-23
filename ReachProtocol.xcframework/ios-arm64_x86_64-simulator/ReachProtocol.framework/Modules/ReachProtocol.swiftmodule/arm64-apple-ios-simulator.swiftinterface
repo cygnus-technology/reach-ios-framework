@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ReachProtocol
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import Combine
 import Foundation
 import PromiseKit
@@ -84,9 +85,7 @@ extension ReachProtocol.StorageLocation {
 }
 public protocol TransportModule {
   var onMessage: Combine.PassthroughSubject<Foundation.Data, Swift.Never> { get }
-  #if compiler(>=5.3) && $AsyncAwait
   func send(data: Foundation.Data) async throws
-  #endif
   func receivedBytes(data: Foundation.Data)
 }
 extension Foundation.Data {
@@ -130,9 +129,7 @@ public struct ParameterDescriptions : Swift.Codable {
 public class Request {
   public init(onMessage: @escaping (any SwiftProtobuf.Message) -> Swift.Void, timeout: Swift.Int)
   public func wait() -> PromiseKit.Promise<Swift.Void>
-  #if compiler(>=5.3) && $AsyncAwait
   public func wait() async throws
-  #endif
   @objc deinit
 }
 public enum ReachProto_MAJOR_Version : SwiftProtobuf.Enum {
@@ -2380,9 +2377,7 @@ extension ReachProtocol.BufferSizes : SwiftProtobuf.Message, SwiftProtobuf._Mess
     get
   }
   final public let transferSize: Swift.UInt32
-  #if compiler(>=5.3) && $AsyncAwait
   public func wait() async throws -> Swift.Bool
-  #endif
   public func cancel()
   @objc deinit
 }
@@ -2424,65 +2419,32 @@ final public class DeviceAccess {
   final public var clientId: Swift.UInt32 {
     get
   }
-  final public var ahsokaHeader: Swift.Bool
+  final public var ahsokaHeader: Swift.Bool {
+    get
+    set
+  }
   public init(transportModule: any ReachProtocol.TransportModule, ahsokaHeader: Swift.Bool = true)
-  #if compiler(>=5.3) && $AsyncAwait
   final public func send(payload: Foundation.Data, messageType: Swift.UInt32, endpoint: Swift.UInt32? = nil) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func sendRequest(payload: Foundation.Data, messageType: Swift.UInt32, endpoint: Swift.UInt32? = nil, onMessage: @escaping (any SwiftProtobuf.Message) -> Swift.Void) async throws -> ReachProtocol.Request
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   @discardableResult
-  final public func getDeviceInfo() async throws -> ReachProtocol.DeviceInfoResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
+  final public func getDeviceInfo(accessKey: Swift.String? = nil) async throws -> ReachProtocol.DeviceInfoResponse
   @discardableResult
   final public func ping(data: Foundation.Data? = nil) async throws -> ReachProtocol.PingResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func discoverParameters(parameterIds: [Swift.UInt32]? = nil, forceFetch: Swift.Bool = false) async throws -> ReachProtocol.ParameterDescriptions
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func readParameters(parameterIds: [Swift.UInt32]? = nil) async throws -> ReachProtocol.ParameterReadResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func writeParameters(parameterValues: [ReachProtocol.ParameterValue]) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func getFileDescriptors() async throws -> [ReachProtocol.FileInfo]
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func readFile(id: Swift.UInt32, url: Foundation.URL, offset: Swift.UInt32 = 0, length: Swift.UInt32? = nil) async throws -> ReachProtocol.FileTransferInfo
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func writeFile(url: Foundation.URL, id: Swift.UInt32, offset: Swift.UInt32 = 0) async throws -> ReachProtocol.FileTransferInfo
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func discoverCommands() async throws -> ReachProtocol.DiscoverCommandsResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func sendCommand(_ command: ReachProtocol.CommandInfo) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func sendCLIData(data: Swift.String) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func setTime(time: Foundation.Date, timezoneOffset: Swift.Int32? = nil) async throws -> ReachProtocol.TimeSetResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func getTime() async throws -> ReachProtocol.TimeGetResponse
-  #endif
   final public func deviceTime() -> Foundation.Date?
-  #if compiler(>=5.3) && $AsyncAwait
   final public func discoverWifi() async throws -> ReachProtocol.DiscoverWiFiResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func connectWifi(ssid: Swift.String, password: Swift.String? = nil, autoconnect: Swift.Bool? = nil) async throws -> ReachProtocol.WiFiConnectionResponse
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   final public func disconnectWifi(ssid: Swift.String) async throws -> ReachProtocol.WiFiConnectionResponse
-  #endif
   @objc deinit
 }
 extension Foundation.Data.Endianness : Swift.Equatable {}

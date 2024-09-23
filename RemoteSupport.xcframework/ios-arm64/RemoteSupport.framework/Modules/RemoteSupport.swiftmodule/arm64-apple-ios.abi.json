@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "RemoteSupport",
+    "printedName": "RemoteSupport",
     "children": [
       {
         "kind": "Import",
@@ -171,6 +171,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -257,6 +273,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -343,6 +375,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -429,6 +477,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -567,6 +631,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -705,6 +785,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -945,6 +1041,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1134,6 +1246,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1303,6 +1431,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3210,6 +3352,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -3608,6 +3764,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "LocalizedError",
@@ -4120,6 +4290,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "LocalizedError",
             "printedName": "LocalizedError",
             "usr": "s:10Foundation14LocalizedErrorP",
@@ -4176,6 +4360,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4315,6 +4515,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -4609,6 +4823,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -4872,6 +5100,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -5388,6 +5630,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -5670,6 +5926,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -6256,6 +6526,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -6502,6 +6786,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -6693,6 +6993,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "MediaStreamController",
             "printedName": "MediaStreamController",
             "usr": "s:13RemoteSupport21MediaStreamControllerP",
@@ -6849,6 +7163,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "MediaStreamController",
@@ -7094,6 +7422,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -7389,6 +7731,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -7446,6 +7804,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -7825,6 +8199,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -8200,6 +8590,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -8371,6 +8777,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -8587,6 +9009,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -8757,6 +9195,20 @@
         ],
         "enumRawTypeName": "UInt8",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -9103,6 +9555,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -9166,6 +9634,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -9379,6 +9863,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -9455,6 +9955,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -9525,6 +10041,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -9628,6 +10160,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "LocalizedError",
@@ -9836,6 +10382,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "RSErrorResponse",
@@ -10245,6 +10805,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -10419,6 +10995,22 @@
             "moduleName": "RemoteSupport",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -10499,6 +11091,22 @@
             "moduleName": "RemoteSupport",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -10575,6 +11183,22 @@
             "moduleName": "RemoteSupport",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -11057,6 +11681,22 @@
             "moduleName": "RemoteSupport",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -11145,6 +11785,22 @@
             "moduleName": "RemoteSupport",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           }
         ],
@@ -11154,6 +11810,22 @@
         "moduleName": "RemoteSupport",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -11646,6 +12318,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -12064,6 +12750,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Logger",
             "printedName": "Logger",
             "usr": "s:13RemoteSupport6LoggerP",
@@ -12136,6 +12836,20 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Scalar",
@@ -12545,6 +13259,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -12647,6 +13368,20 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Scalar",
@@ -13056,6 +13791,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -13259,6 +14001,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -13455,6 +14211,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -13661,6 +14424,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -13843,6 +14620,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -14049,6 +14833,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -14231,6 +15029,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -14437,6 +15242,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -14619,6 +15438,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -14825,6 +15651,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -15014,6 +15854,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -15213,6 +16060,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -15402,6 +16263,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -15601,6 +16469,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -15790,6 +16672,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -15989,6 +16878,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -16171,6 +17074,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -16370,6 +17280,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Scalar",
             "printedName": "Scalar",
             "children": [
@@ -16559,6 +17483,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -16779,13 +17710,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1147,
-      "length": 12,
-      "value": "\"RemoteSupport.WebRtcClient\""
-    },
-    {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
       "kind": "StringLiteral",
       "offset": 374,
@@ -16871,13 +17795,6 @@
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
-      "kind": "StringLiteral",
-      "offset": 324,
-      "length": 19,
-      "value": "\"RemoteSupport.RemoteSupportClient\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "IntegerLiteral",
       "offset": 14790,
       "length": 2,
@@ -16896,76 +17813,6 @@
       "offset": 687,
       "length": 16,
       "value": "\"reachableQueue\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 280,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 299,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 319,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 345,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 369,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 280,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 299,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 319,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 345,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 369,
-      "length": 1,
-      "value": "4"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
@@ -17052,20 +17899,6 @@
       "value": "\"answer\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClientRole.swift",
-      "kind": "StringLiteral",
-      "offset": 245,
-      "length": 7,
-      "value": "\"offer\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClientRole.swift",
-      "kind": "StringLiteral",
-      "offset": 271,
-      "length": 8,
-      "value": "\"answer\""
-    },
-    {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
@@ -17120,13 +17953,6 @@
       "offset": 1290,
       "length": 20,
       "value": "\"DataChannelWrapper\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
-      "kind": "StringLiteral",
-      "offset": 880,
-      "length": 18,
-      "value": "\"RemoteSupport.DataChannelWrapper\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
@@ -17215,132 +18041,6 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
-      "offset": 287,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 318,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 350,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 383,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 407,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 434,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 287,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 318,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 350,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 383,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 407,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 434,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 786,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 809,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 835,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 786,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 809,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 835,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
-      "kind": "IntegerLiteral",
       "offset": 786,
       "length": 1,
       "value": "0"
@@ -17404,76 +18104,6 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
-      "offset": 303,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 325,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 303,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 325,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 717,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 742,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 769,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 717,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 742,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 769,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
       "offset": 717,
       "length": 1,
       "value": "0"
@@ -17512,132 +18142,6 @@
       "offset": 1217,
       "length": 1,
       "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1159,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1190,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1217,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1159,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1190,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1217,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1594,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1620,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1641,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1660,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1696,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1723,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1594,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1620,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1641,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1660,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1696,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1723,
-      "length": 1,
-      "value": "5"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
@@ -17796,41 +18300,6 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
-      "offset": 343,
-      "length": 7,
-      "value": "\"ERROR\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 367,
-      "length": 6,
-      "value": "\"WARN\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 390,
-      "length": 6,
-      "value": "\"INFO\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 414,
-      "length": 7,
-      "value": "\"DEBUG\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 439,
-      "length": 7,
-      "value": "\"TRACE\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
       "offset": 824,
       "length": 12,
       "value": "\"TYPESCRIPT\""
@@ -17855,62 +18324,6 @@
       "offset": 903,
       "length": 4,
       "value": "\"GO\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 824,
-      "length": 12,
-      "value": "\"TYPESCRIPT\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 855,
-      "length": 8,
-      "value": "\"KOTLIN\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 881,
-      "length": 7,
-      "value": "\"SWIFT\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 903,
-      "length": 4,
-      "value": "\"GO\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 1001,
-      "length": 5,
-      "value": "\"LOG\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 1028,
-      "length": 11,
-      "value": "\"SENSITIVE\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 1058,
-      "length": 8,
-      "value": "\"METRIC\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
-      "kind": "StringLiteral",
-      "offset": 1101,
-      "length": 24,
-      "value": "\"DATACHANNELMESSAGEINFO\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
@@ -18054,34 +18467,6 @@
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3129,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3245,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3129,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3245,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "BooleanLiteral",
       "offset": 4714,
       "length": 5,
@@ -18107,20 +18492,6 @@
       "offset": 8464,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
-      "kind": "StringLiteral",
-      "offset": 8932,
-      "length": 9,
-      "value": "\"command\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
-      "kind": "StringLiteral",
-      "offset": 8963,
-      "length": 7,
-      "value": "\"query\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
@@ -18191,69 +18562,6 @@
       "offset": 14862,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 12985,
-      "length": 27,
-      "value": "\"text\/plain; charset=utf-8\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13063,
-      "length": 26,
-      "value": "\"application\/octet-stream\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13131,
-      "length": 18,
-      "value": "\"application\/json\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13202,
-      "length": 30,
-      "value": "\"application\/vnd.cygnus+int32\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13286,
-      "length": 30,
-      "value": "\"application\/vnd.cygnus+int64\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13373,
-      "length": 32,
-      "value": "\"application\/vnd.cygnus+float32\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13463,
-      "length": 32,
-      "value": "\"application\/vnd.cygnus+float64\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13551,
-      "length": 29,
-      "value": "\"application\/vnd.cygnus+bool\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
-      "kind": "StringLiteral",
-      "offset": 13609,
-      "length": 2,
-      "value": "\"\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
