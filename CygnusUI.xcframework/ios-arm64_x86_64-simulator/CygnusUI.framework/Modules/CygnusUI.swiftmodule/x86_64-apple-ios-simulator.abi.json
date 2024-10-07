@@ -80242,28 +80242,28 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/CygnusUI\/Services\/SupportService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2990,
+      "offset": 2986,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/CygnusUI\/Services\/SupportService.swift",
       "kind": "BooleanLiteral",
-      "offset": 3848,
+      "offset": 3840,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/CygnusUI\/Services\/SupportService.swift",
       "kind": "StringLiteral",
-      "offset": 4224,
+      "offset": 4214,
       "length": 23,
       "value": "\"supportSessionService\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/CygnusUI\/Services\/SupportService.swift",
       "kind": "FloatLiteral",
-      "offset": 20184,
+      "offset": 20174,
       "length": 3,
       "value": "0.8"
     },
