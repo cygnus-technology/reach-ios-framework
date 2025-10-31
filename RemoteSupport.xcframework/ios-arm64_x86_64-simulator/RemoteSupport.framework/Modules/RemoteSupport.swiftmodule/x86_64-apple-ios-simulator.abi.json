@@ -3798,6 +3798,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -4322,6 +4329,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -10194,6 +10208,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -10423,6 +10444,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -13130,6 +13158,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Strideable",
             "printedName": "Strideable",
             "children": [
@@ -13307,6 +13342,79 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VectorArithmetic",
+            "printedName": "VectorArithmetic",
+            "usr": "s:7SwiftUI16VectorArithmeticP",
+            "mangledName": "$s7SwiftUI16VectorArithmeticP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Animatable",
+            "printedName": "Animatable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AnimatableData",
+                "printedName": "AnimatableData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI10AnimatableP",
+            "mangledName": "$s7SwiftUI10AnimatableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic64BitStorage",
+                    "printedName": "Synchronization._Atomic64BitStorage",
+                    "usr": "s:15Synchronization19_Atomic64BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -13662,6 +13770,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Strideable",
             "printedName": "Strideable",
             "children": [
@@ -13839,6 +13954,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VectorArithmetic",
+            "printedName": "VectorArithmetic",
+            "usr": "s:7SwiftUI16VectorArithmeticP",
+            "mangledName": "$s7SwiftUI16VectorArithmeticP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic32BitStorage",
+                    "printedName": "Synchronization._Atomic32BitStorage",
+                    "usr": "s:15Synchronization19_Atomic32BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -14114,6 +14280,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -14262,6 +14435,50 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic64BitStorage",
+                    "printedName": "Synchronization._Atomic64BitStorage",
+                    "usr": "s:15Synchronization19_Atomic64BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -14523,6 +14740,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -14671,6 +14895,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic8BitStorage",
+                    "printedName": "Synchronization._Atomic8BitStorage",
+                    "usr": "s:15Synchronization18_Atomic8BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -14932,6 +15207,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -15080,6 +15362,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic16BitStorage",
+                    "printedName": "Synchronization._Atomic16BitStorage",
+                    "usr": "s:15Synchronization19_Atomic16BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -15341,6 +15674,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -15489,6 +15829,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic32BitStorage",
+                    "printedName": "Synchronization._Atomic32BitStorage",
+                    "usr": "s:15Synchronization19_Atomic32BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -15757,6 +16148,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -15905,6 +16303,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic64BitStorage",
+                    "printedName": "Synchronization._Atomic64BitStorage",
+                    "usr": "s:15Synchronization19_Atomic64BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -16166,6 +16615,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -16314,6 +16770,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic8BitStorage",
+                    "printedName": "Synchronization._Atomic8BitStorage",
+                    "usr": "s:15Synchronization18_Atomic8BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -16575,6 +17082,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -16723,6 +17237,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic16BitStorage",
+                    "printedName": "Synchronization._Atomic16BitStorage",
+                    "usr": "s:15Synchronization19_Atomic16BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -16977,6 +17542,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -17125,6 +17697,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic32BitStorage",
+                    "printedName": "Synchronization._Atomic32BitStorage",
+                    "usr": "s:15Synchronization19_Atomic32BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -17386,6 +18009,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -17534,6 +18164,57 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic64BitStorage",
+                    "printedName": "Synchronization._Atomic64BitStorage",
+                    "usr": "s:15Synchronization19_Atomic64BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       }
@@ -17542,1092 +18223,1092 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/ScreenCaptureMediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/ScreenCaptureMediaStreamContainer.swift",
       "kind": "StringLiteral",
       "offset": 466,
       "length": 8,
       "value": "\"SCREEN\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/ScreenCaptureMediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/ScreenCaptureMediaStreamContainer.swift",
       "kind": "StringLiteral",
       "offset": 506,
       "length": 21,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/ScreenCaptureMediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/ScreenCaptureMediaStreamContainer.swift",
       "kind": "StringLiteral",
       "offset": 520,
       "length": 6,
       "value": "\"_TRACK\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 280,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 850,
       "length": 2,
       "value": "90"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 1757,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 4320,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "BooleanLiteral",
       "offset": 4576,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 5215,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/MessageChunking.swift",
       "kind": "IntegerLiteral",
       "offset": 8369,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "Array",
       "offset": 194,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "Array",
       "offset": 301,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 481,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "Dictionary",
       "offset": 634,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 742,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 932,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "IntegerLiteral",
       "offset": 2621,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 2659,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 4348,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/FlatBufferBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 4963,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
       "kind": "StringLiteral",
       "offset": 1854,
       "length": 14,
       "value": "\"WebRtcClient\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
       "kind": "IntegerLiteral",
       "offset": 2622,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/WebRtcClient.swift",
       "kind": "BooleanLiteral",
       "offset": 6911,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 35,
       "value": "\"atomic.queue.\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
       "kind": "StringLiteral",
       "offset": 408,
       "length": 27,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
       "kind": "StringLiteral",
       "offset": 1316,
       "length": 35,
       "value": "\"atomic.queue.\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Atomic.swift",
       "kind": "StringLiteral",
       "offset": 1350,
       "length": 27,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 259,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 480,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 484,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Constants.swift",
       "kind": "IntegerLiteral",
       "offset": 489,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "StringLiteral",
       "offset": 635,
       "length": 21,
       "value": "\"RemoteSupportClient\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "BooleanLiteral",
       "offset": 685,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "IntegerLiteral",
       "offset": 5661,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "BooleanLiteral",
       "offset": 11752,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "IntegerLiteral",
       "offset": 14790,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "IntegerLiteral",
       "offset": 19062,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/NetworkStatus.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/NetworkStatus.swift",
       "kind": "StringLiteral",
       "offset": 687,
       "length": 16,
       "value": "\"reachableQueue\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 280,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 299,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 319,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 345,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 369,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 7626,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/rtc_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 11756,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportServices.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/RemoteSupportServices.swift",
       "kind": "StringLiteral",
       "offset": 3308,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/MediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/MediaStreamContainer.swift",
       "kind": "BooleanLiteral",
       "offset": 575,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/MediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/MediaStreamContainer.swift",
       "kind": "IntegerLiteral",
       "offset": 2636,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClientRole.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/WebRtcClientRole.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 7,
       "value": "\"offer\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/WebRtcClientRole.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/WebRtcClientRole.swift",
       "kind": "StringLiteral",
       "offset": 271,
       "length": 8,
       "value": "\"answer\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 590,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 695,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 738,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 745,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 752,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 795,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "IntegerLiteral",
       "offset": 802,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/DataChannelWrapper.swift",
       "kind": "StringLiteral",
       "offset": 1290,
       "length": 20,
       "value": "\"DataChannelWrapper\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
       "kind": "IntegerLiteral",
       "offset": 613,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
       "kind": "IntegerLiteral",
       "offset": 695,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
       "kind": "IntegerLiteral",
       "offset": 787,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
       "kind": "IntegerLiteral",
       "offset": 879,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/SessionMetrics.swift",
       "kind": "BooleanLiteral",
       "offset": 2952,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Struct.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Struct.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 287,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 318,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 350,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 383,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 407,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 434,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 786,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 809,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 835,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 7904,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 7928,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 12192,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/chunks_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 12218,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 303,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 325,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 717,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 742,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 769,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1159,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1190,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1217,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1594,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1620,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1641,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1660,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1696,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 1723,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 5374,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 7483,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 9288,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "BooleanLiteral",
       "offset": 12185,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 14001,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/messages_generated.swift",
       "kind": "IntegerLiteral",
       "offset": 21473,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
       "kind": "StringLiteral",
       "offset": 1745,
       "length": 33,
       "value": "\"ReachabilityChangedNotification\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
       "kind": "StringLiteral",
       "offset": 1897,
       "length": 21,
       "value": "\"reachabilityChanged\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
       "kind": "BooleanLiteral",
       "offset": 3172,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
       "kind": "BooleanLiteral",
       "offset": 4264,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Reachability.swift",
       "kind": "BooleanLiteral",
       "offset": 4375,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 343,
       "length": 7,
       "value": "\"ERROR\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 367,
       "length": 6,
       "value": "\"WARN\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 390,
       "length": 6,
       "value": "\"INFO\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 414,
       "length": 7,
       "value": "\"DEBUG\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 439,
       "length": 7,
       "value": "\"TRACE\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 824,
       "length": 12,
       "value": "\"TYPESCRIPT\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 855,
       "length": 8,
       "value": "\"KOTLIN\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 881,
       "length": 7,
       "value": "\"SWIFT\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 903,
       "length": 4,
       "value": "\"GO\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 1001,
       "length": 5,
       "value": "\"LOG\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 1028,
       "length": 11,
       "value": "\"SENSITIVE\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 1058,
       "length": 8,
       "value": "\"METRIC\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "StringLiteral",
       "offset": 1101,
       "length": 24,
       "value": "\"DATACHANNELMESSAGEINFO\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/Logging\/I3Logger.swift",
       "kind": "Array",
       "offset": 4090,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/CameraMediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/CameraMediaStreamContainer.swift",
       "kind": "StringLiteral",
       "offset": 431,
       "length": 8,
       "value": "\"CAMERA\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/CameraMediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/CameraMediaStreamContainer.swift",
       "kind": "StringLiteral",
       "offset": 471,
       "length": 21,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/CameraMediaStreamContainer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Media\/CameraMediaStreamContainer.swift",
       "kind": "StringLiteral",
       "offset": 485,
       "length": 6,
       "value": "\"_TRACK\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/BackgroundTimer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/BackgroundTimer.swift",
       "kind": "IntegerLiteral",
       "offset": 748,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/BackgroundTimer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/BackgroundTimer.swift",
       "kind": "BooleanLiteral",
       "offset": 977,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/SignalClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/SignalClient.swift",
       "kind": "StringLiteral",
       "offset": 811,
       "length": 19,
       "value": "\"signalClientQueue\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/SignalClient.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/SignalClient.swift",
       "kind": "IntegerLiteral",
       "offset": 10037,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 1327,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 1332,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 1370,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 1375,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 1415,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 1456,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 3129,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 3245,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "BooleanLiteral",
       "offset": 4714,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "BooleanLiteral",
       "offset": 6634,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "BooleanLiteral",
       "offset": 7632,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 8464,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "StringLiteral",
       "offset": 8932,
       "length": 9,
       "value": "\"command\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Models\/MessageTypes.swift",
       "kind": "StringLiteral",
       "offset": 8963,
       "length": 7,
       "value": "\"query\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
       "kind": "IntegerLiteral",
       "offset": 1157,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
       "kind": "IntegerLiteral",
       "offset": 1258,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
       "kind": "BooleanLiteral",
       "offset": 8235,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/ByteBuffer.swift",
       "kind": "IntegerLiteral",
       "offset": 12035,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
       "kind": "StringLiteral",
       "offset": 946,
       "length": 20,
       "value": "\"WebRtcChunkAdapter\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
       "kind": "IntegerLiteral",
       "offset": 1418,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
       "kind": "BooleanLiteral",
       "offset": 14835,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WebRTC\/WebRtcChunkAdapter.swift",
       "kind": "BooleanLiteral",
       "offset": 14862,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 12985,
       "length": 27,
       "value": "\"text\/plain; charset=utf-8\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13063,
       "length": 26,
       "value": "\"application\/octet-stream\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13131,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13202,
       "length": 30,
       "value": "\"application\/vnd.cygnus+int32\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13286,
       "length": 30,
       "value": "\"application\/vnd.cygnus+int64\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13373,
       "length": 32,
       "value": "\"application\/vnd.cygnus+float32\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13463,
       "length": 32,
       "value": "\"application\/vnd.cygnus+float64\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13551,
       "length": 29,
       "value": "\"application\/vnd.cygnus+bool\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Util\/WellKnownTags.swift",
       "kind": "StringLiteral",
       "offset": 13609,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Table.swift",
+      "filePath": "\/Users\/jkinross\/Workspace\/reach_sdk_swift\/RemoteSupport\/Protocol\/FlatBuffers\/Table.swift",
       "kind": "IntegerLiteral",
       "offset": 184,
       "length": 1,

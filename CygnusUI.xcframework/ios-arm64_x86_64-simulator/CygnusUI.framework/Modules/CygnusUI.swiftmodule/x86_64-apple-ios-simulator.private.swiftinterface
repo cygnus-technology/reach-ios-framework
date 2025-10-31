@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CygnusUI
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CygnusUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFoundation
 import AVKit
 import Combine
@@ -15,7 +15,7 @@ import ReachProtocol
 import RemoteSupport
 import Swift
 import SwiftUI
-import Toast_Swift
+import Toast
 import UIKit
 import UniformTypeIdentifiers
 import WebRTC
@@ -44,7 +44,9 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
     case magenta
     case cyan
     case white
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias AllCases = [CygnusUI.ANSI.Colors]
     public typealias RawValue = Swift.String
     nonisolated public static var allCases: [CygnusUI.ANSI.Colors] {
@@ -63,7 +65,9 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
     case magenta
     case cyan
     case white
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias AllCases = [CygnusUI.ANSI.BrightColors]
     public typealias RawValue = Swift.String
     nonisolated public static var allCases: [CygnusUI.ANSI.BrightColors] {
@@ -75,7 +79,9 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
   }
   public enum Style : Swift.String, Swift.CaseIterable {
     case bold
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias AllCases = [CygnusUI.ANSI.Style]
     public typealias RawValue = Swift.String
     nonisolated public static var allCases: [CygnusUI.ANSI.Style] {
@@ -88,13 +94,205 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
   public static func styleText(_ string: Swift.String) -> Foundation.NSAttributedString
   @objc deinit
 }
+public struct CygnusText {
+  public var ofTimes: Swift.String
+  public var accessKey: Swift.String
+  public var access: Swift.String
+  public var ackRate: Swift.String
+  public var addCommentOrSend: Swift.String
+  public var agentMessages: Swift.String
+  public var alphabetically: Swift.String
+  public var areYouSureYouWishToDisconnectFromThisDevice: Swift.String
+  public var areYouSureYouWishToEndThisSupportSession: Swift.String
+  public var asRaw: Swift.String
+  public var asUtcInCurrentTimezone: Swift.String
+  public var autoconnect: Swift.String
+  public var band: Swift.String
+  public var bigDataBufferSize: Swift.String
+  public var camera: Swift.String
+  public var cancel: Swift.String
+  public var cancelled: Swift.String
+  public var cannotAccessThatFile: Swift.String
+  public var changeYourPreferredSortingMethod: Swift.String
+  public var commandLineInterface: Swift.String
+  public var command: Swift.String
+  public var commands: Swift.String
+  public var complete: Swift.String
+  public var connect: Swift.String
+  public var connectCaps: Swift.String
+  public var connectToADevice: Swift.String
+  public var connectToADeviceCaps: Swift.String
+  public var connectToDevice: Swift.String
+  public var connectToRemoteSupport: Swift.String
+  public var connected: Swift.String
+  public var connectedColon: Swift.String
+  public var connectingToDevice: Swift.String
+  public var connectionDetails: Swift.String
+  public var connectionLost: Swift.String
+  public var continueCaps: Swift.String
+  public var couldNotFindParameterWithTheSpecifiedId: Swift.String
+  public var countParamDescriptionsInResponse: Swift.String
+  public var creatingTempFile: Swift.String
+  public var currentDeviceTime: Swift.String
+  public var currentDeviceTimeNonTimezoned: Swift.String
+  public var debugMode: Swift.String
+  public var description: Swift.String
+  public var descriptionLength: Swift.String
+  public var details: Swift.String
+  public var deviceDescription: Swift.String
+  public var deviceMessages: Swift.String
+  public var deviceParameters: Swift.String
+  public var deviceRanOutOfMemoryClearingMessageHistoryToFreeUpSomeSpace: Swift.String
+  public var device: Swift.String
+  public var disconnect: Swift.String
+  public var disconnectCaps: Swift.String
+  public var disconnectFromDevice: Swift.String
+  public var disconnected: Swift.String
+  public var discoverCommands: Swift.String
+  public var discoverParameters: Swift.String
+  public var discoverWifi: Swift.String
+  public var discovered: Swift.String
+  public var dismiss: Swift.String
+  public var done: Swift.String
+  public var downloadFile: Swift.String
+  public var downloadFileCaps: Swift.String
+  public var downloading: Swift.String
+  public var endScreenSharing: Swift.String
+  public var endSession: Swift.String
+  public var endSupportSession: Swift.String
+  public var endVideoSharing: Swift.String
+  public var enterMessage: Swift.String
+  public var enterMessageEllipses: Swift.String
+  public var enterPassword: Swift.String
+  public var enterPin: Swift.String
+  public var enterText: Swift.String
+  public var enteredInvalidStateWhileSendingMediaCantAccessScreenshotOrVideoData: Swift.String
+  public var enumDescriptions: Swift.String
+  public var error: Swift.String
+  public var errorReFetchingDeviceInfo: Swift.String
+  public var errorSendingMessages: Swift.String
+  public var failedToSetUpVideoRecorder: Swift.String
+  public var fileAccess: Swift.String
+  public var fileAccessState: Swift.String
+  public var fileDetails: Swift.String
+  public var fileId: Swift.String
+  public var fileName: Swift.String
+  public var fileSelect: Swift.String
+  public var firmwareVersion: Swift.String
+  public var getDeviceInfo: Swift.String
+  public var getFileDescriptors: Swift.String
+  public var getTime: Swift.String
+  public var hangTightWhileWeTryToReconnect: Swift.String
+  public var id: Swift.String
+  public var identifier: Swift.String
+  public var length: Swift.String
+  public var list: Swift.String
+  public var local: Swift.String
+  public var manufacturer: Swift.String
+  public var max: Swift.String
+  public var maxMessageSize: Swift.String
+  public var maxParamBytes: Swift.String
+  public var maxSize: Swift.String
+  public var mediumStringLength: Swift.String
+  public var messageType: Swift.String
+  public var messaging: Swift.String
+  public var min: Swift.String
+  public var name: Swift.String
+  public var noDeviceConnected: Swift.String
+  public var noMessages: Swift.String
+  public var none: Swift.String
+  public var numCommandsInResponse: Swift.String
+  public var numDescriptorsInResponse: Swift.String
+  public var numParamNotifications: Swift.String
+  public var numParamsInResponse: Swift.String
+  public var offset: Swift.String
+  public var open: Swift.String
+  public var paramInfoDescriptionLength: Swift.String
+  public var paramNotifyConfigCount: Swift.String
+  public var parameterBufferCount: Swift.String
+  public var parameterHash: Swift.String
+  public var parametersWith: Swift.String
+  public var password: Swift.String
+  public var permissionIsRequiredToAccessFilesInThePhotosAppWouldYouLikeToAccessSettingsToChangeThatPermission: Swift.String
+  public var photoLibrary: Swift.String
+  public var pickACommandToSend: Swift.String
+  public var pickAFileToRead: Swift.String
+  public var pickAFileToWrite: Swift.String
+  public var ping: Swift.String
+  public var pleaseEnterThePinFromTheAgentToGetStarted: Swift.String
+  public var pleaseSelectTheDeviceToTroubleshoot: Swift.String
+  public var productKeyIsNotSetPleaseSelectOneNowOrCreateOneInTheWebPortalIfYouHaventYetDoneSo: Swift.String
+  public var protocolVersion: Swift.String
+  public var reachDevice: Swift.String
+  public var reachEnabled: Swift.String
+  public var readFile: Swift.String
+  public var reconnect: Swift.String
+  public var reconnecting: Swift.String
+  public var reconnectingTo: Swift.String
+  public var recording: Swift.String
+  public var screenShare: Swift.String
+  public var security: Swift.String
+  public var selectFile: Swift.String
+  public var selectImageSource: Swift.String
+  public var selectedDeviceDoesntImplementTheReachenabledProtocolCannotAccessTheDevicesReachData: Swift.String
+  public var sendCommand: Swift.String
+  public var sendScreenshot: Swift.String
+  public var sendVideoRecording: Swift.String
+  public var services: Swift.String
+  public var setTimeAndTimezoneToCurrent: Swift.String
+  public var setTimeToPresent: Swift.String
+  public var setTimeToPresentLocalTime: Swift.String
+  public var setTimeToPresentUtc: Swift.String
+  public var shareYourCamera: Swift.String
+  public var shareYourCameraCaps: Swift.String
+  public var shareYourScreen: Swift.String
+  public var shareYourScreenCaps: Swift.String
+  public var shortStringLength: Swift.String
+  public var signalStrength: Swift.String
+  public var signalStrengthColon: Swift.String
+  public var size: Swift.String
+  public var ssid: Swift.String
+  public var ssidColon: Swift.String
+  public var startARemoteSession: Swift.String
+  public var startingFileTransfer: Swift.String
+  public var status: Swift.String
+  public var storageLocation: Swift.String
+  public var submit: Swift.String
+  public var submitCaps: Swift.String
+  public var throughput: Swift.String
+  public var time: Swift.String
+  public var timeToReadFile: Swift.String
+  public var type: Swift.String
+  public var unknown: Swift.String
+  public var unnamed: Swift.String
+  public var uploadFile: Swift.String
+  public var uploadFileCaps: Swift.String
+  public var uploading: Swift.String
+  public var useTheButtonBelowToConnectToADeviceToBeginTroubleshooting: Swift.String
+  public var useTheButtonBelowToShareYourCameraWithTheAgentToHelpThemGetABetterUnderstandingOfTheIssue: Swift.String
+  public var useTheButtonBelowToShareYourScreenWithYourAgentToHelpThemGetABetterUnderstandingOfTheIssue: Swift.String
+  public var useTheMessagingToKeepInCommunicationWithYourAgentAndLetThemKnowAnyImportantInfo: Swift.String
+  public var utc: Swift.String
+  public var videoShare: Swift.String
+  public var viewDeviceParameters: Swift.String
+  public var viewParameters: Swift.String
+  public var wifi: Swift.String
+  public var wifiAccess: Swift.String
+  public var wifiAccessState: Swift.String
+  public var writeFile: Swift.String
+  public var writeValue: Swift.String
+  public var yes: Swift.String
+  public var youreSharingYourScreenWithTheAgent: Swift.String
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SupportVideoViewController : CygnusUI.ThemeableViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String {
     get
   }
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var card: CygnusUI.Card!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var headerLabel: UIKit.UILabel!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var inactiveView: UIKit.UIView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var activeView: WebRTC.RTCMTLVideoView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var inactiveImage: UIKit.UIImageView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var shareButton: CygnusUI.PrimaryButton!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var endButton: CygnusUI.PrimaryButton!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var activityIndicator: UIKit.UIActivityIndicatorView!
@@ -108,12 +306,16 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var screenRecordButton: CygnusUI.CircleButton!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var recordingView: UIKit.UIView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var recordingTimeLabel: UIKit.UILabel!
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var remoteSupport: RemoteSupport.RemoteSupportClient? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var videoController: (any RemoteSupport.CameraStreamController)? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public var bag: Swift.Set<Combine.AnyCancellable>
   @_Concurrency.MainActor @preconcurrency public var screenshot: UIKit.UIImage?
   @_Concurrency.MainActor @preconcurrency public var recordingUrl: Foundation.URL?
@@ -124,8 +326,12 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var durationFormatter: Foundation.DateComponentsFormatter
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  #endif
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func shareButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func endButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func switchCameraTapped(_ sender: Any)
@@ -144,8 +350,12 @@ extension CygnusUI.NibLoadable where Self : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency open func handleNotification(_ args: RemoteSupport.NotificationEventArgs)
   @_Concurrency.MainActor @preconcurrency open func handleVideoCapture(_ args: RemoteSupport.VideoCaptureEventArgs)
   @_Concurrency.MainActor @preconcurrency open func handleVideoCaptureError(_ error: any Swift.Error)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.SupportVideoViewController : WebRTC.RTCVideoViewDelegate {
@@ -155,15 +365,21 @@ extension CygnusUI.SupportVideoViewController : WebRTC.RTCVideoViewDelegate {
   @_Concurrency.MainActor @preconcurrency public var connectDevice: (() -> Swift.Void)!
   @_Concurrency.MainActor @preconcurrency public var disconnectDevice: (() -> Swift.Void)!
   @_Concurrency.MainActor @preconcurrency public var endSupport: (() -> Swift.Void)!
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var connectedDevice: (any CygnusUI.Device)? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func endSupportButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func deviceButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ConnectDeviceViewController : CygnusUI.ThemeableViewController {
@@ -176,14 +392,20 @@ extension CygnusUI.SupportVideoViewController : WebRTC.RTCVideoViewDelegate {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func connect() async throws
   @_Concurrency.MainActor @preconcurrency open func shouldDisconnectOnDisappear() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency open func afterInitialConnect()
   @_Concurrency.MainActor @preconcurrency open func reconnect() async
   @objc @_Concurrency.MainActor @preconcurrency open func initiateReconnect()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachWiFiTableViewCell : UIKit.UITableViewCell {
@@ -192,9 +414,13 @@ extension CygnusUI.SupportVideoViewController : WebRTC.RTCVideoViewDelegate {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var securityLabel: UIKit.UILabel!
   @_Concurrency.MainActor @preconcurrency open func setConnectionInfo(_ connectionInfo: ReachProtocol.ConnectionDescription)
   @_Concurrency.MainActor @preconcurrency open func theme()
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public protocol CommandDelegate : AnyObject {
@@ -208,8 +434,12 @@ public protocol CommandDelegate : AnyObject {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @_Concurrency.MainActor @preconcurrency open func sendCommand(_ command: ReachProtocol.CommandInfo)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachCommandsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
@@ -220,18 +450,28 @@ extension CygnusUI.ReachCommandsViewController : UIKit.UITableViewDelegate, UIKi
 public struct ErrorResponse : Swift.Codable, Foundation.LocalizedError {
   public var message: Swift.String
   public var statusCode: Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case message
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(intValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
     public var intValue: Swift.Int? {
       get
     }
+    #endif
     public var rawValue: Swift.String {
       get
     }
@@ -256,8 +496,12 @@ public struct ErrorResponse : Swift.Codable, Foundation.LocalizedError {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func cliSendButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachCLIViewController : UIKit.UITextFieldDelegate {
@@ -266,6 +510,23 @@ extension CygnusUI.ReachCLIViewController : UIKit.UITextFieldDelegate {
 }
 extension CygnusUI.ReachCLIViewController {
   @objc @_Concurrency.MainActor @preconcurrency dynamic open func keyboardNotification(notification: Foundation.NSNotification)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class AvailableDeviceTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var nameLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var iconView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var idLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var cygnusIconImageView: UIKit.UIImageView!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func setState(_ device: any CygnusUI.Device)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SupportReconnectDialogController : CygnusUI.ThemeableViewController, CygnusUI.StoryboardView {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String {
@@ -277,8 +538,12 @@ extension CygnusUI.ReachCLIViewController {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var activityIndicator: UIKit.UIActivityIndicatorView!
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public struct SupportTabItem {
@@ -292,22 +557,32 @@ public struct SupportTabItem {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var storageLabel: UIKit.UILabel!
   @_Concurrency.MainActor @preconcurrency open func theme()
   @_Concurrency.MainActor @preconcurrency open func setFileInfo(_ fileInfo: ReachProtocol.FileInfo)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class DeviceViewController : CygnusUI.ThemeableViewController, CygnusUI.StoryboardView {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var device: (any CygnusUI.Device)? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override public func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachServiceViewController : CygnusUI.ThemeableViewController {
@@ -315,8 +590,12 @@ public struct SupportTabItem {
   @_Concurrency.MainActor @preconcurrency public var reachDevice: any CygnusUI.ReachEnabled {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public struct ReachService {
@@ -325,9 +604,11 @@ public struct ReachService {
   public let serviceId: ReachProtocol.ServiceIds
 }
 extension ReachProtocol.ServiceIds {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var serviceSummary: CygnusUI.ReachService? {
     get
   }
+  #endif
 }
 extension ReachProtocol.DeviceInfoResponse {
   public var serviceSummaries: [CygnusUI.ReachService] {
@@ -335,20 +616,28 @@ extension ReachProtocol.DeviceInfoResponse {
   }
 }
 extension UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderColor: UIKit.UIColor? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension UIKit.UIViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func showAlert(title: Swift.String? = nil, message: Swift.String?, buttonTitle: Swift.String = "Ok", action: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+  #endif
 }
 extension UIKit.UIAlertController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public static var topLevelViewController: UIKit.UIViewController? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public static func showAlert(_ alert: UIKit.UIAlertController)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public static func showAlert(title: Swift.String? = nil, message: Swift.String?, buttonTitle: Swift.String = "Ok", action: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+  #endif
 }
 extension UIKit.UITextField {
   public enum PaddingSide {
@@ -390,37 +679,57 @@ public class FileAccessViewModel {
   public var $fileAccessState: Combine.Published<CygnusUI.FileAccessState>.Publisher {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($selectedFileInfo) public var selectedFileInfo: ReachProtocol.FileInfo? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $selectedFileInfo: Combine.Published<ReachProtocol.FileInfo?>.Publisher {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($selectedUploadUrl) public var selectedUploadUrl: Foundation.URL? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $selectedUploadUrl: Combine.Published<Foundation.URL?>.Publisher {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($fileTransfer) public var fileTransfer: ReachProtocol.FileTransferInfo? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $fileTransfer: Combine.Published<ReachProtocol.FileTransferInfo?>.Publisher {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($fileDescriptors) public var fileDescriptors: [ReachProtocol.FileInfo]? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $fileDescriptors: Combine.Published<[ReachProtocol.FileInfo]?>.Publisher {
     get
   }
+  #endif
   final public let downloadedFileReady: Combine.AnyPublisher<Foundation.URL, Swift.Never>
   public init(delegate: any CygnusUI.ReachDeviceDelegate)
   public func getFileDescriptors() async throws
   public func readFile() async throws
   public func writeFile() async throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public func selectFileInfo(_ fileInfo: ReachProtocol.FileInfo?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setUploadUrl(_ url: Foundation.URL?)
+  #endif
   public func setFileAccessState(_ state: CygnusUI.FileAccessState)
   @objc deinit
 }
@@ -470,15 +779,21 @@ public class FileAccessViewModel {
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func doneButtonTapped(_ sender: Any)
   @_Concurrency.MainActor @preconcurrency open func pickFile(_ fileInfo: ReachProtocol.FileInfo)
   @_Concurrency.MainActor @preconcurrency @objc open func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachFileAccessViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
@@ -497,32 +812,190 @@ public class WiFiViewModel {
   public var $wifiViewState: Combine.Published<CygnusUI.WiFiViewState>.Publisher {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($selectedWifiInfo) public var selectedWifiInfo: ReachProtocol.ConnectionDescription? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $selectedWifiInfo: Combine.Published<ReachProtocol.ConnectionDescription?>.Publisher {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($connectResponse) public var connectResponse: ReachProtocol.WiFiConnectionResponse? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $connectResponse: Combine.Published<ReachProtocol.WiFiConnectionResponse?>.Publisher {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($wifiDescriptors) public var wifiDescriptors: [ReachProtocol.ConnectionDescription]? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $wifiDescriptors: Combine.Published<[ReachProtocol.ConnectionDescription]?>.Publisher {
     get
   }
+  #endif
   public init(delegate: any CygnusUI.ReachDeviceDelegate)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func selectWifiInfo(_ wifiInfo: ReachProtocol.ConnectionDescription?)
+  #endif
   public func setWifiViewState(_ state: CygnusUI.WiFiViewState)
   public func getWifiDescriptors() async throws
   public func reset() async throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public func connectWifi(_ password: Swift.String? = nil, _ autoconnect: Swift.Bool? = nil) async throws
+  #endif
   public func disconnectWifi() async throws
   @objc deinit
+}
+public protocol CygnusAssets {
+  var cancel: UIKit.UIImage { get }
+  var cancelRed: UIKit.UIImage { get }
+  var chat: UIKit.UIImage { get }
+  var chatDisabled: UIKit.UIImage { get }
+  var cli: UIKit.UIImage { get }
+  var close: UIKit.UIImage { get }
+  var code: UIKit.UIImage { get }
+  var commands: UIKit.UIImage { get }
+  var expandMore: UIKit.UIImage { get }
+  var expandLess: UIKit.UIImage { get }
+  var fileAccess: UIKit.UIImage { get }
+  var inactiveScreenShareImage: UIKit.UIImage { get }
+  var inactiveVideoImage: UIKit.UIImage { get }
+  var moreVertical: UIKit.UIImage { get }
+  var parameters: UIKit.UIImage { get }
+  var remoteSupportAvatar: UIKit.UIImage { get }
+  var sendEnabled: UIKit.UIImage { get }
+  var sendDisabled: UIKit.UIImage { get }
+  var screenShare: UIKit.UIImage { get }
+  var screenShareActive: UIKit.UIImage { get }
+  var screenShareDisabled: UIKit.UIImage { get }
+  var signalEmpty: UIKit.UIImage { get }
+  var signalFull: UIKit.UIImage { get }
+  var signalLow: UIKit.UIImage { get }
+  var signalMid: UIKit.UIImage { get }
+  var terminal: UIKit.UIImage { get }
+  var time: UIKit.UIImage { get }
+  var update: UIKit.UIImage { get }
+  var updateDisabled: UIKit.UIImage { get }
+  var video: UIKit.UIImage { get }
+  var videoActive: UIKit.UIImage { get }
+  var videoDisabled: UIKit.UIImage { get }
+  var wifi: UIKit.UIImage { get }
+  var x: UIKit.UIImage { get }
+}
+extension CygnusUI.CygnusAssets {
+  public var cancel: UIKit.UIImage {
+    get
+  }
+  public var cancelRed: UIKit.UIImage {
+    get
+  }
+  public var chat: UIKit.UIImage {
+    get
+  }
+  public var chatDisabled: UIKit.UIImage {
+    get
+  }
+  public var cli: UIKit.UIImage {
+    get
+  }
+  public var close: UIKit.UIImage {
+    get
+  }
+  public var code: UIKit.UIImage {
+    get
+  }
+  public var commands: UIKit.UIImage {
+    get
+  }
+  public var expandMore: UIKit.UIImage {
+    get
+  }
+  public var expandLess: UIKit.UIImage {
+    get
+  }
+  public var fileAccess: UIKit.UIImage {
+    get
+  }
+  public var inactiveScreenShareImage: UIKit.UIImage {
+    get
+  }
+  public var inactiveVideoImage: UIKit.UIImage {
+    get
+  }
+  public var moreVertical: UIKit.UIImage {
+    get
+  }
+  public var parameters: UIKit.UIImage {
+    get
+  }
+  public var remoteSupportAvatar: UIKit.UIImage {
+    get
+  }
+  public var sendEnabled: UIKit.UIImage {
+    get
+  }
+  public var sendDisabled: UIKit.UIImage {
+    get
+  }
+  public var screenShare: UIKit.UIImage {
+    get
+  }
+  public var screenShareActive: UIKit.UIImage {
+    get
+  }
+  public var screenShareDisabled: UIKit.UIImage {
+    get
+  }
+  public var signalEmpty: UIKit.UIImage {
+    get
+  }
+  public var signalFull: UIKit.UIImage {
+    get
+  }
+  public var signalLow: UIKit.UIImage {
+    get
+  }
+  public var signalMid: UIKit.UIImage {
+    get
+  }
+  public var terminal: UIKit.UIImage {
+    get
+  }
+  public var time: UIKit.UIImage {
+    get
+  }
+  public var update: UIKit.UIImage {
+    get
+  }
+  public var updateDisabled: UIKit.UIImage {
+    get
+  }
+  public var video: UIKit.UIImage {
+    get
+  }
+  public var videoActive: UIKit.UIImage {
+    get
+  }
+  public var videoDisabled: UIKit.UIImage {
+    get
+  }
+  public var wifi: UIKit.UIImage {
+    get
+  }
+  public var x: UIKit.UIImage {
+    get
+  }
+}
+public struct DefaultAssets : CygnusUI.CygnusAssets {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachInfoCollectionViewCell : UIKit.UICollectionViewCell {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var card: CygnusUI.Card!
@@ -563,7 +1036,9 @@ public class WiFiViewModel {
   @_Concurrency.MainActor @preconcurrency open func setDeviceInfoValues(_ deviceAccess: ReachProtocol.DeviceAccess)
   @_Concurrency.MainActor @preconcurrency open func theme()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public enum Colors {
@@ -579,6 +1054,8 @@ public enum Colors {
   case raisedBackground
   case red
   case warning
+  case white
+  case sentMessage
   public var color: UIKit.UIColor {
     get
   }
@@ -590,6 +1067,8 @@ public enum Colors {
 }
 @_hasMissingDesignatedInitializers final public class RemoteSupportUI {
   public static let defaultTheme: CygnusUI.DefaultTheme
+  public static let defaultText: CygnusUI.CygnusText
+  public static let defaultAssets: CygnusUI.DefaultAssets
   public static let defaultDeviceViewController: (_ device: any CygnusUI.Device) -> UIKit.UIViewController
   public static let defaultSessionTabs: [CygnusUI.SupportTabItem]
   public static let shared: CygnusUI.RemoteSupportUI
@@ -597,10 +1076,12 @@ public enum Colors {
   final public var remoteSupportUrl: Swift.String
   final public var apiKey: Swift.String
   final public var theme: any CygnusUI.CygnusTheme
+  final public var text: CygnusUI.CygnusText
+  final public var assets: any CygnusUI.CygnusAssets
   final public var enableReachDeviceFiltering: Swift.Bool
   final public var sessionTabs: [CygnusUI.SupportTabItem]
   final public var viewControllerForDevice: (any CygnusUI.Device) -> UIKit.UIViewController
-  final public func configure(deviceService: any CygnusUI.DeviceService, remoteSupportUrl: Swift.String, apiKey: Swift.String, theme: any CygnusUI.CygnusTheme = RemoteSupportUI.defaultTheme, enableReachDeviceFiltering: Swift.Bool = false, sessionTabs: [CygnusUI.SupportTabItem] = RemoteSupportUI.defaultSessionTabs, viewControllerForDevice: @escaping (any CygnusUI.Device) -> UIKit.UIViewController = RemoteSupportUI.defaultDeviceViewController)
+  final public func configure(deviceService: any CygnusUI.DeviceService, remoteSupportUrl: Swift.String, apiKey: Swift.String, theme: any CygnusUI.CygnusTheme = RemoteSupportUI.defaultTheme, text: CygnusUI.CygnusText = RemoteSupportUI.defaultText, assets: any CygnusUI.CygnusAssets = RemoteSupportUI.defaultAssets, enableReachDeviceFiltering: Swift.Bool = false, sessionTabs: [CygnusUI.SupportTabItem] = RemoteSupportUI.defaultSessionTabs, viewControllerForDevice: @escaping (any CygnusUI.Device) -> UIKit.UIViewController = RemoteSupportUI.defaultDeviceViewController)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SupportChatViewController : CygnusUI.ThemeableViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
@@ -635,8 +1116,12 @@ public enum Colors {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didReceiveMemoryWarning()
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func sendButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func cameraButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.SupportChatViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
@@ -673,12 +1158,18 @@ extension CygnusUI.SupportChatViewController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func minimizeTapped(_ sender: Any)
   @available(iOS 18.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(tabs: [UIKit.UITab])
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.SupportSessionViewController : UIKit.UIPopoverPresentationControllerDelegate {
@@ -689,7 +1180,9 @@ public enum Tabs : Swift.Int {
   case messaging
   case videoShare
   case screenShare
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -705,6 +1198,7 @@ public enum Tabs : Swift.Int {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var videoHeightConstraint: UIKit.NSLayoutConstraint?
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var videoWidthConstraint: UIKit.NSLayoutConstraint?
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var videoPlayImageView: UIKit.UIImageView?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var remoteSupportAvatar: UIKit.UIImageView?
   @_Concurrency.MainActor @preconcurrency public var loading: Swift.Bool {
     get
     set
@@ -715,9 +1209,13 @@ public enum Tabs : Swift.Int {
   @_Concurrency.MainActor @preconcurrency open func addVideo(from player: AVFoundation.AVPlayer, bounds: CoreFoundation.CGRect)
   @objc @_Concurrency.MainActor @preconcurrency open func toggleVideo()
   @_Concurrency.MainActor @preconcurrency open func stopVideo()
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension AVFoundation.AVPlayer {
@@ -730,7 +1228,9 @@ extension AVFoundation.AVPlayer {
   @_Concurrency.MainActor open func takeScreenshot() async throws -> UIKit.UIImage
   open func captureVideo(to url: Foundation.URL) throws
   open func stopCapture() async
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func renderFrame(_ frame: WebRTC.RTCVideoFrame?)
+  #endif
   @objc open func setSize(_ size: CoreFoundation.CGSize)
   @objc override dynamic public init()
   @objc deinit
@@ -761,7 +1261,9 @@ public protocol ParameterWriteDelegate : AnyObject {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func refreshButtonTapped(_ sender: Any)
   @objc @_Concurrency.MainActor @preconcurrency open func keyboardWillShow(_ notification: Foundation.Notification)
   @objc @_Concurrency.MainActor @preconcurrency open func keyboardWillHide(_ notification: Foundation.Notification)
@@ -772,15 +1274,21 @@ public protocol ParameterWriteDelegate : AnyObject {
   @_Concurrency.MainActor @preconcurrency open func readParameters()
   @_Concurrency.MainActor @preconcurrency open func setParameterValues(descriptions: ReachProtocol.ParameterDescriptions, _ parameterValues: [ReachProtocol.ParameterValue])
   @_Concurrency.MainActor @preconcurrency open func handleParameterNotification(_ message: ReachProtocol.ReachMessage)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachParametersViewController : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource {
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func updateParameterCell(index: Swift.Int, cell: CygnusUI.ParameterCollectionViewCell?)
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class BitfieldViewController : CygnusUI.ThemeableViewController, CygnusUI.StoryboardView {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String
@@ -798,8 +1306,12 @@ extension CygnusUI.ReachParametersViewController : UIKit.UICollectionViewDelegat
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func cancelButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func writeValueTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.BitfieldViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
@@ -814,11 +1326,15 @@ extension CygnusUI.BitfieldViewController : UIKit.UITableViewDelegate, UIKit.UIT
   @_Concurrency.MainActor @preconcurrency final public let bottomInset: CoreFoundation.CGFloat
   @_Concurrency.MainActor @preconcurrency final public let leftInset: CoreFoundation.CGFloat
   @_Concurrency.MainActor @preconcurrency final public let rightInset: CoreFoundation.CGFloat
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public protocol ReachWiFiViewDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func submitPasswordButtonTapped(_ password: Swift.String?)
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachWiFiViewController : CygnusUI.ReachServiceViewController, CygnusUI.StoryboardView, CygnusUI.ReachWiFiViewDelegate {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String
@@ -850,15 +1366,23 @@ public protocol ReachWiFiViewDelegate : AnyObject {
   @_Concurrency.MainActor @preconcurrency open func connectWifi(_ password: Swift.String)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func connectButtonTapped()
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func disconnectButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func submitPasswordButtonTapped(_ password: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachWiFiViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
@@ -876,6 +1400,7 @@ public enum Storyboards {
   }
 }
 @_hasMissingDesignatedInitializers public class ReachViewModel : Foundation.ObservableObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($accessKey) public var accessKey: Swift.String? {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
@@ -883,21 +1408,25 @@ public enum Storyboards {
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     _modify
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $accessKey: Combine.Published<Swift.String?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  #endif
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
 public protocol SupportTabViewController : UIKit.UIViewController {
 }
 extension CygnusUI.SupportTabViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var remoteSupport: RemoteSupport.RemoteSupportClient? {
     get
   }
+  #endif
   public func showError(message: Swift.String, duration: Foundation.TimeInterval = .infinity)
 }
 @_hasMissingDesignatedInitializers public class SupportService {
@@ -943,18 +1472,23 @@ extension CygnusUI.SupportTabViewController {
   public var $deviceStatus: Combine.Published<CygnusUI.ConnectionStatus>.Publisher {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($remoteSupport) public var remoteSupport: RemoteSupport.RemoteSupportClient? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $remoteSupport: Combine.Published<RemoteSupport.RemoteSupportClient?>.Publisher {
     get
   }
+  #endif
   @Combine.Published @_projectedValueProperty($recordingState) public var recordingState: CygnusUI.MediaRecordingState {
     get
   }
   public var $recordingState: Combine.Published<CygnusUI.MediaRecordingState>.Publisher {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($reachViewModel) public var reachViewModel: CygnusUI.ReachViewModel? {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
@@ -962,30 +1496,39 @@ extension CygnusUI.SupportTabViewController {
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     _modify
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $reachViewModel: Combine.Published<CygnusUI.ReachViewModel?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @Combine.Published @_projectedValueProperty($selectedDevice) public var selectedDevice: (any CygnusUI.Device)? {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var $selectedDevice: Combine.Published<(any CygnusUI.Device)?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
+  #endif
   public var isConnected: Swift.Bool {
     get
   }
   public var sessionActive: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var sessionPin: Swift.String? {
     get
   }
+  #endif
   public var logger: CygnusUI.TextViewLogger {
     get
   }
@@ -1018,8 +1561,12 @@ extension CygnusUI.SupportService {
   public func takeScreenshot(mediaType: CygnusUI.MediaSharingType = .video) -> PromiseKit.Promise<UIKit.UIImage>
   public func sendScreenshot(_ image: UIKit.UIImage, requested: Swift.Bool) -> PromiseKit.Promise<Swift.Void>
   public func createVideoRecordingUrl() -> Foundation.URL
+  #if compiler(>=5.3) && $NonescapableTypes
   public func startVideoRecording(url: Foundation.URL, mediaType: CygnusUI.MediaSharingType = .video, context: RemoteSupport.RSCommandContext? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func stopVideoRecording(mediaType: CygnusUI.MediaSharingType = .video, context: RemoteSupport.RSCommandContext? = nil) async
+  #endif
   public func sendVideoRecording(_ url: Foundation.URL, requested: Swift.Bool) -> PromiseKit.Promise<Swift.Void>
   public func addScreenDrawLines(_ lines: [CoreFoundation.CGPoint], expiration: Swift.Double = 0.8, onLinesExpired: @escaping () -> Swift.Void)
   public func removeScreenDrawLines(at index: Swift.Int)
@@ -1035,9 +1582,14 @@ extension CygnusUI.SupportService {
   public func sendVideo(_ url: Foundation.URL) -> PromiseKit.Promise<Swift.Void>
   public func clearMessages()
 }
-@objc @_Concurrency.MainActor @preconcurrency open class PrimaryButton : UIKit.UIButton {
+@objc @IBDesignable @_Concurrency.MainActor @preconcurrency open class PrimaryButton : UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var textKey: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
   @_Concurrency.MainActor @preconcurrency public func setBackgroundColor(_ color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public func applyTextFromCygnus()
   @objc deinit
 }
 public enum DeviceSortCriteria {
@@ -1053,6 +1605,7 @@ public enum DeviceSortCriteria {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String {
     get
   }
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var headerLabel: UIKit.UILabel!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var searchBar: UIKit.UISearchBar!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var tableView: UIKit.UITableView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var sortButton: UIKit.UIButton!
@@ -1060,9 +1613,11 @@ public enum DeviceSortCriteria {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var bottomConstraint: UIKit.NSLayoutConstraint!
   @_Concurrency.MainActor @preconcurrency public var sortCriteria: CygnusUI.DeviceSortCriteria
   @_Concurrency.MainActor @preconcurrency public var initialLoadComplete: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var deviceService: (any CygnusUI.DeviceService)? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public var supportSessionConnect: Swift.Bool
   @_Concurrency.MainActor @preconcurrency public var bleDelegateId: Swift.String
   @_Concurrency.MainActor @preconcurrency public var scannedDevices: [any CygnusUI.Device]
@@ -1083,18 +1638,23 @@ public enum DeviceSortCriteria {
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func closeButtonTapped(_ sender: Any)
   @objc @_Concurrency.MainActor @preconcurrency open func reloadDevices()
   @_Concurrency.MainActor @preconcurrency open func listenToRssi(device: any CygnusUI.Device)
+  @_Concurrency.MainActor @preconcurrency open func onRssiSubject(device: any CygnusUI.Device)
   @_Concurrency.MainActor @preconcurrency open func setDevices()
   @_Concurrency.MainActor @preconcurrency open func reloadTableView()
   @_Concurrency.MainActor @preconcurrency open func sortDevices()
   @_Concurrency.MainActor @preconcurrency open func navigateToDeviceView(device: any CygnusUI.Device)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.AvailableDevicesViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
@@ -1112,6 +1672,10 @@ public protocol CygnusTheme {
   var background: UIKit.UIColor { get }
   var raisedBackground: UIKit.UIColor { get }
   var border: UIKit.UIColor { get }
+  var sentMessage: UIKit.UIColor { get }
+  var white: UIKit.UIColor { get }
+  var selectedTabTint: UIKit.UIColor { get }
+  var tabRowBackground: UIKit.UIColor { get }
 }
 extension CygnusUI.CygnusTheme {
   public var primary: UIKit.UIColor {
@@ -1132,15 +1696,32 @@ extension CygnusUI.CygnusTheme {
   public var border: UIKit.UIColor {
     get
   }
+  public var sentMessage: UIKit.UIColor {
+    get
+  }
+  public var white: UIKit.UIColor {
+    get
+  }
+  public var selectedTabTint: UIKit.UIColor {
+    get
+  }
+  public var tabRowBackground: UIKit.UIColor {
+    get
+  }
 }
 public struct DefaultTheme : CygnusUI.CygnusTheme {
 }
 @objc @IBDesignable @_Concurrency.MainActor @preconcurrency open class OutlineButton : UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var textKey: Swift.String?
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var customBorderColor: Swift.Bool {
     @objc get
     @objc set
   }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func applyTextFromCygnus()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ParameterCollectionViewCell : UIKit.UICollectionViewCell {
@@ -1161,12 +1742,16 @@ public struct DefaultTheme : CygnusUI.CygnusTheme {
   @_Concurrency.MainActor @preconcurrency weak public var writeDelegate: (any CygnusUI.ParameterWriteDelegate)!
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func preferredLayoutAttributesFitting(_ layoutAttributes: UIKit.UICollectionViewLayoutAttributes) -> UIKit.UICollectionViewLayoutAttributes
   @_Concurrency.MainActor @preconcurrency open func theme()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func setParameter(container: ReachProtocol.ParameterContainer, editedValue: Swift.String?, enumCases: [ReachProtocol.ParamExKey]?)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func setExpanded(_ expanded: Swift.Bool)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func sendButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func parameterSwitchValueChanged(_ sender: Any)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ParameterCollectionViewCell : UIKit.UITextFieldDelegate {
@@ -1178,7 +1763,9 @@ extension CygnusUI.ParameterCollectionViewCell : UIKit.UITextFieldDelegate {
 extension CygnusUI.ParameterCollectionViewCell : UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachTimeViewController : CygnusUI.ReachServiceViewController, UIKit.UIDocumentPickerDelegate, CygnusUI.StoryboardView {
@@ -1210,8 +1797,12 @@ extension CygnusUI.ParameterCollectionViewCell : UIKit.UIPickerViewDelegate, UIK
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func utcButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func localButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func refreshButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SupportDeviceViewController : CygnusUI.ThemeableViewController, CygnusUI.SupportTabViewController, CygnusUI.StoryboardView {
@@ -1225,15 +1816,23 @@ extension CygnusUI.ParameterCollectionViewCell : UIKit.UIPickerViewDelegate, UIK
   @_Concurrency.MainActor @preconcurrency public var logger: CygnusUI.TextViewLogger {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var connectedDevice: (any CygnusUI.Device)? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func deviceButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachDiagnosticViewController : CygnusUI.ConnectDeviceViewController, CygnusUI.ReachViewDelegate {
@@ -1290,7 +1889,9 @@ extension CygnusUI.ParameterCollectionViewCell : UIKit.UIPickerViewDelegate, UIK
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @_Concurrency.MainActor @preconcurrency override open func afterInitialConnect()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency open func keyboardNotification(notification: Foundation.NSNotification)
   @objc @_Concurrency.MainActor @preconcurrency open func debugViewButtonTapped()
   @objc @_Concurrency.MainActor @preconcurrency open func terminalButtonTapped()
@@ -1312,8 +1913,12 @@ extension CygnusUI.ParameterCollectionViewCell : UIKit.UIPickerViewDelegate, UIK
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func cliSendButtonTapped(_ sender: Any)
   @_Concurrency.MainActor @preconcurrency open func checkDeviceInfo() async throws
   @_Concurrency.MainActor @preconcurrency open func showError(_ error: any Swift.Error, in view: UIKit.UIView)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachDiagnosticViewController : UIKit.UITextFieldDelegate {
@@ -1326,12 +1931,18 @@ extension CygnusUI.ReachDiagnosticViewController : UIKit.UITextFieldDelegate {
   }
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public protocol Device {
+  #if compiler(>=5.3) && $NonescapableTypes
   var name: Swift.String? { get set }
+  #endif
   var identifier: Swift.String { get }
   var connectionStatusSubject: Combine.CurrentValueSubject<CygnusUI.ConnectionStatus, Swift.Never> { get }
   var rssiSubject: Combine.CurrentValueSubject<Swift.Int, Swift.Never> { get }
@@ -1354,7 +1965,9 @@ public enum DeviceRssiType : Swift.Int {
   public var image: UIKit.UIImage {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1362,9 +1975,13 @@ public enum DeviceRssiType : Swift.Int {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class BitfieldTableViewCell : UIKit.UITableViewCell {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public let maxDebugLength: Swift.Int
@@ -1417,13 +2034,19 @@ public protocol ReachViewDelegate : CygnusUI.ReachDeviceDelegate {
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @_Concurrency.MainActor @preconcurrency override open func connect() async throws
   @_Concurrency.MainActor @preconcurrency override open func afterInitialConnect()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func getDeviceInfo() async throws
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func supportButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func showMenuItems()
   @_Concurrency.MainActor @preconcurrency open func showError(_ error: any Swift.Error, in view: UIKit.UIView)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.ReachViewController : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
@@ -1457,7 +2080,9 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
   public var color: UIKit.UIColor {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1473,10 +2098,14 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
   }
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var statusView: UIKit.UIView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var statusLabel: UIKit.UILabel!
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func setStatus(to status: CygnusUI.ConnectionStatus, text: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachCommandTableViewCell : UIKit.UITableViewCell {
@@ -1487,13 +2116,19 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
   @_Concurrency.MainActor @preconcurrency open func theme()
   @_Concurrency.MainActor @preconcurrency open func setCommand(_ command: ReachProtocol.CommandInfo)
   @_Concurrency.MainActor @preconcurrency open func setLoading(_ loading: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_Concurrency.MainActor @preconcurrency open class DragHandle : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
   @objc deinit
 }
@@ -1507,8 +2142,12 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var cancelButton: UIKit.UIButton!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var submitButton: UIKit.UIButton!
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ReachAccessKeyViewController : CygnusUI.ThemeableViewController {
@@ -1521,8 +2160,12 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func setKeyTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func cancelTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @IBDesignable @_Concurrency.MainActor @preconcurrency public class Card : UIKit.UIView {
@@ -1530,7 +2173,9 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SetupSupportViewController : CygnusUI.ThemeableViewController, CygnusUI.StoryboardView {
@@ -1549,9 +2194,17 @@ public enum ConnectionStatus : Swift.String, Swift.Codable {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  #endif
+  @_Concurrency.MainActor @preconcurrency open func getPin() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency open func attemptSession()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension CygnusUI.SetupSupportViewController : UIKit.UITextFieldDelegate {
@@ -1566,7 +2219,9 @@ public class ChatMessage {
   public var message: Swift.String?
   public var image: UIKit.UIImage?
   public var player: AVFoundation.AVPlayer?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.Int = -1, sent: Swift.Bool, loading: Swift.Bool = false, message: Swift.String? = nil, image: UIKit.UIImage? = nil, player: AVFoundation.AVPlayer? = nil)
+  #endif
   @objc deinit
 }
 public enum MessageCategory : Swift.UInt16 {
@@ -1583,7 +2238,9 @@ public enum MessageCategory : Swift.UInt16 {
   case disconnectFromDevice
   case deviceSummary
   case reachProtocol
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt16)
+  #endif
   public typealias RawValue = Swift.UInt16
   public var rawValue: Swift.UInt16 {
     get
@@ -1592,7 +2249,9 @@ public enum MessageCategory : Swift.UInt16 {
 public enum MediaSharingType : Swift.Int32 {
   case video
   case screen
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int32)
+  #endif
   public typealias RawValue = Swift.Int32
   public var rawValue: Swift.Int32 {
     get
@@ -1601,7 +2260,9 @@ public enum MediaSharingType : Swift.Int32 {
 public enum MediaStateChange : Swift.Int32 {
   case start
   case end
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int32)
+  #endif
   public typealias RawValue = Swift.Int32
   public var rawValue: Swift.Int32 {
     get
@@ -1632,6 +2293,26 @@ public enum MessageErrors : RemoteSupport.RSErrorResponse {
   public var statusCode: Swift.UInt32 {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class CygnusTabBarItem : UIKit.UITabBarItem {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var textKey: Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency public func applyTextFromCygnus()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class CygnusNavigationItem : UIKit.UINavigationItem {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var textKey: Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency public func applyTextFromCygnus()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(title: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
 }
 public enum TimeViewState : Swift.Equatable {
   case timezoned
@@ -1665,14 +2346,26 @@ public class TimeViewModel {
   public var isContentOverflowing: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(textView: UIKit.UITextView? = nil)
+  #endif
   public func clearText()
   public func scrollToBottom()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func trace(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func debug(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func error(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func info(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func warn(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
+  #endif
   @objc deinit
 }
 extension CygnusUI.TextViewLogger : UIKit.UITextViewDelegate {
@@ -1682,19 +2375,25 @@ extension CygnusUI.TextViewLogger : UIKit.UITextViewDelegate {
   @_Concurrency.MainActor @preconcurrency public static var storyboardIdentifier: Swift.String {
     get
   }
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var card: CygnusUI.Card!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var headerLabel: UIKit.UILabel!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var inactiveView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var inactiveImage: UIKit.UIImageView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var activeView: UIKit.UIView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var shareButton: CygnusUI.PrimaryButton!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var endButton: CygnusUI.PrimaryButton!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var activityIndicator: UIKit.UIActivityIndicatorView!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var screenShareAlertLabel: UIKit.UILabel!
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var remoteSupport: RemoteSupport.RemoteSupportClient? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var screenController: (any RemoteSupport.ScreenCaptureController)? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public var bag: Swift.Set<Combine.AnyCancellable>
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
@@ -1706,14 +2405,20 @@ extension CygnusUI.TextViewLogger : UIKit.UITextViewDelegate {
   @_Concurrency.MainActor @preconcurrency open func sendStop()
   @_Concurrency.MainActor @preconcurrency open func handleScreenCapture(_ args: RemoteSupport.ScreenCaptureEventArgs)
   @_Concurrency.MainActor @preconcurrency open func handleScreenCaptureError(_ error: any Swift.Error)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CircleButton : UIKit.UIButton {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public protocol DeviceService {
@@ -1729,7 +2434,9 @@ public protocol DeviceService {
   @_Concurrency.MainActor @preconcurrency open func setService(_ service: CygnusUI.ReachService)
   @_Concurrency.MainActor @preconcurrency open func theme()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public protocol ReachEnabled {
@@ -1752,11 +2459,17 @@ public protocol ReachDiagnostic : CygnusUI.ReachEnabled {
   @_Concurrency.MainActor @preconcurrency public var onError: ((any Swift.Error) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency override open func themeViews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  #endif
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func sendButtonTapped(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency open func closeButtonTapped(_ sender: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public enum Assets {
@@ -1771,13 +2484,20 @@ public enum Assets {
   case expandMore
   case expandLess
   case fileAccess
+  case inactiveScreenShareImage
+  case inactiveVideoImage
   case moreVertical
   case parameters
+  case remoteSupportAvatar
   case sendDisabled
   case sendEnabled
   case screenShare
   case screenShareActive
   case screenShareDisabled
+  case signalEmpty
+  case signalFull
+  case signalLow
+  case signalMid
   case terminal
   case time
   case update
