@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RemoteSupport-Swift.h</key>
 		<data>
-		69vO1eND122ymQZL6sayvLtRbNQ=
+		wstfW/ucaMncUyXx7lYGNZAR6j8=
 		</data>
 		<key>Headers/RemoteSupport.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FIQpyC1c0CmyVvhfocUb3Rjw2ws=
+		nDYnIwKIK8LuUYBrlD4qoqk6lEE=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		sIS3E5gNS+aRUEWPtDprpZj2YUo=
+		pSvDez5jWnSTw3fx2QQLv5PffDY=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		JRNyn2KCARUZx753BCCPndUrGfk=
+		1pn15MxSQqnvYQWuuQ4bXHS1L7k=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sIS3E5gNS+aRUEWPtDprpZj2YUo=
+		pSvDez5jWnSTw3fx2QQLv5PffDY=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7gXsyO5oYm9CNbupJjbUzoiN2jM=
+		i1MKRdrKco5cEEJHql2+q9gu548=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		oEVVpTq9EdFKdXFL3ctWHQmOIBA=
+		YV0GMWmNFL/OxH4Ofloq5rRh3ck=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		V+IloBLLaJSPk2i3KghlnsCPN+I=
+		t5ZonGS9wgBZSizznijOrDnbhZU=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		oEVVpTq9EdFKdXFL3ctWHQmOIBA=
+		YV0GMWmNFL/OxH4Ofloq5rRh3ck=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		u0AYR0qZu89mL1BXduWcWPFtvGU=
+		LKxb3+iilBiUCkTIBMia3icNWhU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tnuzc/PfoiES6AdvlloB/Js85o4eM25aSnqY72mk5Ug=
+			G/DxG7QZcrNS2BEQPyvgqjanllHDOTACgCkY0o+ib6w=
 			</data>
 		</dict>
 		<key>Headers/RemoteSupport.h</key>
@@ -88,28 +88,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H0OIklIeiVfYOXvQrYDlVjbtz7OA60bYI+LZBWNrqlM=
+			jOc19eMbqD3jaBy6WRcydDotKMjSTU/uLbct4xpd91k=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pffJZW/NFiWFMEFjv5LSBZwnPwjsTtBHlSuc6UHuN2Q=
+			4AJHFbjgKTLGzPZY+sqs8/DPSdxx5ggAQmhqyUnXR6M=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H0OIklIeiVfYOXvQrYDlVjbtz7OA60bYI+LZBWNrqlM=
+			jOc19eMbqD3jaBy6WRcydDotKMjSTU/uLbct4xpd91k=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MJKOMF48UJtUp14+obZEaequ11uPNHbHwRUq7UlgvPA=
+			hBB9zav+InIQmfQFiTYI1ncOygYCEhpjesWadBH7DJ0=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KRE6XjmyZUCbboyjNbHnSw8h/hnLC+uooHpDpkCQoj8=
+			ogKgVMvmmmZKKhQVEUbCvLdMo3FIhdvqGY0VQ2FfjRo=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RP26OuivlFmQkAzIVYdBi7NOd12EmQRWNYuwUt84G0I=
+			DmNO+ogtgTKx3Jq6j2eH+Zs1FqNVkWaRL48XZhu0xv8=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KRE6XjmyZUCbboyjNbHnSw8h/hnLC+uooHpDpkCQoj8=
+			ogKgVMvmmmZKKhQVEUbCvLdMo3FIhdvqGY0VQ2FfjRo=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			68cFPNzhLc3ab8r+t5tceSxPNcayF+iZCupxdhMQdEc=
+			buf3W6Mqxv22liaplJ8a8mRFsSO6foPXj1FhdfM3S3k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

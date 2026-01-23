@@ -104986,373 +104986,373 @@
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3464,
+      "offset": 3477,
+      "length": 15,
+      "value": "\"camera-switch\""
+    },
+    {
+      "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3614,
       "length": 8,
       "value": "\"cancel\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3601,
+      "offset": 3751,
       "length": 12,
       "value": "\"cancel-red\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3731,
+      "offset": 3881,
       "length": 6,
       "value": "\"chat\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 3872,
+      "offset": 4022,
       "length": 15,
       "value": "\"chat-disabled\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4018,
+      "offset": 4168,
       "length": 13,
       "value": "\"check-small\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4151,
+      "offset": 4301,
       "length": 7,
       "value": "\"close\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4276,
+      "offset": 4426,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4407,
+      "offset": 4557,
       "length": 10,
       "value": "\"code-off\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4550,
+      "offset": 4700,
       "length": 14,
       "value": "\"command-line\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4690,
+      "offset": 4840,
       "length": 10,
       "value": "\"commands\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4841,
+      "offset": 4991,
       "length": 18,
       "value": "\"customer-support\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4994,
+      "offset": 5144,
       "length": 15,
       "value": "\"cygnus-splash\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5155,
+      "offset": 5305,
       "length": 21,
       "value": "\"cygnus-splash-plain\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5323,
+      "offset": 5473,
       "length": 21,
       "value": "\"device-illustration\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5473,
+      "offset": 5623,
       "length": 12,
       "value": "\"expand-all\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5616,
+      "offset": 5766,
       "length": 13,
       "value": "\"expand-less\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5760,
+      "offset": 5910,
       "length": 13,
       "value": "\"expand-more\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5904,
+      "offset": 6054,
       "length": 13,
       "value": "\"file-access\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6039,
+      "offset": 6189,
       "length": 8,
       "value": "\"filter\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6174,
+      "offset": 6324,
       "length": 11,
       "value": "\"font-size\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6336,
+      "offset": 6486,
       "length": 23,
       "value": "\"messages-illustration\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6494,
+      "offset": 6644,
       "length": 15,
       "value": "\"more-vertical\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6639,
+      "offset": 6789,
       "length": 12,
       "value": "\"parameters\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6769,
+      "offset": 6919,
       "length": 6,
       "value": "\"play\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6897,
+      "offset": 7047,
       "length": 8,
       "value": "\"record\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7033,
+      "offset": 7183,
       "length": 11,
       "value": "\"recording\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7168,
+      "offset": 7318,
       "length": 9,
       "value": "\"refresh\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7327,
+      "offset": 7477,
       "length": 23,
       "value": "\"remote-support-avatar\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7483,
+      "offset": 7633,
       "length": 14,
       "value": "\"screen-share\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7643,
+      "offset": 7793,
       "length": 21,
       "value": "\"screen-share-active\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7814,
+      "offset": 7964,
       "length": 23,
       "value": "\"screen-share-disabled\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7995,
+      "offset": 8145,
       "length": 27,
       "value": "\"screen-share-illustration\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8152,
+      "offset": 8302,
       "length": 12,
       "value": "\"screenshot\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8282,
+      "offset": 8432,
       "length": 6,
       "value": "\"send\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8419,
+      "offset": 8569,
       "length": 13,
       "value": "\"send-orange\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8561,
+      "offset": 8711,
       "length": 12,
       "value": "\"send-white\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8706,
+      "offset": 8856,
       "length": 14,
       "value": "\"signal-empty\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8851,
+      "offset": 9001,
       "length": 13,
       "value": "\"signal-full\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 8993,
+      "offset": 9143,
       "length": 12,
       "value": "\"signal-low\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9134,
+      "offset": 9284,
       "length": 12,
       "value": "\"signal-mid\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9279,
+      "offset": 9429,
       "length": 14,
       "value": "\"support-team\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9419,
+      "offset": 9569,
       "length": 10,
       "value": "\"terminal\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9547,
+      "offset": 9697,
       "length": 6,
       "value": "\"time\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9675,
+      "offset": 9825,
       "length": 8,
       "value": "\"update\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9822,
+      "offset": 9972,
       "length": 17,
       "value": "\"update-disabled\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 9959,
+      "offset": 10109,
       "length": 7,
       "value": "\"video\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 10099,
+      "offset": 10249,
       "length": 14,
       "value": "\"video-active\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 10250,
+      "offset": 10400,
       "length": 16,
       "value": "\"video-disabled\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 10422,
+      "offset": 10572,
       "length": 26,
       "value": "\"video-share-illustration\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 10579,
+      "offset": 10729,
       "length": 13,
       "value": "\"video-white\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 10710,
+      "offset": 10860,
       "length": 6,
       "value": "\"wifi\""
     },
     {
       "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 10828,
+      "offset": 10978,
       "length": 3,
       "value": "\"x\""
-    },
-    {
-      "filePath": "\/Users\/jkinross\/Library\/Developer\/Xcode\/DerivedData\/RemoteSupport-gotqghlxyihxmjbzzkpwxdaadzft\/Build\/Intermediates.noindex\/ArchiveIntermediates\/CygnusUI-Release\/IntermediateBuildFilesPath\/CygnusUI.build\/Release-iphonesimulator\/CygnusUI.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 10966,
-      "length": 15,
-      "value": "\"camera-switch\""
     }
   ]
 }

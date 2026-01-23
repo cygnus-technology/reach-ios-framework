@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ReachProtocol-Swift.h</key>
 		<data>
-		yTRHfUdL1yODqaLMLZoV5V+hGgc=
+		KcIO7UWR68a6e3ZwfQr53OtAdBo=
 		</data>
 		<key>Headers/ReachProtocol.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lnN/Tc+gdtQ/weytlbrjdFUXcJI=
+		myB+imB2q27DELozsNOrOBEAgG0=
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		ou0NhzhHPgMQk6jS3z+hgaMAEXg=
+		yjczQLkJAu+0xiq3KlHGYtz9Rxc=
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		qi9oJk+FDwzNVQaFX6ptbmmTXn0=
+		q2VZH9Nmy8cfRXlfhx/lAndqZ44=
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		/92ks/y306HqEhsJKHUZscManiU=
+		SeSuhk+IBBcejbOlUZRjgixZfhY=
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		qi9oJk+FDwzNVQaFX6ptbmmTXn0=
+		q2VZH9Nmy8cfRXlfhx/lAndqZ44=
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vGa9UIx5pNZaTrKUo4JxbApItoU=
+		dcAyecpXjfx2SvJ8wVIgDW+UD9Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tEbYIKW/yyhZoqdhHFpaClB/2n45mThV15M1hJVg+9E=
+			si0X6amXnlqgZj/pg8R6RgI6BZ9ieL1J6HS7Qe9uM8s=
 			</data>
 		</dict>
 		<key>Headers/ReachProtocol.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n00ixuFj6z0DS1mzrpBqRxD9o3Uh/kvy0xtsOGLku3M=
+			ATterJU4netMkwXOoq8caCqX4Ca55977FCero59FpWA=
 			</data>
 		</dict>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x2VIKzJ0MTIiWJ2NBX6YoN/rKyp+qKxCnjztXX5sv2g=
+			EEvj7UKu5/8k9W2lp9wimoNlZzPgayLqM8CUG58FWKw=
 			</data>
 		</dict>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			scpDN44LmEeTVe0fQe/E0YIpGwesgNS4RfWMFIUuppE=
+			cs6FHGlC63rHDxAZtWElN4OHJdS0Fw/M5lLZoCEJ35A=
 			</data>
 		</dict>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x2VIKzJ0MTIiWJ2NBX6YoN/rKyp+qKxCnjztXX5sv2g=
+			EEvj7UKu5/8k9W2lp9wimoNlZzPgayLqM8CUG58FWKw=
 			</data>
 		</dict>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			10WHr76tvMzmZYRAQd4shR5+f3CtRYdvkSU7Erb6AUU=
+			aomTstnMbqvaawg68wzdVbZlM0Tct1hPrW6wMbh57hA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
