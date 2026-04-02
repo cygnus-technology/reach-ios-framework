@@ -5,17 +5,19 @@ import PackageDescription
 
 let package = Package(
     name: "CygnusReach",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v16)],
     products: [
         .library(
             name: "RemoteSupport",
-            type: .static,
             targets: ["RemoteSupportTarget"]
         ),
         .library(
             name: "ReachProtocol",
-            type: .static,
             targets: ["ReachProtocolTarget"]
+        ),
+        .library(
+            name: "Session",
+            targets: ["SessionTarget"]
         ),
         .library(
             name: "SessionUI",
@@ -60,12 +62,12 @@ let package = Package(
         .target(
             name: "SessionTarget",
             dependencies: [
-                .target(name: "RemoteSupport"),
-                .target(name: "ReachProtocol"),
+                .target(name: "RemoteSupportTarget"),
+                .target(name: "ReachProtocolTarget"),
                 .target(name: "Session")
             ],
-            path: "SessionUIWrap"
-        )
+            path: "SessionWrap"
+        ),
         .binaryTarget(
             name: "SessionUI",
             path: "SessionUI.xcframework"
@@ -73,7 +75,7 @@ let package = Package(
         .target(
             name: "SessionUITarget",
             dependencies: [
-                .target(name: "Session"),
+                .target(name: "SessionTarget"),
                 .target(name: "SessionUI")
             ],
             path: "SessionUIWrap"
