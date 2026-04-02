@@ -1,17 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RemoteSupport
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RemoteSupport
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import AVFoundation
-import CocoaMQTT
 import Combine
 import Foundation
-import PromiseKit
-@_exported import RemoteSupport
 import ReplayKit
 import Swift
 import SystemConfiguration
-import WebRTC
+@preconcurrency import WebRTC
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -127,14 +124,17 @@ extension Swift.UInt64 : RemoteSupport.Scalar {
   final public let onScreenCaptureRemoved: Combine.AnyPublisher<Swift.Void, Swift.Never>
   final public let onVideoCaptureFailed: Combine.AnyPublisher<any Swift.Error, Swift.Never>
   final public let onScreenCaptureFailed: Combine.AnyPublisher<any Swift.Error, Swift.Never>
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(apiUrlBase: Swift.String, apiKey: Swift.String, retainLogs: Swift.Bool, timeout: Swift.Int = 5, logger: (any RemoteSupport.Logger)? = nil)
-  #endif
   @objc deinit
-  public func initiateSupportSession() -> PromiseKit.Promise<Swift.String>
-  public func connectToSupportSession(pin: Swift.String) -> PromiseKit.Promise<Swift.Void>
-  @discardableResult
-  public func disconnect(sendDisconnect: Swift.Bool = true) -> PromiseKit.Promise<Swift.Void>
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func initiateSupportSession() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func connectToSupportSession(pin: Swift.String) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func disconnect(sendDisconnect: Swift.Bool = true) async throws
+  #endif
 }
 extension RemoteSupport.RemoteSupportClient {
   public func setByteDefaults(category: Swift.UInt16, tag: Swift.String)
@@ -142,13 +142,25 @@ extension RemoteSupport.RemoteSupportClient {
   public func setObjectDefaults(category: Swift.UInt16, tag: Swift.String)
 }
 extension RemoteSupport.RemoteSupportClient {
-  public func sendNotification(notification: RemoteSupport.RSNotification) -> PromiseKit.Promise<Swift.Void>
-  public func sendCommand(command: RemoteSupport.RSCommand, timeout: Foundation.TimeInterval = 30) -> PromiseKit.Promise<Swift.Void>
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func sendNotification(notification: RemoteSupport.RSNotification) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func sendCommand(command: RemoteSupport.RSCommand, timeout: Foundation.TimeInterval = 30) async throws
+  #endif
   public func sendQuery(query: RemoteSupport.RSQuery, timeout: Swift.Double = 30, onReceived: @escaping (_ response: RemoteSupport.RSTaggedData, _ isLastMessage: Swift.Bool) -> Swift.Void = { _, _ in }) -> RemoteSupport.RSQueryReceipt
-  public func sendBytes(data: Foundation.Data, tag: Swift.String = DefaultTag.Bytes, category: Swift.UInt16 = DefaultCategory.Bytes) -> PromiseKit.Promise<Swift.Void>
-  public func sendChat(text: Swift.String, tag: Swift.String = DefaultTag.Chat, category: Swift.UInt16 = DefaultCategory.Chat) -> PromiseKit.Promise<Swift.Void>
-  public func sendLog(text: Swift.String, tag: Swift.String = DefaultTag.Log, category: Swift.UInt16 = DefaultCategory.Log) -> PromiseKit.Promise<Swift.Void>
-  public func sendEncodable<T>(of type: T.Type, encodable: T, tag: Swift.String = DefaultTag.Object, category: Swift.UInt16 = DefaultCategory.Object) -> PromiseKit.Promise<Swift.Void> where T : Swift.Encodable
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func sendBytes(data: Foundation.Data, tag: Swift.String = DefaultTag.Bytes, category: Swift.UInt16 = DefaultCategory.Bytes) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func sendChat(text: Swift.String, tag: Swift.String = DefaultTag.Chat, category: Swift.UInt16 = DefaultCategory.Chat) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func sendLog(text: Swift.String, tag: Swift.String = DefaultTag.Log, category: Swift.UInt16 = DefaultCategory.Log) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func sendEncodable<T>(of type: T.Type, encodable: T, tag: Swift.String = DefaultTag.Object, category: Swift.UInt16 = DefaultCategory.Object) async throws where T : Swift.Encodable
+  #endif
 }
 extension RemoteSupport.RemoteSupportClient {
   public func addVideoStream(_ configuration: RemoteSupport.CameraFormat) -> Swift.Bool
@@ -162,11 +174,9 @@ public enum WebRTCError : Foundation.LocalizedError {
   case failedToSendData
   case timeout(operation: Swift.String)
   case checksumFailed
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
 }
 public enum RemoteSupportError : Foundation.LocalizedError {
   case failedToInitialize(title: Swift.String, message: Swift.String)
@@ -176,11 +186,9 @@ public enum RemoteSupportError : Foundation.LocalizedError {
   case queryTimedOut(Foundation.TimeInterval)
   case failedToSend(messageType: Swift.String)
   case networkRequestFailed(title: Swift.String, message: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
   public var title: Swift.String {
     get
   }
@@ -257,7 +265,9 @@ public struct CameraInfo : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol MediaStreamController {
-  func start() -> PromiseKit.Promise<Swift.Void>
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) func start() async throws
+  #endif
   func stop()
   var isStarted: Swift.Bool { get }
   func addVideoSink(sink: any WebRTC.RTCVideoRenderer)
@@ -265,19 +275,23 @@ public protocol MediaStreamController {
 }
 public protocol CameraStreamController : RemoteSupport.MediaStreamController {
   var cameraName: Swift.String { get set }
-  func switchCamera(_ camera: RemoteSupport.CameraFormat) -> PromiseKit.Promise<Swift.Void>
-  func changeFormat(_ format: RemoteSupport.FrameFormat) -> PromiseKit.Promise<Swift.Void>
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) func switchCamera(_ camera: RemoteSupport.CameraFormat) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) func changeFormat(_ format: RemoteSupport.FrameFormat) async throws
+  #endif
 }
 public protocol ScreenCaptureController : RemoteSupport.MediaStreamController {
   var format: RemoteSupport.FrameSize { get set }
-  func changeFormat(_ format: RemoteSupport.FrameSize) -> PromiseKit.Promise<Swift.Void>
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) func changeFormat(_ format: RemoteSupport.FrameSize) async throws
+  #endif
 }
 public enum WebRtcClientRole : Swift.String, Swift.Encodable {
   case offer
   case answer
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -302,7 +316,7 @@ public struct DefaultCategory {
   public static var Bytes: Swift.UInt16
   public static var Object: Swift.UInt16
 }
-public struct RSTaggedData {
+public struct RSTaggedData : Swift.Sendable {
   public let tag: Swift.String
   public let data: Foundation.Data
   public init(tag: Swift.String, data: Foundation.Data)
@@ -318,9 +332,7 @@ public struct RSNotification {
 public enum RSAcknowledgeOn : Swift.UInt8 {
   case received
   case finished
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt8)
-  #endif
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
     get
@@ -349,10 +361,11 @@ public struct RSQueryContext {
   public func respond(_ data: RemoteSupport.RSTaggedData, isLastMessage: Swift.Bool = true)
   public func error(_ error: any RemoteSupport.RSErrorResponse)
 }
-public struct RSQueryReceipt {
-  public var complete: PromiseKit.Promise<Swift.Void> {
-    get
-  }
+@_hasMissingDesignatedInitializers public class RSQueryReceipt {
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func wait() async throws
+  #endif
+  @objc deinit
 }
 public protocol RSErrorResponse : Foundation.LocalizedError {
   var message: Swift.String { get }
@@ -365,93 +378,49 @@ public struct RSError : RemoteSupport.RSErrorResponse {
   public var statusCode: Swift.UInt32 {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
   public init(message: Swift.String, statusCode: Swift.UInt32 = 0)
 }
 public protocol Logger {
-  #if compiler(>=5.3) && $NonescapableTypes
   func trace(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func debug(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func error(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func info(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func warn(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
 }
 public struct WellKnownTagEncoder {
   public static let Empty: RemoteSupport.RSTaggedData
   public struct Text {
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.String) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ value: RemoteSupport.RSTaggedData) -> Swift.String?
-    #endif
   }
   public struct Bytes {
     public static func encode(_ value: Foundation.Data) -> RemoteSupport.RSTaggedData
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ value: RemoteSupport.RSTaggedData) -> Foundation.Data?
-    #endif
   }
   public struct Json {
     public static func encode<T>(_ value: T) throws -> RemoteSupport.RSTaggedData where T : Swift.Encodable
     public static func decode<T>(_ value: RemoteSupport.RSTaggedData) throws -> T where T : Swift.Decodable
   }
   public struct Number {
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.Int) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ value: RemoteSupport.RSTaggedData) -> Swift.Int?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.Int32) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Int32?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.Int64) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Int64?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.Float) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Float?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.Double) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ data: RemoteSupport.RSTaggedData) -> Swift.Double?
-    #endif
     public static func encode<T>(type: T.Type, _ value: T, tag: RemoteSupport.WellKnownTags) -> RemoteSupport.RSTaggedData where T : Swift.ExpressibleByIntegerLiteral
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode<T>(type: T.Type, _ data: RemoteSupport.RSTaggedData) -> T? where T : Swift.ExpressibleByIntegerLiteral
-    #endif
   }
   public struct Boolean {
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func encode(_ value: Swift.Bool) -> RemoteSupport.RSTaggedData?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func decode(_ value: RemoteSupport.RSTaggedData) -> Swift.Bool?
-    #endif
   }
 }
 public enum WellKnownTags : Swift.String, RemoteSupport.MessageTag {
@@ -467,9 +436,7 @@ public enum WellKnownTags : Swift.String, RemoteSupport.MessageTag {
   case double
   case boolean
   case empty
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -477,21 +444,11 @@ public enum WellKnownTags : Swift.String, RemoteSupport.MessageTag {
 }
 public class PrintLogger : RemoteSupport.Logger {
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public func trace(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func debug(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func error(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func info(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func warn(_ msg: Swift.String, _ data: RemoteSupport.PrintableMap?...)
-  #endif
   @objc deinit
 }
 extension RemoteSupport.WebRtcClientRole : Swift.Equatable {}

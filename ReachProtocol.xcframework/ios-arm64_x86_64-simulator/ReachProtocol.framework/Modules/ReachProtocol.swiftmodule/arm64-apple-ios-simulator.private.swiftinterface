@@ -1,10 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ReachProtocol
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ReachProtocol
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import Combine
 import Foundation
-import PromiseKit
 @_exported import ReachProtocol
 import Swift
 import SwiftProtobuf
@@ -13,11 +12,9 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 extension ReachProtocol.DeviceInfoResponse {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var bufferSizes: ReachProtocol.BufferSizes? {
     get
   }
-  #endif
   public func implementsService(_ service: ReachProtocol.ServiceIds) -> Swift.Bool
 }
 extension ReachProtocol.BufferSizes {
@@ -60,26 +57,18 @@ extension ReachProtocol.ParameterInfo {
   public var type: ReachProtocol.ParameterDataType {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var units: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var rangeMinDescription: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var rangeMaxDescription: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var extensionId: Swift.UInt32? {
     get
   }
-  #endif
   public var allowedCharacters: Foundation.CharacterSet {
     get
   }
@@ -108,9 +97,7 @@ extension Foundation.Data {
       get
     }
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(hexString: Swift.String, endianness: Foundation.Data.Endianness = .little)
-  #endif
   public func hexString(endianness: Foundation.Data.Endianness, trim: Swift.Bool = false) -> Swift.String
 }
 public struct ParameterContainer {
@@ -122,19 +109,13 @@ public struct ParameterContainer {
   public init(parameterInfo: ReachProtocol.ParameterInfo, parameterValue: ReachProtocol.ParameterValue)
 }
 open class ReachError : Foundation.LocalizedError {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var failureReason: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(message: Swift.String? = nil, underlyingError: (any Swift.Error)? = nil)
-  #endif
   @objc deinit
 }
 public struct ParameterDescriptions : Swift.Codable {
@@ -146,7 +127,6 @@ public struct ParameterDescriptions : Swift.Codable {
 }
 public class Request {
   public init(onMessage: @escaping (any SwiftProtobuf.Message) -> Swift.Void, timeout: Swift.Int)
-  public func wait() -> PromiseKit.Promise<Swift.Void>
   public func wait() async throws
   @objc deinit
 }
@@ -155,9 +135,7 @@ public enum ReachProto_MAJOR_Version : SwiftProtobuf.Enum {
   case majorVersion
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -172,9 +150,7 @@ public enum ReachProto_MINOR_Version : SwiftProtobuf.Enum {
   case minorVersion
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -189,9 +165,7 @@ public enum ReachProto_PATCH_Version : SwiftProtobuf.Enum {
   case patchVersion
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -232,9 +206,7 @@ public enum ReachMessageTypes : SwiftProtobuf.Enum {
   case wifiConnect
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -255,9 +227,7 @@ public enum ServiceIds : SwiftProtobuf.Enum {
   case wifi
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -275,9 +245,7 @@ public enum EndpointIds : SwiftProtobuf.Enum {
   case four
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -301,9 +269,7 @@ public enum ParameterDataType : SwiftProtobuf.Enum {
   case byteArray
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -320,9 +286,7 @@ public enum AccessLevel : SwiftProtobuf.Enum {
   case readWrite
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -340,9 +304,7 @@ public enum StorageLocation : SwiftProtobuf.Enum {
   case nonvolatileExtended
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -360,9 +322,7 @@ public enum WiFiSecurity : SwiftProtobuf.Enum {
   case wpa3
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -378,9 +338,7 @@ public enum WiFiBand : SwiftProtobuf.Enum {
   case band5
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -416,9 +374,7 @@ public enum ErrorCodes : SwiftProtobuf.Enum {
   case abort
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -436,9 +392,7 @@ public enum FileTransferState : SwiftProtobuf.Enum {
   case complete
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -466,9 +420,7 @@ public enum SizesOffsets : SwiftProtobuf.Enum {
   case structureSize
   case UNRECOGNIZED(Swift.Int)
   public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public var rawValue: Swift.Int {
     get
   }
@@ -2410,13 +2362,13 @@ extension ReachProtocol.BufferSizes : SwiftProtobuf.Message, SwiftProtobuf._Mess
   }
 }
 @_hasMissingDesignatedInitializers public class FileTransferInfo {
-  @Combine.Published @_projectedValueProperty($transferPercent) public var transferPercent: Swift.Double {
+  @Combine.Published<Swift.Double> @_projectedValueProperty($transferPercent) public var transferPercent: Swift.Double {
     get
   }
   public var $transferPercent: Combine.Published<Swift.Double>.Publisher {
     get
   }
-  @Combine.Published @_projectedValueProperty($bytesTransferred) public var bytesTransferred: Swift.Int {
+  @Combine.Published<Swift.Int> @_projectedValueProperty($bytesTransferred) public var bytesTransferred: Swift.Int {
     get
   }
   public var $bytesTransferred: Combine.Published<Swift.Int>.Publisher {
@@ -2473,51 +2425,29 @@ final public class DeviceAccess {
     set
   }
   public init(transportModule: any ReachProtocol.TransportModule, ahsokaHeader: Swift.Bool = true)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func send(payload: Foundation.Data, messageType: Swift.UInt32, endpoint: Swift.UInt32? = nil) async throws
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func sendRequest(payload: Foundation.Data, messageType: Swift.UInt32, endpoint: Swift.UInt32? = nil, onMessage: @escaping (any SwiftProtobuf.Message) -> Swift.Void) async throws -> ReachProtocol.Request
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func getDeviceInfo(accessKey: Swift.String? = nil) async throws -> ReachProtocol.DeviceInfoResponse
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func ping(data: Foundation.Data? = nil) async throws -> ReachProtocol.PingResponse
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func discoverParameters(parameterIds: [Swift.UInt32]? = nil, forceFetch: Swift.Bool = false) async throws -> ReachProtocol.ParameterDescriptions
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func readParameters(parameterIds: [Swift.UInt32]? = nil) async throws -> ReachProtocol.ParameterReadResponse
-  #endif
   final public func writeParameters(parameterValues: [ReachProtocol.ParameterValue]) async throws
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func discoverParameterNotifications(parameterIds: [Swift.UInt32]? = nil) async throws -> [Swift.UInt32 : ReachProtocol.ParameterNotifyConfig]
-  #endif
   final public func enableParameterNotifications(toEnable: [ReachProtocol.ParameterNotifyConfig], disableAllFirst: Swift.Bool = false) async throws -> [Swift.UInt32 : ReachProtocol.ParameterNotifyConfig]
   final public func disableParameterNotifications(parameterIds: [Swift.UInt32] = []) async throws -> [Swift.UInt32 : ReachProtocol.ParameterNotifyConfig]
   final public func getFileDescriptors() async throws -> [ReachProtocol.FileInfo]
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func readFile(id: Swift.UInt32, url: Foundation.URL, offset: Swift.UInt32 = 0, length: Swift.UInt32? = nil) async throws -> ReachProtocol.FileTransferInfo
-  #endif
   final public func writeFile(url: Foundation.URL, id: Swift.UInt32, offset: Swift.UInt32 = 0) async throws -> ReachProtocol.FileTransferInfo
   final public func discoverCommands() async throws -> ReachProtocol.DiscoverCommandsResponse
   final public func sendCommand(_ command: ReachProtocol.CommandInfo) async throws
   final public func sendCLIData(data: Swift.String) async throws
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func setTime(time: Foundation.Date, timezoneOffset: Swift.Int32? = nil) async throws -> ReachProtocol.TimeSetResponse
-  #endif
   final public func getTime() async throws -> ReachProtocol.TimeGetResponse
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func deviceTime() -> Foundation.Date?
-  #endif
   final public func discoverWifi() async throws -> ReachProtocol.DiscoverWiFiResponse
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func connectWifi(ssid: Swift.String, password: Swift.String? = nil, autoconnect: Swift.Bool? = nil) async throws -> ReachProtocol.WiFiConnectionResponse
-  #endif
   final public func disconnectWifi(ssid: Swift.String) async throws -> ReachProtocol.WiFiConnectionResponse
   @objc deinit
 }

@@ -6,59 +6,55 @@
 	<dict>
 		<key>Headers/RemoteSupport-Swift.h</key>
 		<data>
-		wstfW/ucaMncUyXx7lYGNZAR6j8=
-		</data>
-		<key>Headers/RemoteSupport.h</key>
-		<data>
-		rCqdjtb3TubFFu62p+gpLAF/Fdg=
+		oRKFlp/DoBftSP8atjeR4OqkTDE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nDYnIwKIK8LuUYBrlD4qoqk6lEE=
+		odPlzedzuRoSQSFL33EzMZVXrwo=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		+lxCoCqawCuw/7TruF+4zCSmFsA=
+		QL1ae+/eFi32OcSzX+SrqOSYWfQ=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		pSvDez5jWnSTw3fx2QQLv5PffDY=
+		WjlSPmjKhJvLaVFyVGgLiDfwd94=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1pn15MxSQqnvYQWuuQ4bXHS1L7k=
+		s1qqI8IWHwvYD0PpDCq/B3SSIz4=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		pSvDez5jWnSTw3fx2QQLv5PffDY=
+		WjlSPmjKhJvLaVFyVGgLiDfwd94=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		i1MKRdrKco5cEEJHql2+q9gu548=
+		WTVUL0bafvkHz64/HyMuM8JVcuw=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		+lxCoCqawCuw/7TruF+4zCSmFsA=
+		QL1ae+/eFi32OcSzX+SrqOSYWfQ=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		YV0GMWmNFL/OxH4Ofloq5rRh3ck=
+		x8cHm09//J7qb+2wjIy2UEVmQl4=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		t5ZonGS9wgBZSizznijOrDnbhZU=
+		5RBcm4CxUpEYjIaZC2AYppZwCY0=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YV0GMWmNFL/OxH4Ofloq5rRh3ck=
+		x8cHm09//J7qb+2wjIy2UEVmQl4=
 		</data>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LKxb3+iilBiUCkTIBMia3icNWhU=
+		Mo7EEgswz9TFnireBHUp6IvMUAA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		AnAPf3D+n7WLYAxrsG/Nmfy0wIo=
+		h7bhRunjlh/bka2J2BR57CpHumM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,91 +63,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G/DxG7QZcrNS2BEQPyvgqjanllHDOTACgCkY0o+ib6w=
-			</data>
-		</dict>
-		<key>Headers/RemoteSupport.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HwPOSvT2WPCSPBDSTm0ctpQF2oDdXEu4FPIvydKRWfY=
+			Khbk78Ilhd/wmr0Gxe+IoxWJnVTaqhtyp3sBnBSPut0=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dqP3uezNwd9+lI1e4NvOX1XPNkI6b/SABZqIG4r8eHE=
+			43mtEI+UHSCEozjzp4P6PVVv2VY4thfpjDjAXqQHTck=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOc19eMbqD3jaBy6WRcydDotKMjSTU/uLbct4xpd91k=
+			hX01rCaYYBZgrmq/WWOtTqi6177ReTHvpSVZJHLv1NY=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4AJHFbjgKTLGzPZY+sqs8/DPSdxx5ggAQmhqyUnXR6M=
+			d6qS8+tY3cURTZvPlhW1tIDEirn9COZRjdpFl1K6M2I=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOc19eMbqD3jaBy6WRcydDotKMjSTU/uLbct4xpd91k=
+			hX01rCaYYBZgrmq/WWOtTqi6177ReTHvpSVZJHLv1NY=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hBB9zav+InIQmfQFiTYI1ncOygYCEhpjesWadBH7DJ0=
+			DsYBZ/qCBesYm6CHX2qsn5ka7WFjP2nU1WSm5DG15u0=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dqP3uezNwd9+lI1e4NvOX1XPNkI6b/SABZqIG4r8eHE=
+			43mtEI+UHSCEozjzp4P6PVVv2VY4thfpjDjAXqQHTck=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ogKgVMvmmmZKKhQVEUbCvLdMo3FIhdvqGY0VQ2FfjRo=
+			RbJQpPh6vWkDaxBeH9/sf4WAAVnvMsr+q+HRvscDY6g=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DmNO+ogtgTKx3Jq6j2eH+Zs1FqNVkWaRL48XZhu0xv8=
+			fllrxk9FBvLlrJMeBJ2Py6a/96Ui+++LFUkTBQHjRo0=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ogKgVMvmmmZKKhQVEUbCvLdMo3FIhdvqGY0VQ2FfjRo=
+			RbJQpPh6vWkDaxBeH9/sf4WAAVnvMsr+q+HRvscDY6g=
 			</data>
 		</dict>
 		<key>Modules/RemoteSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			buf3W6Mqxv22liaplJ8a8mRFsSO6foPXj1FhdfM3S3k=
+			oAyp2XJp7yNq4BYhn9lpLVW/Hi7OTZsZ+zm+lE6MHpo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+SXhCQAeivOjxawnp/AzGy+BAYD2EHw8tplH8xs759U=
+			jLE4USKOd9OXQ8+myZt+ag2HQJ5eFYisS9GUYtjwRic=
 			</data>
 		</dict>
 	</dict>
