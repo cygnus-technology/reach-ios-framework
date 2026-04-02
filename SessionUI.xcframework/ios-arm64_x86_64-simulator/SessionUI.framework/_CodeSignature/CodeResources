@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		QWndG+vdySWddLV6AUwO7UJMs5c=
+		hkvFqdRtRYDsD66jkMNhIuhSnxM=
 		</data>
 		<key>ChivoMono.ttf</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		2IUIqdOkREz6erUBwXkWtHjM1QU=
+		2sHQ59Ng2YrkOngaJhP7xjOq6Sg=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/hDYSSCmAMspxUj6FGv/QQhTg9U=
+		7tOPos5ywsX/HdXlG2n9y6SZr1I=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		2IUIqdOkREz6erUBwXkWtHjM1QU=
+		2sHQ59Ng2YrkOngaJhP7xjOq6Sg=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IXTwvT1BS0HWW39FXcrJHPaGYB4=
+		LcgBCr4MnGM+WzzVNIYA2Zm6WfY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3VKnmxVXUEfufakM3y1Kui9HDK7qRTvhVOpf+rg71ug=
+			vyqFJAdDm0/DLFR+tp2KX45V7+Z/atVCqckTyelX0CQ=
 			</data>
 		</dict>
 		<key>ChivoMono.ttf</key>
@@ -107,7 +107,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dcVThnJX410xFJxnPTaTPCRLO+pgQUlL7fWRwi7LIX8=
+			6WUzKkXkuG4BPPgX/Fl1p0oNWAG/U9khubyZF2Bn3WI=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -135,14 +135,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MJeIItiQ5iSK4PKXSecGH0HRa2r0gLdbY/CZRhqmpnM=
+			BY4Gw78dvKZo3siHOxwpqwiQFxP2+QJMCVyeyvPVbME=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dcVThnJX410xFJxnPTaTPCRLO+pgQUlL7fWRwi7LIX8=
+			6WUzKkXkuG4BPPgX/Fl1p0oNWAG/U9khubyZF2Bn3WI=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -170,7 +170,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			213qcjmeee0Uz7wabYly50AkedH9l9iS8AKar1nHbUM=
+			XgpSmtXUBtErae33q7L1Z6BweY+IKa50NOExeUhg8CE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

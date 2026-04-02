@@ -31676,6 +31676,7 @@
         "moduleName": "Session",
         "enumRawTypeName": "String",
         "isExternal": true,
+        "isEnumExhaustive": true,
         "conformances": [
           {
             "kind": "Conformance",
