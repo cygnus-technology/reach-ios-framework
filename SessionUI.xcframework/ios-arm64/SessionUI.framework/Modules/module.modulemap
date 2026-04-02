@@ -1,0 +1,6 @@
+framework module SessionUI {
+  umbrella header "SessionUI.h"
+  export *
+
+  module * { export * }
+}

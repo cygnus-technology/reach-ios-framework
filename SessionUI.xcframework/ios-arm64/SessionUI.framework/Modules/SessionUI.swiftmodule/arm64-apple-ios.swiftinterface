@@ -1,0 +1,801 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios16.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SessionUI
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+import AVKit
+import Combine
+import CoreGraphics
+import CoreText
+import DeveloperToolsSupport
+import Foundation
+import Photos
+import RemoteSupport
+import Session
+@_exported import SessionUI
+import Swift
+import SwiftUI
+import UIKit
+import WebRTC
+import _AVKit_SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Session.ConnectionStatus {
+  public var themeColor: SessionUI.DynamicColor {
+    get
+  }
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func sessionTextStyle(font: Swift.String = SessionUIConfiguration.shared.theme.typography.fontFamily.paragraph, size: CoreFoundation.CGFloat = SessionUIConfiguration.shared.theme.typography.fontSize.md, weight: SwiftUICore.Font.Weight = .regular, color: SwiftUICore.Color) -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func sessionGradientBackground() -> some SwiftUICore.View
+  
+  @_Concurrency.MainActor @preconcurrency public func presentationCompactAdaptationNone() -> some SwiftUICore.View
+  
+}
+public struct SessionTheme : Swift.Sendable, Swift.Equatable {
+  public var typography: SessionUI.SessionTheme.Typography
+  public var metrics: SessionUI.SessionTheme.Metrics
+  public var colorPalette: SessionUI.SessionTheme.ColorPalette
+  public var colors: SessionUI.SessionTheme.Colors
+  public init(typography: SessionUI.SessionTheme.Typography = Typography(), metrics: SessionUI.SessionTheme.Metrics = Metrics(), colorPalette: SessionUI.SessionTheme.ColorPalette = ColorPalette(), colors: SessionUI.SessionTheme.Colors? = nil)
+  public struct Colors : Swift.Sendable, Swift.Equatable {
+    public var background: SessionUI.SessionTheme.Colors.Background
+    public var border: SessionUI.SessionTheme.Colors.Border
+    public var icon: SessionUI.SessionTheme.Colors.Icon
+    public var surface: SessionUI.SessionTheme.Colors.Surface
+    public var text: SessionUI.SessionTheme.Colors.Text
+    public var ui: SessionUI.SessionTheme.Colors.UI
+    public init(background: SessionUI.SessionTheme.Colors.Background, border: SessionUI.SessionTheme.Colors.Border, icon: SessionUI.SessionTheme.Colors.Icon, surface: SessionUI.SessionTheme.Colors.Surface, text: SessionUI.SessionTheme.Colors.Text, ui: SessionUI.SessionTheme.Colors.UI)
+    public struct Background : Swift.Sendable, Swift.Equatable {
+      public var brand: SessionUI.DynamicColor
+      public var brandDisabled: SessionUI.DynamicColor
+      public var inverse: SessionUI.DynamicColor
+      public var primary: SessionUI.DynamicColor
+      public var secondary: SessionUI.DynamicColor
+      public var tertiary: SessionUI.DynamicColor
+      public init(brand: SessionUI.DynamicColor, brandDisabled: SessionUI.DynamicColor, inverse: SessionUI.DynamicColor, primary: SessionUI.DynamicColor, secondary: SessionUI.DynamicColor, tertiary: SessionUI.DynamicColor)
+      public static func == (a: SessionUI.SessionTheme.Colors.Background, b: SessionUI.SessionTheme.Colors.Background) -> Swift.Bool
+    }
+    public struct Border : Swift.Sendable, Swift.Equatable {
+      public var brand: SessionUI.DynamicColor
+      public var brandDisabled: SessionUI.DynamicColor
+      public var disabled: SessionUI.DynamicColor
+      public var error: SessionUI.DynamicColor
+      public var errorDisabled: SessionUI.DynamicColor
+      public var neutral: SessionUI.DynamicColor
+      public var neutralDisabled: SessionUI.DynamicColor
+      public var primary: SessionUI.DynamicColor
+      public var secondary: SessionUI.DynamicColor
+      public var success: SessionUI.DynamicColor
+      public var successDisabled: SessionUI.DynamicColor
+      public var tertiary: SessionUI.DynamicColor
+      public var warning: SessionUI.DynamicColor
+      public var warningDisabled: SessionUI.DynamicColor
+      public init(brand: SessionUI.DynamicColor, brandDisabled: SessionUI.DynamicColor, disabled: SessionUI.DynamicColor, error: SessionUI.DynamicColor, errorDisabled: SessionUI.DynamicColor, neutral: SessionUI.DynamicColor, neutralDisabled: SessionUI.DynamicColor, primary: SessionUI.DynamicColor, secondary: SessionUI.DynamicColor, success: SessionUI.DynamicColor, successDisabled: SessionUI.DynamicColor, tertiary: SessionUI.DynamicColor, warning: SessionUI.DynamicColor, warningDisabled: SessionUI.DynamicColor)
+      public static func == (a: SessionUI.SessionTheme.Colors.Border, b: SessionUI.SessionTheme.Colors.Border) -> Swift.Bool
+    }
+    public struct Icon : Swift.Sendable, Swift.Equatable {
+      public var brand: SessionUI.DynamicColor
+      public var brandLight: SessionUI.DynamicColor
+      public var disabled: SessionUI.DynamicColor
+      public var error: SessionUI.DynamicColor
+      public var inverse: SessionUI.DynamicColor
+      public var onFill: SessionUI.DynamicColor
+      public var onFillDisabled: SessionUI.DynamicColor
+      public var primary: SessionUI.DynamicColor
+      public var secondary: SessionUI.DynamicColor
+      public var success: SessionUI.DynamicColor
+      public var tertiary: SessionUI.DynamicColor
+      public var warning: SessionUI.DynamicColor
+      public init(brand: SessionUI.DynamicColor, brandLight: SessionUI.DynamicColor, disabled: SessionUI.DynamicColor, error: SessionUI.DynamicColor, inverse: SessionUI.DynamicColor, onFill: SessionUI.DynamicColor, onFillDisabled: SessionUI.DynamicColor, primary: SessionUI.DynamicColor, secondary: SessionUI.DynamicColor, success: SessionUI.DynamicColor, tertiary: SessionUI.DynamicColor, warning: SessionUI.DynamicColor)
+      public static func == (a: SessionUI.SessionTheme.Colors.Icon, b: SessionUI.SessionTheme.Colors.Icon) -> Swift.Bool
+    }
+    public struct Surface : Swift.Sendable, Swift.Equatable {
+      public var brand: SessionUI.DynamicColor
+      public var brandDisabled: SessionUI.DynamicColor
+      public var brandLight: SessionUI.DynamicColor
+      public var disabled: SessionUI.DynamicColor
+      public var error: SessionUI.DynamicColor
+      public var errorLight: SessionUI.DynamicColor
+      public var neutral: SessionUI.DynamicColor
+      public var neutralDisabled: SessionUI.DynamicColor
+      public var neutralLight: SessionUI.DynamicColor
+      public var primary: SessionUI.DynamicColor
+      public var secondary: SessionUI.DynamicColor
+      public var success: SessionUI.DynamicColor
+      public var successLight: SessionUI.DynamicColor
+      public var tertiary: SessionUI.DynamicColor
+      public var transparent: SessionUI.DynamicColor
+      public var warning: SessionUI.DynamicColor
+      public var warningLight: SessionUI.DynamicColor
+      public init(brand: SessionUI.DynamicColor, brandDisabled: SessionUI.DynamicColor, brandLight: SessionUI.DynamicColor, disabled: SessionUI.DynamicColor, error: SessionUI.DynamicColor, errorLight: SessionUI.DynamicColor, neutral: SessionUI.DynamicColor, neutralDisabled: SessionUI.DynamicColor, neutralLight: SessionUI.DynamicColor, primary: SessionUI.DynamicColor, secondary: SessionUI.DynamicColor, success: SessionUI.DynamicColor, successLight: SessionUI.DynamicColor, tertiary: SessionUI.DynamicColor, transparent: SessionUI.DynamicColor, warning: SessionUI.DynamicColor, warningLight: SessionUI.DynamicColor)
+      public static func == (a: SessionUI.SessionTheme.Colors.Surface, b: SessionUI.SessionTheme.Colors.Surface) -> Swift.Bool
+    }
+    public struct Text : Swift.Sendable, Swift.Equatable {
+      public var brand: SessionUI.DynamicColor
+      public var disabled: SessionUI.DynamicColor
+      public var error: SessionUI.DynamicColor
+      public var inverse: SessionUI.DynamicColor
+      public var onFill: SessionUI.DynamicColor
+      public var onFillDisabled: SessionUI.DynamicColor
+      public var primary: SessionUI.DynamicColor
+      public var secondary: SessionUI.DynamicColor
+      public var success: SessionUI.DynamicColor
+      public var tertiary: SessionUI.DynamicColor
+      public var warning: SessionUI.DynamicColor
+      public init(brand: SessionUI.DynamicColor, disabled: SessionUI.DynamicColor, error: SessionUI.DynamicColor, inverse: SessionUI.DynamicColor, onFill: SessionUI.DynamicColor, onFillDisabled: SessionUI.DynamicColor, primary: SessionUI.DynamicColor, secondary: SessionUI.DynamicColor, success: SessionUI.DynamicColor, tertiary: SessionUI.DynamicColor, warning: SessionUI.DynamicColor)
+      public static func == (a: SessionUI.SessionTheme.Colors.Text, b: SessionUI.SessionTheme.Colors.Text) -> Swift.Bool
+    }
+    public struct UI : Swift.Sendable, Swift.Equatable {
+      public var divider: SessionUI.DynamicColor
+      public var overlay: SessionUI.DynamicColor
+      public var system: SessionUI.DynamicColor
+      public init(divider: SessionUI.DynamicColor, overlay: SessionUI.DynamicColor, system: SessionUI.DynamicColor)
+      public static func == (a: SessionUI.SessionTheme.Colors.UI, b: SessionUI.SessionTheme.Colors.UI) -> Swift.Bool
+    }
+    public static func == (a: SessionUI.SessionTheme.Colors, b: SessionUI.SessionTheme.Colors) -> Swift.Bool
+  }
+  public struct Typography : Swift.Sendable, Swift.Equatable {
+    public struct FontFamily : Swift.Sendable, Swift.Equatable {
+      public var heading: Swift.String
+      public var label: Swift.String
+      public var paragraph: Swift.String
+      public var mono: Swift.String
+      public init(heading: Swift.String = "Figtree-Regular", label: Swift.String = "Figtree-Regular", paragraph: Swift.String = "NotoSans-Regular", mono: Swift.String = "ChivoMono-Medium")
+      public static func == (a: SessionUI.SessionTheme.Typography.FontFamily, b: SessionUI.SessionTheme.Typography.FontFamily) -> Swift.Bool
+    }
+    public struct FontSize : Swift.Sendable, Swift.Equatable {
+      public var xs: CoreFoundation.CGFloat
+      public var sm: CoreFoundation.CGFloat
+      public var md: CoreFoundation.CGFloat
+      public var base: CoreFoundation.CGFloat
+      public var lg: CoreFoundation.CGFloat
+      public var xl: CoreFoundation.CGFloat
+      public var xxl: CoreFoundation.CGFloat
+      public var huge: CoreFoundation.CGFloat
+      public init(xs: CoreFoundation.CGFloat = 10, sm: CoreFoundation.CGFloat = 12, md: CoreFoundation.CGFloat = 14, base: CoreFoundation.CGFloat = 16, lg: CoreFoundation.CGFloat = 20, xl: CoreFoundation.CGFloat = 24, xxl: CoreFoundation.CGFloat = 32, huge: CoreFoundation.CGFloat = 48)
+      public static func == (a: SessionUI.SessionTheme.Typography.FontSize, b: SessionUI.SessionTheme.Typography.FontSize) -> Swift.Bool
+    }
+    public var fontFamily: SessionUI.SessionTheme.Typography.FontFamily
+    public var fontSize: SessionUI.SessionTheme.Typography.FontSize
+    public init(fontFamily: SessionUI.SessionTheme.Typography.FontFamily = FontFamily(), fontSize: SessionUI.SessionTheme.Typography.FontSize = FontSize())
+    public static func == (a: SessionUI.SessionTheme.Typography, b: SessionUI.SessionTheme.Typography) -> Swift.Bool
+  }
+  public struct Metrics : Swift.Sendable, Swift.Equatable {
+    public struct BorderRadius : Swift.Sendable, Swift.Equatable {
+      public var sm: CoreFoundation.CGFloat
+      public var md: CoreFoundation.CGFloat
+      public var lg: CoreFoundation.CGFloat
+      public init(sm: CoreFoundation.CGFloat = 4, md: CoreFoundation.CGFloat = 8, lg: CoreFoundation.CGFloat = 16)
+      public static func == (a: SessionUI.SessionTheme.Metrics.BorderRadius, b: SessionUI.SessionTheme.Metrics.BorderRadius) -> Swift.Bool
+    }
+    public struct BorderWidth : Swift.Sendable, Swift.Equatable {
+      public var sm: CoreFoundation.CGFloat
+      public var md: CoreFoundation.CGFloat
+      public var lg: CoreFoundation.CGFloat
+      public init(sm: CoreFoundation.CGFloat = 1, md: CoreFoundation.CGFloat = 2, lg: CoreFoundation.CGFloat = 4)
+      public static func == (a: SessionUI.SessionTheme.Metrics.BorderWidth, b: SessionUI.SessionTheme.Metrics.BorderWidth) -> Swift.Bool
+    }
+    public var borderRadius: SessionUI.SessionTheme.Metrics.BorderRadius
+    public var borderWidth: SessionUI.SessionTheme.Metrics.BorderWidth
+    public init(borderRadius: SessionUI.SessionTheme.Metrics.BorderRadius = BorderRadius(), borderWidth: SessionUI.SessionTheme.Metrics.BorderWidth = BorderWidth())
+    public static func == (a: SessionUI.SessionTheme.Metrics, b: SessionUI.SessionTheme.Metrics) -> Swift.Bool
+  }
+  public struct ColorPalette : Swift.Sendable, Swift.Equatable {
+    public var primary: SessionUI.SessionTheme.ColorPalette.Primary
+    public var neutral: SessionUI.SessionTheme.ColorPalette.Neutral
+    public var success: SessionUI.SessionTheme.ColorPalette.Success
+    public var warning: SessionUI.SessionTheme.ColorPalette.Warning
+    public var error: SessionUI.SessionTheme.ColorPalette.Error
+    public init(primary: SessionUI.SessionTheme.ColorPalette.Primary = .default, neutral: SessionUI.SessionTheme.ColorPalette.Neutral = .default, success: SessionUI.SessionTheme.ColorPalette.Success = .default, warning: SessionUI.SessionTheme.ColorPalette.Warning = .default, error: SessionUI.SessionTheme.ColorPalette.Error = .default)
+    public func makeColors() -> SessionUI.SessionTheme.Colors
+    public struct Primary : Swift.Sendable, Swift.Equatable {
+      public static let `default`: SessionUI.SessionTheme.ColorPalette.Primary
+      public var c20Percent: SwiftUICore.Color
+      public var c10: SwiftUICore.Color
+      public var c20: SwiftUICore.Color
+      public var c30: SwiftUICore.Color
+      public var c40: SwiftUICore.Color
+      public var c50: SwiftUICore.Color
+      public var c60: SwiftUICore.Color
+      public var c70: SwiftUICore.Color
+      public var c80: SwiftUICore.Color
+      public var c90: SwiftUICore.Color
+      public init(c20Percent: SwiftUICore.Color = Self.default.c20Percent, c10: SwiftUICore.Color = Self.default.c10, c20: SwiftUICore.Color = Self.default.c20, c30: SwiftUICore.Color = Self.default.c30, c40: SwiftUICore.Color = Self.default.c40, c50: SwiftUICore.Color = Self.default.c50, c60: SwiftUICore.Color = Self.default.c60, c70: SwiftUICore.Color = Self.default.c70, c80: SwiftUICore.Color = Self.default.c80, c90: SwiftUICore.Color = Self.default.c90)
+      public static func == (a: SessionUI.SessionTheme.ColorPalette.Primary, b: SessionUI.SessionTheme.ColorPalette.Primary) -> Swift.Bool
+    }
+    public struct Neutral : Swift.Sendable, Swift.Equatable {
+      public static let `default`: SessionUI.SessionTheme.ColorPalette.Neutral
+      public var c20Percent: SwiftUICore.Color
+      public var c10: SwiftUICore.Color
+      public var c20: SwiftUICore.Color
+      public var c30: SwiftUICore.Color
+      public var c40: SwiftUICore.Color
+      public var c50: SwiftUICore.Color
+      public var c60: SwiftUICore.Color
+      public var c70: SwiftUICore.Color
+      public var c80: SwiftUICore.Color
+      public var c90: SwiftUICore.Color
+      public var black: SwiftUICore.Color
+      public var darkTransparent10: SwiftUICore.Color
+      public var darkTransparent14: SwiftUICore.Color
+      public var darkTransparent20: SwiftUICore.Color
+      public var darkTransparent35: SwiftUICore.Color
+      public var white: SwiftUICore.Color
+      public var whiteTransparent75: SwiftUICore.Color
+      public var whiteTransparent90: SwiftUICore.Color
+      public var transparent: SwiftUICore.Color
+      public init(c20Percent: SwiftUICore.Color = Self.default.c20Percent, c10: SwiftUICore.Color = Self.default.c10, c20: SwiftUICore.Color = Self.default.c20, c30: SwiftUICore.Color = Self.default.c30, c40: SwiftUICore.Color = Self.default.c40, c50: SwiftUICore.Color = Self.default.c50, c60: SwiftUICore.Color = Self.default.c60, c70: SwiftUICore.Color = Self.default.c70, c80: SwiftUICore.Color = Self.default.c80, c90: SwiftUICore.Color = Self.default.c90, black: SwiftUICore.Color = Self.default.black, darkTransparent10: SwiftUICore.Color = Self.default.darkTransparent10, darkTransparent14: SwiftUICore.Color = Self.default.darkTransparent14, darkTransparent20: SwiftUICore.Color = Self.default.darkTransparent20, darkTransparent35: SwiftUICore.Color = Self.default.darkTransparent35, white: SwiftUICore.Color = Self.default.white, whiteTransparent75: SwiftUICore.Color = Self.default.whiteTransparent75, whiteTransparent90: SwiftUICore.Color = Self.default.whiteTransparent90, transparent: SwiftUICore.Color = Self.default.transparent)
+      public static func == (a: SessionUI.SessionTheme.ColorPalette.Neutral, b: SessionUI.SessionTheme.ColorPalette.Neutral) -> Swift.Bool
+    }
+    public struct Success : Swift.Sendable, Swift.Equatable {
+      public static let `default`: SessionUI.SessionTheme.ColorPalette.Success
+      public var c20Percent: SwiftUICore.Color
+      public var c20: SwiftUICore.Color
+      public var c40: SwiftUICore.Color
+      public var c60: SwiftUICore.Color
+      public var c80: SwiftUICore.Color
+      public var c90: SwiftUICore.Color
+      public init(c20Percent: SwiftUICore.Color = Self.default.c20Percent, c20: SwiftUICore.Color = Self.default.c20, c40: SwiftUICore.Color = Self.default.c40, c60: SwiftUICore.Color = Self.default.c60, c80: SwiftUICore.Color = Self.default.c80, c90: SwiftUICore.Color = Self.default.c90)
+      public static func == (a: SessionUI.SessionTheme.ColorPalette.Success, b: SessionUI.SessionTheme.ColorPalette.Success) -> Swift.Bool
+    }
+    public struct Warning : Swift.Sendable, Swift.Equatable {
+      public static let `default`: SessionUI.SessionTheme.ColorPalette.Warning
+      public var c20Percent: SwiftUICore.Color
+      public var c20: SwiftUICore.Color
+      public var c40: SwiftUICore.Color
+      public var c60: SwiftUICore.Color
+      public var c80: SwiftUICore.Color
+      public var c90: SwiftUICore.Color
+      public init(c20Percent: SwiftUICore.Color = Self.default.c20Percent, c20: SwiftUICore.Color = Self.default.c20, c40: SwiftUICore.Color = Self.default.c40, c60: SwiftUICore.Color = Self.default.c60, c80: SwiftUICore.Color = Self.default.c80, c90: SwiftUICore.Color = Self.default.c90)
+      public static func == (a: SessionUI.SessionTheme.ColorPalette.Warning, b: SessionUI.SessionTheme.ColorPalette.Warning) -> Swift.Bool
+    }
+    public struct Error : Swift.Sendable, Swift.Equatable {
+      public static let `default`: SessionUI.SessionTheme.ColorPalette.Error
+      public var c20Percent: SwiftUICore.Color
+      public var c20: SwiftUICore.Color
+      public var c40: SwiftUICore.Color
+      public var c60: SwiftUICore.Color
+      public var c80: SwiftUICore.Color
+      public var c90: SwiftUICore.Color
+      public init(c20Percent: SwiftUICore.Color = Self.default.c20Percent, c20: SwiftUICore.Color = Self.default.c20, c40: SwiftUICore.Color = Self.default.c40, c60: SwiftUICore.Color = Self.default.c60, c80: SwiftUICore.Color = Self.default.c80, c90: SwiftUICore.Color = Self.default.c90)
+      public static func == (a: SessionUI.SessionTheme.ColorPalette.Error, b: SessionUI.SessionTheme.ColorPalette.Error) -> Swift.Bool
+    }
+    public static func == (a: SessionUI.SessionTheme.ColorPalette, b: SessionUI.SessionTheme.ColorPalette) -> Swift.Bool
+  }
+  public static func == (a: SessionUI.SessionTheme, b: SessionUI.SessionTheme) -> Swift.Bool
+}
+public struct DynamicColor : Swift.Sendable, Swift.Equatable {
+  public let light: SwiftUICore.Color
+  public let dark: SwiftUICore.Color
+  public init(light: SwiftUICore.Color, dark: SwiftUICore.Color)
+  public init(color: SwiftUICore.Color)
+  public func resolve(for scheme: SwiftUICore.ColorScheme) -> SwiftUICore.Color
+  public static func == (a: SessionUI.DynamicColor, b: SessionUI.DynamicColor) -> Swift.Bool
+}
+@_Concurrency.MainActor @preconcurrency public struct MediaPicker : SwiftUI.UIViewControllerRepresentable {
+  @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> SessionUI.MediaPicker.Coordinator
+  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: SessionUI.MediaPicker.Context) -> UIKit.UIImagePickerController
+  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: UIKit.UIImagePickerController, context: SessionUI.MediaPicker.Context)
+  @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class Coordinator : ObjectiveC.NSObject, UIKit.UIImagePickerControllerDelegate, UIKit.UINavigationControllerDelegate {
+    @_Concurrency.MainActor @preconcurrency @objc final public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+    @_Concurrency.MainActor @preconcurrency @objc final public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+    @objc deinit
+  }
+  public typealias Body = Swift.Never
+  public typealias UIViewControllerType = UIKit.UIImagePickerController
+}
+@_Concurrency.MainActor @preconcurrency public struct SessionFontViewModifier : SwiftUICore.ViewModifier {
+  @_Concurrency.MainActor @preconcurrency public init(theme: SessionUI.SessionTheme = SessionUIConfiguration.shared.theme, font: Swift.String, size: CoreFoundation.CGFloat, weight: SwiftUICore.Font.Weight, color: SwiftUICore.Color)
+  @_Concurrency.MainActor @preconcurrency public func body(content: SessionUI.SessionFontViewModifier.Content) -> some SwiftUICore.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI0A16FontViewModifierV4body7contentQr05SwiftB001_dE8_ContentVyACG_tF", 0) __
+}
+@_Concurrency.MainActor @preconcurrency public struct InactiveMediaShareView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(isLoading: SwiftUICore.Binding<Swift.Bool>, icon: SwiftUICore.Image, heading: Swift.String, description: Swift.String, buttonText: Swift.String, onStart: @escaping @_Concurrency.MainActor @Sendable () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI22InactiveMediaShareViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct SessionButtonStyle : SwiftUI.ButtonStyle {
+  @_Concurrency.MainActor @preconcurrency public var isEnabled: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var theme: SessionUI.SessionButtonTheme
+  @_Concurrency.MainActor @preconcurrency public var height: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var maxWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public func makeBody(configuration: SessionUI.SessionButtonStyle.Configuration) -> some SwiftUICore.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI0A11ButtonStyleV8makeBody13configurationQr05SwiftB00cD13ConfigurationV_tF", 0) __
+}
+public struct SessionButtonTheme {
+  public static let primary: SessionUI.SessionButtonTheme
+  public static let primaryOutline: SessionUI.SessionButtonTheme
+  public static let destructive: SessionUI.SessionButtonTheme
+  public static let destructiveOutline: SessionUI.SessionButtonTheme
+  public var isOutline: Swift.Bool
+  public var textColor: SessionUI.DynamicColor
+  public var disabledTextColor: SessionUI.DynamicColor
+  public var styleColor: SessionUI.DynamicColor
+  public var disabledColor: SessionUI.DynamicColor
+  public init(isOutline: Swift.Bool, textColor: SessionUI.DynamicColor, disabledTextColor: SessionUI.DynamicColor, styleColor: SessionUI.DynamicColor, disabledColor: SessionUI.DynamicColor)
+}
+@_Concurrency.MainActor @preconcurrency public struct ChatMessageView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var message: Session.ChatMessage
+  @_Concurrency.MainActor @preconcurrency public init(message: Session.ChatMessage)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI15ChatMessageViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct ChatView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init()
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI8ChatViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor public class ChatViewModel : Foundation.ObservableObject {
+  @Combine.Published<[Session.ChatMessage]> @_projectedValueProperty($messages) @_Concurrency.MainActor public var messages: [Session.ChatMessage] {
+    get
+  }
+  @_Concurrency.MainActor public var $messages: Combine.Published<[Session.ChatMessage]>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isSendingMessage) @_Concurrency.MainActor public var isSendingMessage: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor public var $isSendingMessage: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Session.ChatMessage.Content?> @_projectedValueProperty($selectedMedia) @_Concurrency.MainActor public var selectedMedia: Session.ChatMessage.Content? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  @_Concurrency.MainActor public var $selectedMedia: Combine.Published<Session.ChatMessage.Content?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.String> @_projectedValueProperty($text) @_Concurrency.MainActor public var text: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  @_Concurrency.MainActor public var $text: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @_Concurrency.MainActor final public let sessionService: any Session.SessionService
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor public func sendMessage() async throws
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct SessionDeviceConnectionView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(isShowingPicker: SwiftUICore.Binding<Swift.Bool>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI0A20DeviceConnectionViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct SessionDevicePickerView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(isPresented: SwiftUICore.Binding<Swift.Bool>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI0A16DevicePickerViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct ScreenShareView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init()
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI15ScreenShareViewV4bodyQrvp", 0) __
+}
+
+public class ScreenShareViewModel : Foundation.ObservableObject {
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isSharingScreen) public var isSharingScreen: Swift.Bool {
+    get
+  }
+  public var $isSharingScreen: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  public var screenController: (any RemoteSupport.ScreenCaptureController)? {
+    get
+  }
+  final public let sessionService: any Session.SessionService
+  public init()
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func startScreenShare() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func stopScreenShare() async
+  #endif
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct MediaCapturePreviewView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(message: Session.ChatMessage.Content)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI23MediaCapturePreviewViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct MetalVideoView : SwiftUI.UIViewRepresentable {
+  public class Coordinator : WebRTC.RTCVideoViewDelegate {
+    public init(videoBounds: SwiftUICore.Binding<CoreFoundation.CGRect>)
+    @objc public func videoView(_ videoView: any WebRTC.RTCVideoRenderer, didChangeVideoSize size: CoreFoundation.CGSize)
+    @objc deinit
+  }
+  @_Concurrency.MainActor @preconcurrency public var contentMode: UIKit.UIView.ContentMode
+  @_Concurrency.MainActor @preconcurrency public var isMirrored: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public init(videoBounds: SwiftUICore.Binding<CoreFoundation.CGRect> = .constant(.zero), contentMode: UIKit.UIView.ContentMode = .scaleAspectFit, isMirrored: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> SessionUI.MetalVideoView.Coordinator
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: SessionUI.MetalVideoView.Context) -> WebRTC.RTCMTLVideoView
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: WebRTC.RTCMTLVideoView, context: SessionUI.MetalVideoView.Context)
+  public typealias Body = Swift.Never
+  public typealias UIViewType = WebRTC.RTCMTLVideoView
+}
+
+@_Concurrency.MainActor @preconcurrency public struct ScreenDrawView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(videoBounds: SwiftUICore.Binding<CoreFoundation.CGRect>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI14ScreenDrawViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor public class ScreenDrawViewModel : Combine.ObservableObject {
+  @Combine.Published<UIKit.UIImage?> @_projectedValueProperty($image) @_Concurrency.MainActor public var image: UIKit.UIImage? {
+    get
+  }
+  @_Concurrency.MainActor public var $image: Combine.Published<UIKit.UIImage?>.Publisher {
+    get
+  }
+  @_Concurrency.MainActor final public let sessionService: any Session.SessionService
+  @_Concurrency.MainActor public var size: CoreFoundation.CGSize
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor public func handleLine(from p1: CoreFoundation.CGPoint, to p2: CoreFoundation.CGPoint, in size: CoreFoundation.CGSize)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct VideoShareView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init()
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI14VideoShareViewV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor public class VideoShareViewModel : Foundation.ObservableObject {
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isSharingVideo) @_Concurrency.MainActor public var isSharingVideo: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor public var $isSharingVideo: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isCameraFrontFacing) @_Concurrency.MainActor public var isCameraFrontFacing: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor public var $isCameraFrontFacing: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Session.MediaRecordingState> @_projectedValueProperty($recordingState) @_Concurrency.MainActor public var recordingState: Session.MediaRecordingState {
+    get
+  }
+  @_Concurrency.MainActor public var $recordingState: Combine.Published<Session.MediaRecordingState>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Double> @_projectedValueProperty($recordingTime) @_Concurrency.MainActor public var recordingTime: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor public var $recordingTime: Combine.Published<Swift.Double>.Publisher {
+    get
+  }
+  @_Concurrency.MainActor public var durationFormatter: Foundation.DateComponentsFormatter
+  @_Concurrency.MainActor public var videoController: (any RemoteSupport.CameraStreamController)? {
+    get
+  }
+  @_Concurrency.MainActor final public let onVideoRecordingEnded: Combine.PassthroughSubject<Foundation.URL, Swift.Never>
+  @_Concurrency.MainActor final public let sessionService: any Session.SessionService
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor public func startVideoShare() async throws
+  @_Concurrency.MainActor public func stopVideoShare() async
+  @_Concurrency.MainActor public func flipCamera() async throws
+  @_Concurrency.MainActor public func takeScreenshot() async throws -> UIKit.UIImage
+  @_Concurrency.MainActor public func startRecording() async throws
+  @_Concurrency.MainActor public func stopRecording() async throws -> Foundation.URL
+  @_Concurrency.MainActor public func sendMedia(_ content: Session.ChatMessage.Content) async throws
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct SessionNavigationView<SessionToolbar> : SwiftUICore.View where SessionToolbar : SwiftUI.ToolbarContent {
+  @_Concurrency.MainActor @preconcurrency public init() where SessionToolbar == SessionUI.DefaultSessionToolbar
+  @_Concurrency.MainActor @preconcurrency public init(@SwiftUI.ToolbarContentBuilder sessionToolbar: @escaping () -> SessionToolbar)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI0A14NavigationViewV4bodyQrvp", 0) __<SessionToolbar>
+}
+@_Concurrency.MainActor @preconcurrency public struct DefaultSessionToolbar : SwiftUI.ToolbarContent {
+  @_Concurrency.MainActor @preconcurrency public init(vm: SessionUI.SessionViewModel, showEndSession: SwiftUICore.Binding<Swift.Bool>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUI.ToolbarContent {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI07DefaultA7ToolbarV4bodyQrvp", 0) __
+}
+
+@_Concurrency.MainActor @preconcurrency public struct SessionView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(vm: SessionUI.SessionViewModel? = nil)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9SessionUI0A4ViewV4bodyQrvp", 0) __
+}
+
+public class SessionViewModel : Foundation.ObservableObject {
+  @Combine.Published<Swift.String> @_projectedValueProperty($sessionDuration) public var sessionDuration: Swift.String {
+    get
+  }
+  public var $sessionDuration: Combine.Published<Swift.String>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isSharingVideo) public var isSharingVideo: Swift.Bool {
+    get
+  }
+  public var $isSharingVideo: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isSharingScreen) public var isSharingScreen: Swift.Bool {
+    get
+  }
+  public var $isSharingScreen: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isReconnecting) public var isReconnecting: Swift.Bool {
+    get
+  }
+  public var $isReconnecting: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($sessionActive) public var sessionActive: Swift.Bool {
+    get
+  }
+  public var $sessionActive: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<Session.DeviceSummary?> @_projectedValueProperty($selectedDeviceSummary) public var selectedDeviceSummary: Session.DeviceSummary? {
+    get
+  }
+  public var $selectedDeviceSummary: Combine.Published<Session.DeviceSummary?>.Publisher {
+    get
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isDisconnectingDevice) public var isDisconnectingDevice: Swift.Bool {
+    get
+  }
+  public var $isDisconnectingDevice: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published<(any Session.DeviceService)?> @_projectedValueProperty($deviceService) public var deviceService: (any Session.DeviceService)? {
+    get
+  }
+  public var $deviceService: Combine.Published<(any Session.DeviceService)?>.Publisher {
+    get
+  }
+  final public let sessionService: any Session.SessionService
+  final public let onSessionEnded: Combine.PassthroughSubject<Swift.Void, Swift.Never>
+  final public let onStartCameraShareRequest: Combine.PassthroughSubject<any Session.StartCameraShareRequest, Swift.Never>
+  final public let onStartScreenShareRequest: Combine.PassthroughSubject<any Session.StartScreenShareRequest, Swift.Never>
+  public init()
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func endSession() async
+  #endif
+  @_Concurrency.MainActor public func disconnectDevice() async
+  public func screenConfiguration() -> RemoteSupport.ScreenFormat
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct SessionUIAssets {
+  public var chat: SessionUI.SessionUIAssets.Chat
+  public var videoShare: SessionUI.SessionUIAssets.VideoShare
+  public var screenShare: SessionUI.SessionUIAssets.ScreenShare
+  public init(chat: SessionUI.SessionUIAssets.Chat = Chat(), videoShare: SessionUI.SessionUIAssets.VideoShare = VideoShare(), screenShare: SessionUI.SessionUIAssets.ScreenShare = ScreenShare())
+}
+extension SessionUI.SessionUIAssets {
+  public struct Chat {
+    public var emptyStateIcon: SwiftUICore.Image
+    public init(emptyStateIcon: SwiftUICore.Image? = nil)
+  }
+  public struct VideoShare {
+    public var inactiveIcon: SwiftUICore.Image
+    public init(inactiveIcon: SwiftUICore.Image? = nil)
+  }
+  public struct ScreenShare {
+    public var inactiveIcon: SwiftUICore.Image
+    public init(inactiveIcon: SwiftUICore.Image? = nil)
+  }
+}
+public struct SessionUIComponents {
+  public var session: SessionUI.SessionUIComponents.Session
+  public var chat: SessionUI.SessionUIComponents.Chat
+  public init(session: SessionUI.SessionUIComponents.Session = Session(), chat: SessionUI.SessionUIComponents.Chat = Chat())
+}
+extension SessionUI.SessionUIComponents {
+  public struct Session {
+    public struct Context {
+      public let vm: SessionUI.SessionViewModel
+      public let selectedTab: SwiftUICore.Binding<Swift.Int>
+      public init(vm: SessionUI.SessionViewModel, selectedTab: SwiftUICore.Binding<Swift.Int>)
+    }
+    public struct DeviceConnectionContext {
+      public let vm: SessionUI.SessionViewModel
+      public let isVisible: Swift.Bool
+      public let isShowingPicker: SwiftUICore.Binding<Swift.Bool>
+      public init(vm: SessionUI.SessionViewModel, isVisible: Swift.Bool = true, isShowingPicker: SwiftUICore.Binding<Swift.Bool>)
+    }
+    public struct DevicePickerContext {
+      public let vm: SessionUI.SessionViewModel
+      public let isPresented: SwiftUICore.Binding<Swift.Bool>
+      public init(vm: SessionUI.SessionViewModel, isPresented: SwiftUICore.Binding<Swift.Bool>)
+    }
+    public var tabView: ((SessionUI.SessionUIComponents.Session.Context) -> SwiftUICore.AnyView)?
+    public var deviceConnectionView: ((SessionUI.SessionUIComponents.Session.DeviceConnectionContext) -> SwiftUICore.AnyView)?
+    public var devicePickerView: ((SessionUI.SessionUIComponents.Session.DevicePickerContext) -> SwiftUICore.AnyView)?
+    public init(tabView: ((SessionUI.SessionUIComponents.Session.Context) -> SwiftUICore.AnyView)? = nil, deviceConnectionView: ((SessionUI.SessionUIComponents.Session.DeviceConnectionContext) -> SwiftUICore.AnyView)? = nil, devicePickerView: ((SessionUI.SessionUIComponents.Session.DevicePickerContext) -> SwiftUICore.AnyView)? = nil)
+  }
+  public struct Chat {
+    public var emptyState: (() -> SwiftUICore.AnyView)?
+    public init(emptyState: (() -> SwiftUICore.AnyView)? = nil)
+  }
+}
+@_hasMissingDesignatedInitializers final public class SessionUIConfiguration : Foundation.ObservableObject {
+  public static let shared: SessionUI.SessionUIConfiguration
+  @Combine.Published<any Session.SessionService> @_projectedValueProperty($sessionService) final public var sessionService: any Session.SessionService {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $sessionService: Combine.Published<any Session.SessionService>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<SessionUI.SessionTheme> @_projectedValueProperty($theme) final public var theme: SessionUI.SessionTheme {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $theme: Combine.Published<SessionUI.SessionTheme>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<SessionUI.SessionUIText> @_projectedValueProperty($text) final public var text: SessionUI.SessionUIText {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $text: Combine.Published<SessionUI.SessionUIText>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<SessionUI.SessionUIAssets> @_projectedValueProperty($assets) final public var assets: SessionUI.SessionUIAssets {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $assets: Combine.Published<SessionUI.SessionUIAssets>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<SessionUI.SessionUIComponents> @_projectedValueProperty($components) final public var components: SessionUI.SessionUIComponents {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $components: Combine.Published<SessionUI.SessionUIComponents>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @_Concurrency.MainActor final public func configure(sessionService: any Session.SessionService = ReachSessionService(), theme: SessionUI.SessionTheme = SessionTheme(), text: SessionUI.SessionUIText = SessionUIText(), assets: SessionUI.SessionUIAssets = SessionUIAssets(), components: SessionUI.SessionUIComponents = SessionUIComponents())
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct SessionUIText {
+  public var session: SessionUI.SessionUIText.Session
+  public var chat: SessionUI.SessionUIText.Chat
+  public var videoShare: SessionUI.SessionUIText.VideoShare
+  public var screenShare: SessionUI.SessionUIText.ScreenShare
+  public init(session: SessionUI.SessionUIText.Session = Session(), chat: SessionUI.SessionUIText.Chat = Chat(), videoShare: SessionUI.SessionUIText.VideoShare = VideoShare(), screenShare: SessionUI.SessionUIText.ScreenShare = ScreenShare())
+}
+extension SessionUI.SessionUIText {
+  public struct Session {
+    public var connectedDevicePrefix: Swift.String
+    public var disconnectedDeviceTitle: Swift.String
+    public var disconnectedDeviceStatus: Swift.String
+    public var disconnectDeviceAccessibilityLabel: Swift.String
+    public var devicePickerTitle: Swift.String
+    public var devicePickerSearchPlaceholder: Swift.String
+    public var devicePickerEmptyTitle: Swift.String
+    public var devicePickerEmptyDescription: Swift.String
+    public var devicePickerRetry: Swift.String
+    public var devicePickerConnecting: Swift.String
+    public init(connectedDevicePrefix: Swift.String = "Connected to:", disconnectedDeviceTitle: Swift.String = "Connect to a Device", disconnectedDeviceStatus: Swift.String = "Not Connected", disconnectDeviceAccessibilityLabel: Swift.String = "Disconnect Device", devicePickerTitle: Swift.String = "Available Devices", devicePickerSearchPlaceholder: Swift.String = "Search Devices", devicePickerEmptyTitle: Swift.String = "No Devices Found", devicePickerEmptyDescription: Swift.String = "Try moving closer to the device and refreshing.", devicePickerRetry: Swift.String = "Retry", devicePickerConnecting: Swift.String = "Connecting...")
+  }
+  public struct Chat {
+    public var welcomeTitle: Swift.String
+    public var welcomeDescription: Swift.String
+    public var enterMessagePlaceholder: Swift.String
+    public var mediaCamera: Swift.String
+    public var mediaPhotos: Swift.String
+    public init(welcomeTitle: Swift.String = "Welcome", welcomeDescription: Swift.String = "Connect to a device to begin troubleshooting.", enterMessagePlaceholder: Swift.String = "Enter Message", mediaCamera: Swift.String = "Camera", mediaPhotos: Swift.String = "Photos")
+  }
+  public struct VideoShare {
+    public var recordingIndicator: Swift.String
+    public var endShareButton: Swift.String
+    public var inactiveHeading: Swift.String
+    public var inactiveDescription: Swift.String
+    public var inactiveButton: Swift.String
+    public var errorAlertTitle: Swift.String
+    public var errorAlertDismiss: Swift.String
+    public var unknownErrorMessage: Swift.String
+    public init(recordingIndicator: Swift.String = "Recording", endShareButton: Swift.String = "End Video Share", inactiveHeading: Swift.String = "Share your video", inactiveDescription: Swift.String = "Use the button below to share your camera with your agent to help them get a better understanding of the issue.", inactiveButton: Swift.String = "Start Video Share", errorAlertTitle: Swift.String = "Video Share Error", errorAlertDismiss: Swift.String = "Ok", unknownErrorMessage: Swift.String = "An unknown error occurred.")
+  }
+  public struct ScreenShare {
+    public var sharingStatus: Swift.String
+    public var endShareButton: Swift.String
+    public var inactiveHeading: Swift.String
+    public var inactiveDescription: Swift.String
+    public var inactiveButton: Swift.String
+    public var errorAlertTitle: Swift.String
+    public var errorAlertDismiss: Swift.String
+    public var unknownErrorMessage: Swift.String
+    public init(sharingStatus: Swift.String = "You're sharing your screen with the agent.", endShareButton: Swift.String = "End Screen Share", inactiveHeading: Swift.String = "Share your screen", inactiveDescription: Swift.String = "Use the button below to share your screen with your agent to help them get a better understanding of the issue.", inactiveButton: Swift.String = "Start Screen Share", errorAlertTitle: Swift.String = "Screen Share Error", errorAlertDismiss: Swift.String = "Ok", unknownErrorMessage: Swift.String = "An unknown error occurred.")
+  }
+}
+extension SessionUI.MediaPicker : Swift.Sendable {}
+extension SessionUI.MediaPicker.Coordinator : Swift.Sendable {}
+extension SessionUI.SessionFontViewModifier : Swift.Sendable {}
+extension SessionUI.InactiveMediaShareView : Swift.Sendable {}
+extension SessionUI.SessionButtonStyle : Swift.Sendable {}
+extension SessionUI.ChatMessageView : Swift.Sendable {}
+extension SessionUI.ChatView : Swift.Sendable {}
+extension SessionUI.ChatViewModel : Swift.Sendable {}
+extension SessionUI.SessionDeviceConnectionView : Swift.Sendable {}
+extension SessionUI.SessionDevicePickerView : Swift.Sendable {}
+extension SessionUI.ScreenShareView : Swift.Sendable {}
+extension SessionUI.MediaCapturePreviewView : Swift.Sendable {}
+extension SessionUI.MetalVideoView : Swift.Sendable {}
+extension SessionUI.ScreenDrawView : Swift.Sendable {}
+extension SessionUI.ScreenDrawViewModel : Swift.Sendable {}
+extension SessionUI.VideoShareView : Swift.Sendable {}
+extension SessionUI.VideoShareViewModel : Swift.Sendable {}
+extension SessionUI.SessionNavigationView : Swift.Sendable {}
+extension SessionUI.DefaultSessionToolbar : Swift.Sendable {}
+extension SessionUI.SessionView : Swift.Sendable {}

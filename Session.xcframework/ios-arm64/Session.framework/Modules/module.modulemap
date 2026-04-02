@@ -1,0 +1,10 @@
+framework module Session {
+  umbrella header "Session.h"
+  export *
+
+  module * { export * }
+}
+
+module Session.Swift {
+  header "Session-Swift.h"
+}
