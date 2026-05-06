@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
 // swift-module-flags: -target x86_64-apple-ios16.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SessionUI
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import AVKit
 import Combine
 import CoreGraphics
@@ -631,7 +631,8 @@ extension SessionUI.SessionUIAssets {
 public struct SessionUIComponents {
   public var session: SessionUI.SessionUIComponents.Session
   public var chat: SessionUI.SessionUIComponents.Chat
-  public init(session: SessionUI.SessionUIComponents.Session = Session(), chat: SessionUI.SessionUIComponents.Chat = Chat())
+  public var mediaShare: SessionUI.SessionUIComponents.MediaShare
+  public init(session: SessionUI.SessionUIComponents.Session = Session(), chat: SessionUI.SessionUIComponents.Chat = Chat(), mediaShare: SessionUI.SessionUIComponents.MediaShare = MediaShare())
 }
 extension SessionUI.SessionUIComponents {
   public struct Session {
@@ -654,26 +655,35 @@ extension SessionUI.SessionUIComponents {
     public var tabView: ((SessionUI.SessionUIComponents.Session.Context) -> SwiftUICore.AnyView)?
     public var deviceConnectionView: ((SessionUI.SessionUIComponents.Session.DeviceConnectionContext) -> SwiftUICore.AnyView)?
     public var devicePickerView: ((SessionUI.SessionUIComponents.Session.DevicePickerContext) -> SwiftUICore.AnyView)?
-    public init(tabView: ((SessionUI.SessionUIComponents.Session.Context) -> SwiftUICore.AnyView)? = nil, deviceConnectionView: ((SessionUI.SessionUIComponents.Session.DeviceConnectionContext) -> SwiftUICore.AnyView)? = nil, devicePickerView: ((SessionUI.SessionUIComponents.Session.DevicePickerContext) -> SwiftUICore.AnyView)? = nil)
+    public var sessionButtonShape: (() -> SwiftUICore.AnyShape)?
+    public init(tabView: ((SessionUI.SessionUIComponents.Session.Context) -> SwiftUICore.AnyView)? = nil, deviceConnectionView: ((SessionUI.SessionUIComponents.Session.DeviceConnectionContext) -> SwiftUICore.AnyView)? = nil, devicePickerView: ((SessionUI.SessionUIComponents.Session.DevicePickerContext) -> SwiftUICore.AnyView)? = nil, sessionButtonShape: (() -> SwiftUICore.AnyShape)? = nil)
   }
   public struct Chat {
     public var emptyState: (() -> SwiftUICore.AnyView)?
     public init(emptyState: (() -> SwiftUICore.AnyView)? = nil)
   }
+  public struct MediaShare {
+    public var initiateShareButtonStyle: SessionUI.SessionButtonTheme?
+    public init(initiateShareButtonStyle: SessionUI.SessionButtonTheme? = nil)
+  }
+}
+@propertyWrapper public struct PublishedRequired<Value> {
+  public init(_ failureMessage: Swift.String)
+  public var wrappedValue: Value {
+    get
+    set
+  }
+  public var projectedValue: Combine.AnyPublisher<Value, Swift.Never> {
+    get
+  }
 }
 @_hasMissingDesignatedInitializers final public class SessionUIConfiguration : Foundation.ObservableObject {
   public static let shared: SessionUI.SessionUIConfiguration
-  @Combine.Published<any Session.SessionService> @_projectedValueProperty($sessionService) final public var sessionService: any Session.SessionService {
+  @SessionUI.PublishedRequired<any Session.SessionService> @_projectedValueProperty($sessionService) final public var sessionService: any Session.SessionService {
     get
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    _modify
   }
-  final public var $sessionService: Combine.Published<any Session.SessionService>.Publisher {
+  final public var $sessionService: Combine.AnyPublisher<any Session.SessionService, Swift.Never> {
     get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
   }
   @Combine.Published<SessionUI.SessionTheme> @_projectedValueProperty($theme) final public var theme: SessionUI.SessionTheme {
     get
@@ -723,7 +733,7 @@ extension SessionUI.SessionUIComponents {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @_Concurrency.MainActor final public func configure(sessionService: any Session.SessionService = ReachSessionService(), theme: SessionUI.SessionTheme = SessionTheme(), text: SessionUI.SessionUIText = SessionUIText(), assets: SessionUI.SessionUIAssets = SessionUIAssets(), components: SessionUI.SessionUIComponents = SessionUIComponents())
+  @_Concurrency.MainActor final public func configure(sessionService: any Session.SessionService, theme: SessionUI.SessionTheme = SessionTheme(), text: SessionUI.SessionUIText = SessionUIText(), assets: SessionUI.SessionUIAssets = SessionUIAssets(), components: SessionUI.SessionUIComponents = SessionUIComponents())
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }

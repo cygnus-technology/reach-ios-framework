@@ -885,6 +885,81 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(info:enums:hash:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ParameterDescriptions",
+                "printedName": "ReachProtocol.ParameterDescriptions",
+                "usr": "s:13ReachProtocol21ParameterDescriptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.UInt32 : ReachProtocol.ParameterInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ParameterInfo",
+                    "printedName": "ReachProtocol.ParameterInfo",
+                    "usr": "s:13ReachProtocol13ParameterInfoV"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.UInt32 : [ReachProtocol.ParamExKey]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ReachProtocol.ParamExKey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ParamExKey",
+                        "printedName": "ReachProtocol.ParamExKey",
+                        "usr": "s:13ReachProtocol10ParamExKeyV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt32",
+                "printedName": "Swift.UInt32",
+                "usr": "s:s6UInt32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReachProtocol21ParameterDescriptionsV4info5enums4hashACSDys6UInt32VAA0C4InfoVG_SDyAHSayAA10ParamExKeyVGGAHtcfc",
+            "mangledName": "$s13ReachProtocol21ParameterDescriptionsV4info5enums4hashACSDys6UInt32VAA0C4InfoVG_SDyAHSayAA10ParamExKeyVGGAHtcfc",
+            "moduleName": "ReachProtocol",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {

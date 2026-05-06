@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		hkvFqdRtRYDsD66jkMNhIuhSnxM=
+		LjYdibv/NiYHqsh2gVBf+XG6k0c=
 		</data>
 		<key>ChivoMono.ttf</key>
 		<data>
@@ -22,27 +22,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ei1kpkL2iobL/YznII/b9TlTdGc=
+		OXk2OHlhfUgjoRKcTr5caC/0BqQ=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		1BD9Bw9liz3X3yxjvRYj6QqeHfk=
+		LMuV224HvlKA337y1HTFjmihCX0=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		RUt9f0zbVp+XGE/bf1AmYNESCOs=
+		pj7dIh1sLNcH37zLt7Qtjn3blo0=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		pJzlmkx452LgqIW4TeXWNJ9e/dU=
+		fgv/DWuz2DTpPrD5XgssuoFz58A=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		RUt9f0zbVp+XGE/bf1AmYNESCOs=
+		pj7dIh1sLNcH37zLt7Qtjn3blo0=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		pE+zNUjcnYBgX99ZsFYyLU39UEI=
+		DJRwfI+ISfaehovpn4INfs3AU0w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,7 +59,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vyqFJAdDm0/DLFR+tp2KX45V7+Z/atVCqckTyelX0CQ=
+			dZmGeSlI7zD6IDvqxyEwNYzQV5wYcSnSY3cUgGvxOQ0=
 			</data>
 		</dict>
 		<key>ChivoMono.ttf</key>
@@ -87,35 +87,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d3/vMljzVkHIdrNidjSORu6TFoG4zkdrI8QJJAJkqAQ=
+			P6kZq7/oKQxX6NyLrQI1u9KBM9hnNBcjHg/8Jf0XOxo=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vuWrDDXmRwNvO3mlTI99tvDolWL2sfmIC+NrXhnILCM=
+			ifqpFAgw0Yg+Bfm/KpQkdmUjgydoGzMlfAvouoB1srg=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F9kvw+XqzCtdz3GVtGzywnP9x+R0D8YqN4wVSBDGAAQ=
+			2X2iSpFCHaUnHeTkPIYa9+iLRq5vVM2EnrSjj+kUjPQ=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vuWrDDXmRwNvO3mlTI99tvDolWL2sfmIC+NrXhnILCM=
+			ifqpFAgw0Yg+Bfm/KpQkdmUjgydoGzMlfAvouoB1srg=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VTAij1MtnX1CuWetFDunqcwRUitzj5spwxMUmRllFLc=
+			gRvQAM90hJE9wg+BROmHw0K7R/PAm2J/H2HchY4EV1o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

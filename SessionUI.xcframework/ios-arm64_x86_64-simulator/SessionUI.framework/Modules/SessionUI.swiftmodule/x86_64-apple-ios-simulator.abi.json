@@ -25377,9 +25377,94 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "mediaShare",
+            "printedName": "mediaShare",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MediaShare",
+                "printedName": "SessionUI.SessionUIComponents.MediaShare",
+                "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0Vvp",
+            "mangledName": "$s9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0Vvp",
+            "moduleName": "SessionUI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MediaShare",
+                    "printedName": "SessionUI.SessionUIComponents.MediaShare",
+                    "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0Vvg",
+                "mangledName": "$s9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0Vvg",
+                "moduleName": "SessionUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MediaShare",
+                    "printedName": "SessionUI.SessionUIComponents.MediaShare",
+                    "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0Vvs",
+                "mangledName": "$s9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0Vvs",
+                "moduleName": "SessionUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0VvM",
+                "mangledName": "$s9SessionUI0A12UIComponentsV10mediaShareAC05MediaE0VvM",
+                "moduleName": "SessionUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(session:chat:)",
+            "printedName": "init(session:chat:mediaShare:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -25400,11 +25485,18 @@
                 "printedName": "SessionUI.SessionUIComponents.Chat",
                 "hasDefaultArg": true,
                 "usr": "s:9SessionUI0A12UIComponentsV4ChatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MediaShare",
+                "printedName": "SessionUI.SessionUIComponents.MediaShare",
+                "hasDefaultArg": true,
+                "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:9SessionUI0A12UIComponentsV7session4chatA2C0A0V_AC4ChatVtcfc",
-            "mangledName": "$s9SessionUI0A12UIComponentsV7session4chatA2C0A0V_AC4ChatVtcfc",
+            "usr": "s:9SessionUI0A12UIComponentsV7session4chat10mediaShareA2C0A0V_AC4ChatVAC05MediaG0Vtcfc",
+            "mangledName": "$s9SessionUI0A12UIComponentsV7session4chat10mediaShareA2C0A0V_AC4ChatVAC05MediaG0Vtcfc",
             "moduleName": "SessionUI",
             "declAttributes": [
               "AccessControl"
@@ -26443,9 +26535,156 @@
                 ]
               },
               {
+                "kind": "Var",
+                "name": "sessionButtonShape",
+                "printedName": "sessionButtonShape",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> SwiftUI.AnyShape)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> SwiftUI.AnyShape",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyShape",
+                            "printedName": "SwiftUI.AnyShape",
+                            "usr": "s:7SwiftUI8AnyShapeV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvp",
+                "mangledName": "$s9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvp",
+                "moduleName": "SessionUI",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(() -> SwiftUI.AnyShape)?",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "() -> SwiftUI.AnyShape",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyShape",
+                                "printedName": "SwiftUI.AnyShape",
+                                "usr": "s:7SwiftUI8AnyShapeV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvg",
+                    "mangledName": "$s9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvg",
+                    "moduleName": "SessionUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(() -> SwiftUI.AnyShape)?",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "() -> SwiftUI.AnyShape",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyShape",
+                                "printedName": "SwiftUI.AnyShape",
+                                "usr": "s:7SwiftUI8AnyShapeV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvs",
+                    "mangledName": "$s9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvs",
+                    "moduleName": "SessionUI",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvM",
+                    "mangledName": "$s9SessionUI0A12UIComponentsV0A0V18sessionButtonShape05SwiftB003AnyF0VycSgvM",
+                    "moduleName": "SessionUI",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(tabView:deviceConnectionView:devicePickerView:)",
+                "printedName": "init(tabView:deviceConnectionView:devicePickerView:sessionButtonShape:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -26536,11 +26775,38 @@
                     ],
                     "hasDefaultArg": true,
                     "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> SwiftUI.AnyShape)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> SwiftUI.AnyShape",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyShape",
+                            "printedName": "SwiftUI.AnyShape",
+                            "usr": "s:7SwiftUI8AnyShapeV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:9SessionUI0A12UIComponentsV0A0V7tabView016deviceConnectionE00f6PickerE0AE05SwiftB003AnyE0VAE7ContextVcSg_AkE06DevicegK0VcSgAkE0lhK0VcSgtcfc",
-                "mangledName": "$s9SessionUI0A12UIComponentsV0A0V7tabView016deviceConnectionE00f6PickerE0AE05SwiftB003AnyE0VAE7ContextVcSg_AkE06DevicegK0VcSgAkE0lhK0VcSgtcfc",
+                "usr": "s:9SessionUI0A12UIComponentsV0A0V7tabView016deviceConnectionE00f6PickerE018sessionButtonShapeAE05SwiftB003AnyE0VAE7ContextVcSg_AlE06DevicegN0VcSgAlE0ohN0VcSgAJ0mK0VycSgtcfc",
+                "mangledName": "$s9SessionUI0A12UIComponentsV0A0V7tabView016deviceConnectionE00f6PickerE018sessionButtonShapeAE05SwiftB003AnyE0VAE7ContextVcSg_AlE06DevicegN0VcSgAlE0ohN0VcSgAJ0mK0VycSgtcfc",
                 "moduleName": "SessionUI",
                 "declAttributes": [
                   "AccessControl"
@@ -26792,6 +27058,181 @@
                 "mangledName": "$ss9EscapableP"
               }
             ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "MediaShare",
+            "printedName": "MediaShare",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "initiateShareButtonStyle",
+                "printedName": "initiateShareButtonStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SessionUI.SessionButtonTheme?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SessionButtonTheme",
+                        "printedName": "SessionUI.SessionButtonTheme",
+                        "usr": "s:9SessionUI0A11ButtonThemeV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvp",
+                "mangledName": "$s9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvp",
+                "moduleName": "SessionUI",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SessionUI.SessionButtonTheme?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SessionButtonTheme",
+                            "printedName": "SessionUI.SessionButtonTheme",
+                            "usr": "s:9SessionUI0A11ButtonThemeV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvg",
+                    "mangledName": "$s9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvg",
+                    "moduleName": "SessionUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SessionUI.SessionButtonTheme?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SessionButtonTheme",
+                            "printedName": "SessionUI.SessionButtonTheme",
+                            "usr": "s:9SessionUI0A11ButtonThemeV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvs",
+                    "mangledName": "$s9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvs",
+                    "moduleName": "SessionUI",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvM",
+                    "mangledName": "$s9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAA0aG5ThemeVSgvM",
+                    "moduleName": "SessionUI",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(initiateShareButtonStyle:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MediaShare",
+                    "printedName": "SessionUI.SessionUIComponents.MediaShare",
+                    "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SessionUI.SessionButtonTheme?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SessionButtonTheme",
+                        "printedName": "SessionUI.SessionButtonTheme",
+                        "usr": "s:9SessionUI0A11ButtonThemeV"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAeA0aG5ThemeVSg_tcfc",
+                "mangledName": "$s9SessionUI0A12UIComponentsV10MediaShareV08initiateE11ButtonStyleAeA0aG5ThemeVSg_tcfc",
+                "moduleName": "SessionUI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:9SessionUI0A12UIComponentsV10MediaShareV",
+            "mangledName": "$s9SessionUI0A12UIComponentsV10MediaShareV",
+            "moduleName": "SessionUI",
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
           }
         ],
         "declKind": "Struct",
@@ -26849,6 +27290,227 @@
         "printedName": "Session",
         "declKind": "Import",
         "moduleName": "SessionUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PublishedRequired",
+        "printedName": "PublishedRequired",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PublishedRequired",
+                "printedName": "SessionUI.PublishedRequired<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:9SessionUI17PublishedRequiredV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9SessionUI17PublishedRequiredVyACyxGSScfc",
+            "mangledName": "$s9SessionUI17PublishedRequiredVyACyxGSScfc",
+            "moduleName": "SessionUI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SessionUI17PublishedRequiredV12wrappedValuexvp",
+            "mangledName": "$s9SessionUI17PublishedRequiredV12wrappedValuexvp",
+            "moduleName": "SessionUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI17PublishedRequiredV12wrappedValuexvg",
+                "mangledName": "$s9SessionUI17PublishedRequiredV12wrappedValuexvg",
+                "moduleName": "SessionUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI17PublishedRequiredV12wrappedValuexvs",
+                "mangledName": "$s9SessionUI17PublishedRequiredV12wrappedValuexvs",
+                "moduleName": "SessionUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI17PublishedRequiredV12wrappedValuexvM",
+                "mangledName": "$s9SessionUI17PublishedRequiredV12wrappedValuexvM",
+                "moduleName": "SessionUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "projectedValue",
+            "printedName": "projectedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<τ_0_0, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SessionUI17PublishedRequiredV14projectedValue7Combine12AnyPublisherVyxs5NeverOGvp",
+            "mangledName": "$s9SessionUI17PublishedRequiredV14projectedValue7Combine12AnyPublisherVyxs5NeverOGvp",
+            "moduleName": "SessionUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<τ_0_0, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SessionUI17PublishedRequiredV14projectedValue7Combine12AnyPublisherVyxs5NeverOGvg",
+                "mangledName": "$s9SessionUI17PublishedRequiredV14projectedValue7Combine12AnyPublisherVyxs5NeverOGvg",
+                "moduleName": "SessionUI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9SessionUI17PublishedRequiredV",
+        "mangledName": "$s9SessionUI17PublishedRequiredV",
+        "moduleName": "SessionUI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "declAttributes": [
+          "AccessControl",
+          "PropertyWrapper"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -26925,6 +27587,7 @@
             "declAttributes": [
               "Final",
               "ProjectedValueProperty",
+              "SetterAccess",
               "AccessControl",
               "Custom",
               "RawDocComment"
@@ -26951,70 +27614,6 @@
                   "Final"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SessionService",
-                    "printedName": "any Session.SessionService",
-                    "usr": "s:7Session0A7ServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9SessionUI0A15UIConfigurationC14sessionService0A00aE0_pvs",
-                "mangledName": "$s9SessionUI0A15UIConfigurationC14sessionService0A00aE0_pvs",
-                "moduleName": "SessionUI",
-                "implicit": true,
-                "intro_Macosx": "10.15",
-                "intro_iOS": "13.0",
-                "intro_tvOS": "13.0",
-                "intro_watchOS": "6.0",
-                "declAttributes": [
-                  "Final",
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9SessionUI0A15UIConfigurationC14sessionService0A00aE0_pvM",
-                "mangledName": "$s9SessionUI0A15UIConfigurationC14sessionService0A00aE0_pvM",
-                "moduleName": "SessionUI",
-                "implicit": true,
-                "intro_Macosx": "10.15",
-                "intro_iOS": "13.0",
-                "intro_tvOS": "13.0",
-                "intro_watchOS": "6.0",
-                "declAttributes": [
-                  "Final",
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -27025,14 +27624,28 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Publisher",
-                "printedName": "Combine.Published<any Session.SessionService>.Publisher",
-                "usr": "s:7Combine9PublishedV9PublisherV"
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<any Session.SessionService, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionService",
+                    "printedName": "any Session.SessionService",
+                    "usr": "s:7Session0A7ServiceP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_Gvp",
-            "mangledName": "$s9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_Gvp",
+            "usr": "s:9SessionUI0A15UIConfigurationC15$sessionService7Combine12AnyPublisherVy0A00aE0_ps5NeverOGvp",
+            "mangledName": "$s9SessionUI0A15UIConfigurationC15$sessionService7Combine12AnyPublisherVy0A00aE0_ps5NeverOGvp",
             "moduleName": "SessionUI",
             "implicit": true,
             "declAttributes": [
@@ -27046,84 +27659,34 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Publisher",
-                    "printedName": "Combine.Published<any Session.SessionService>.Publisher",
-                    "usr": "s:7Combine9PublishedV9PublisherV"
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<any Session.SessionService, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SessionService",
+                        "printedName": "any Session.SessionService",
+                        "usr": "s:7Session0A7ServiceP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_Gvg",
-                "mangledName": "$s9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_Gvg",
+                "usr": "s:9SessionUI0A15UIConfigurationC15$sessionService7Combine12AnyPublisherVy0A00aE0_ps5NeverOGvg",
+                "mangledName": "$s9SessionUI0A15UIConfigurationC15$sessionService7Combine12AnyPublisherVy0A00aE0_ps5NeverOGvg",
                 "moduleName": "SessionUI",
                 "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Publisher",
-                    "printedName": "Combine.Published<any Session.SessionService>.Publisher",
-                    "usr": "s:7Combine9PublishedV9PublisherV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_Gvs",
-                "mangledName": "$s9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_Gvs",
-                "moduleName": "SessionUI",
-                "implicit": true,
-                "intro_Macosx": "11.0",
-                "intro_iOS": "14.0",
-                "intro_tvOS": "14.0",
-                "intro_watchOS": "7.0",
-                "declAttributes": [
-                  "Final",
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_GvM",
-                "mangledName": "$s9SessionUI0A15UIConfigurationC15$sessionService7Combine9PublishedV9PublisherVy0A00aE0_p_GvM",
-                "moduleName": "SessionUI",
-                "implicit": true,
-                "intro_Macosx": "11.0",
-                "intro_iOS": "14.0",
-                "intro_tvOS": "14.0",
-                "intro_watchOS": "7.0",
-                "declAttributes": [
-                  "Final",
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -28025,7 +28588,6 @@
                 "kind": "TypeNominal",
                 "name": "SessionService",
                 "printedName": "any Session.SessionService",
-                "hasDefaultArg": true,
                 "usr": "s:7Session0A7ServiceP"
               },
               {
@@ -32364,28 +32926,28 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2387,
+      "offset": 2467,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "StringLiteral",
-      "offset": 2450,
+      "offset": 2530,
       "length": 17,
       "value": "\"Share Something\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "StringLiteral",
-      "offset": 2490,
+      "offset": 2570,
       "length": 97,
       "value": "\"Description description description description description description description description\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "StringLiteral",
-      "offset": 2609,
+      "offset": 2689,
       "length": 15,
       "value": "\"Start Sharing\""
     },
@@ -32406,28 +32968,28 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/SessionButtonStyle.swift",
       "kind": "BooleanLiteral",
-      "offset": 2820,
+      "offset": 3035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/SessionButtonStyle.swift",
       "kind": "BooleanLiteral",
-      "offset": 3241,
+      "offset": 3456,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/SessionButtonStyle.swift",
       "kind": "BooleanLiteral",
-      "offset": 3651,
+      "offset": 3866,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/SessionButtonStyle.swift",
       "kind": "BooleanLiteral",
-      "offset": 4067,
+      "offset": 4282,
       "length": 5,
       "value": "false"
     },
@@ -32686,9 +33248,16 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/SessionUIComponents.swift",
       "kind": "BooleanLiteral",
-      "offset": 1111,
+      "offset": 1233,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/SessionUIConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 1268,
+      "length": 73,
+      "value": "\"SessionUIConfiguration.configure must be called before using SessionUI.\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/SessionUIText.swift",
