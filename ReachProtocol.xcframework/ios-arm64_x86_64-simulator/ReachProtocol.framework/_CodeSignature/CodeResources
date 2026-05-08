@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xJvPZf66qIvILI44r3xCUwnP7ng=
+		mIpaAyWwdZfF7iyZMT9E3Mnk4Sc=
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/ReachProtocol.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xb0bnTnuPcP63AP8Hv52KmyEl3c=
+		6x5j2kTzl4jaZFAcLCazyQpw9xc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HfsPm0GbWP/HNinjLAJH8Z7tCn4o5WwPYxVcmCBLHBs=
+			IRl9/xEQ3I3xsN0VoGI8dcMJLDB8d6UGusAju+oU49w=
 			</data>
 		</dict>
 		<key>Modules/ReachProtocol.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QunJDxGDjd+HVDp7LNnROklO0LdfDZi0R5hTJV5UFzk=
+			iCncwl1x8gdRM6KUJHqyNENT58Vzw7SuoEpWzW7XkY4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

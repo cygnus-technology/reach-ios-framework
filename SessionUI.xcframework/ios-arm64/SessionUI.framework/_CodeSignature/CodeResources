@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		LMuV224HvlKA337y1HTFjmihCX0=
+		uLU2OG+EBT+U2c2eDQr4KTN/4fI=
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		DJRwfI+ISfaehovpn4INfs3AU0w=
+		72ArG85RNen2CeOBWHj7Ad5GnYw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -87,7 +87,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P6kZq7/oKQxX6NyLrQI1u9KBM9hnNBcjHg/8Jf0XOxo=
+			YUzHna9kuzB2Pumq3c7+m6J4wGE80YP4P+Dw9IpQFtY=
 			</data>
 		</dict>
 		<key>Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -115,7 +115,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gRvQAM90hJE9wg+BROmHw0K7R/PAm2J/H2HchY4EV1o=
+			m7UKFqe9AEZlE0uAnphwieVoONssVGZmlvlmyWuQhao=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -3196,9 +3196,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Void",
+                "printedName": "()"
               },
               {
                 "kind": "TypeNominal",
@@ -3208,13 +3207,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13RemoteSupport0aB6ClientC14addVideoStreamySbAA12CameraFormatVF",
-            "mangledName": "$s13RemoteSupport0aB6ClientC14addVideoStreamySbAA12CameraFormatVF",
+            "usr": "s:13RemoteSupport0aB6ClientC14addVideoStreamyyAA12CameraFormatVYaKF",
+            "mangledName": "$s13RemoteSupport0aB6ClientC14addVideoStreamyyAA12CameraFormatVYaKF",
             "moduleName": "RemoteSupport",
             "declAttributes": [
+              "Nonisolated",
               "AccessControl"
             ],
             "isFromExtension": true,
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -3224,9 +3225,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Void",
+                "printedName": "()"
               },
               {
                 "kind": "TypeNominal",
@@ -3236,13 +3236,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13RemoteSupport0aB6ClientC16addScreenSharingySbAA0E6FormatVF",
-            "mangledName": "$s13RemoteSupport0aB6ClientC16addScreenSharingySbAA0E6FormatVF",
+            "usr": "s:13RemoteSupport0aB6ClientC16addScreenSharingyyAA0E6FormatVYaKF",
+            "mangledName": "$s13RemoteSupport0aB6ClientC16addScreenSharingyyAA0E6FormatVYaKF",
             "moduleName": "RemoteSupport",
             "declAttributes": [
+              "Nonisolated",
               "AccessControl"
             ],
             "isFromExtension": true,
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -4102,6 +4104,63 @@
           },
           {
             "kind": "Var",
+            "name": "failedToSetupScreenSharing",
+            "printedName": "failedToSetupScreenSharing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RemoteSupport.RemoteSupportError.Type) -> (Swift.String) -> RemoteSupport.RemoteSupportError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> RemoteSupport.RemoteSupportError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RemoteSupportError",
+                        "printedName": "RemoteSupport.RemoteSupportError",
+                        "usr": "s:13RemoteSupport0aB5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(message: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RemoteSupport.RemoteSupportError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RemoteSupportError",
+                        "printedName": "RemoteSupport.RemoteSupportError",
+                        "usr": "s:13RemoteSupport0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RemoteSupport0aB5ErrorO26failedToSetupScreenSharingyACSS_tcACmF",
+            "mangledName": "$s13RemoteSupport0aB5ErrorO26failedToSetupScreenSharingyACSS_tcACmF",
+            "moduleName": "RemoteSupport"
+          },
+          {
+            "kind": "Var",
             "name": "errorDescription",
             "printedName": "errorDescription",
             "children": [
@@ -4491,6 +4550,51 @@
         "name": "CameraFormat",
         "printedName": "CameraFormat",
         "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RemoteSupport12CameraFormatV2id10Foundation4UUIDVvp",
+            "mangledName": "$s13RemoteSupport12CameraFormatV2id10Foundation4UUIDVvp",
+            "moduleName": "RemoteSupport",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UUID",
+                    "printedName": "Foundation.UUID",
+                    "usr": "s:10Foundation4UUIDV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RemoteSupport12CameraFormatV2id10Foundation4UUIDVvg",
+                "mangledName": "$s13RemoteSupport12CameraFormatV2id10Foundation4UUIDVvg",
+                "moduleName": "RemoteSupport",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "cameraName",
@@ -18232,21 +18336,21 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 10420,
+      "offset": 11368,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 13404,
+      "offset": 14352,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/RemoteSupportClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 17717,
+      "offset": 18665,
       "length": 2,
       "value": "30"
     },
@@ -18270,6 +18374,13 @@
       "offset": 1753,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/VideoStreamConfiguration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6254,
+      "length": 2,
+      "value": "30"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Util\/NetworkStatus.swift",
@@ -18337,14 +18448,14 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/MediaStreamContainer.swift",
       "kind": "BooleanLiteral",
-      "offset": 557,
+      "offset": 558,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/RemoteSupport\/Media\/MediaStreamContainer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2634,
+      "offset": 2656,
       "length": 1,
       "value": "1"
     },

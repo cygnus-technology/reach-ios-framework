@@ -32926,28 +32926,28 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2467,
+      "offset": 2508,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "StringLiteral",
-      "offset": 2530,
+      "offset": 2571,
       "length": 17,
       "value": "\"Share Something\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "StringLiteral",
-      "offset": 2570,
+      "offset": 2611,
       "length": 97,
       "value": "\"Description description description description description description description description\""
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Components\/InactiveMediaShareView.swift",
       "kind": "StringLiteral",
-      "offset": 2689,
+      "offset": 2730,
       "length": 15,
       "value": "\"Start Sharing\""
     },
@@ -33244,6 +33244,13 @@
       "offset": 1191,
       "length": 3,
       "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/Views\/Session\/SessionViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1479,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/SessionUI\/SessionUI\/SessionUIComponents.swift",

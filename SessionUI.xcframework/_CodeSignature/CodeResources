@@ -26,7 +26,7 @@
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		LMuV224HvlKA337y1HTFjmihCX0=
+		uLU2OG+EBT+U2c2eDQr4KTN/4fI=
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>ios-arm64/SessionUI.framework/SessionUI</key>
 		<data>
-		nphJwpTwF2SDv1WKbSigZJjd25c=
+		Mf3YhgpyYHaLfRKvBUmqdvgHXpk=
 		</data>
 		<key>ios-arm64/SessionUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		knYqmF4mlPN+933pIJLwUgE6m04=
+		ylgBtWiTP7oq+YZcXUBcTBRc3ws=
 		</data>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Resources/DWARF/SessionUI</key>
 		<data>
-		eIkyILS2s7E5X8uGx7TsjyLxFMg=
+		0vj+aI63v0fdBM+PBTKjZPjgA5o=
 		</data>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<data>
-		8i+WohsSQw9isjlWz2m6GgzPSPo=
+		BTjnQoRWK8YakqLxHTVyJkIpL14=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Assets.car</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		5tA3U4+q45cDucLv4uCUeX2+aqw=
+		Zhp+5hpHoDgYbSAGGmOX//g0onk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		5tA3U4+q45cDucLv4uCUeX2+aqw=
+		Zhp+5hpHoDgYbSAGGmOX//g0onk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/SessionUI</key>
 		<data>
-		zhiUCOn5RSp36QXXhprxZmYrtzU=
+		rWUpqxYIeJ+Zv01U8hJcaoRdCYA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		YRuMN5PdwtREzTc6B/dDDVD8FdE=
+		Z/K+zYXYMB+1wW9jVmpz/2C0CXk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -142,15 +142,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/DWARF/SessionUI</key>
 		<data>
-		SmWFxE+Ie7UiKZgfMD98lXkd5EI=
+		z7/YychJCmwnHZ/QYDP29hpHZqM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<data>
-		dly4WTx29PoMInBvhe8Zjv0RcG4=
+		ke6/oVSU8pLPWOVRNKWJIjTe6PM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/x86_64/SessionUI.yml</key>
 		<data>
-		grvcvVXp3YUFbNF2cOTP2t4b2UY=
+		sQFfpGJfgWCzSunSNR0Afhh6rTU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -194,7 +194,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P6kZq7/oKQxX6NyLrQI1u9KBM9hnNBcjHg/8Jf0XOxo=
+			YUzHna9kuzB2Pumq3c7+m6J4wGE80YP4P+Dw9IpQFtY=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -236,14 +236,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dhVOLDW7OVpkVVlnQA7SFZv4qASDnLNLLG9oXi11s6I=
+			Ahv3sIJusH/Du+/7zakYqS1J9Uc7tJN4pA6upG4qGQE=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4JC4uBtDWjRg49DQoxZz0c2LWUiDS8VVNR6DXNKPSaw=
+			adTYnm8aELDrnpDd1fPE9KBrFUmMZt49fJS4w4biHXk=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
@@ -257,14 +257,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rCWAi1ENCJ5i4eucKSnf/NMw1XQM82pavRvZKjQwvoY=
+			lSnye7yO6kMdS35QypDzVX4hhUWbN9v9F8Yy7+bJSGY=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EP4MAxw7+l9LYJuFXATRIzoruBb5C6e0XU8+BG1hTQs=
+			LT2DTDsQvuKHBgrFEO+Hf5JBuy9fGVPLJVJldOTbjSE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Assets.car</key>
@@ -306,7 +306,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+XDdHB0l1LkvWDjZhx7+KppVLi8ilcM3r+d26Ygtzog=
+			PYijS0in0SdyqiZnZwxhJxGMQCv41yXrVAfztP3G3Es=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -334,7 +334,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+XDdHB0l1LkvWDjZhx7+KppVLi8ilcM3r+d26Ygtzog=
+			PYijS0in0SdyqiZnZwxhJxGMQCv41yXrVAfztP3G3Es=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -376,14 +376,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cYc2HAXaec4nCWdsJyJ+9/Fozh5s9CUX66R7HPZlQ3Q=
+			OEEAlLrEbXuR7QosBHfll8/XEwCiDumvo7WzVDpdh3E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zdfZX4EIPZxKLhxw/89moXaHlSZ8Rr1KYldkXRoFUss=
+			AM1Le/H5CyHvMyJ1lleAqJiKI8fM1ss0MieTJ68DhVU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
@@ -397,21 +397,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g11vungoI701A57X68qGRifn/JWRApk/kO4D8SxF24c=
+			nEsad5cL7LMhIU30z6/Wri5wNcFMJZJ0++F94stNuCg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BmG4cxzycmdMc+3mIh218ZeKqWL8/VzjUm3j5hVA+xQ=
+			kjeO7c1Op7ckDSBH3ncLtHLa1OC0KGM6EAlJDc4WTkI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/x86_64/SessionUI.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fYebysnReOtzJEM4upQ8Rneg8SVgV2w/i3I+cvy6xU0=
+			Omh8VDB2byHQvk1wMuWIphvxHtgkAV2GA1bZQvWVaoI=
 			</data>
 		</dict>
 	</dict>

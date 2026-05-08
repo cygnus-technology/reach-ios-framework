@@ -163,8 +163,12 @@ extension RemoteSupport.RemoteSupportClient {
   #endif
 }
 extension RemoteSupport.RemoteSupportClient {
-  public func addVideoStream(_ configuration: RemoteSupport.CameraFormat) -> Swift.Bool
-  public func addScreenSharing(_ configuration: RemoteSupport.ScreenFormat) -> Swift.Bool
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func addVideoStream(_ configuration: RemoteSupport.CameraFormat) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public func addScreenSharing(_ configuration: RemoteSupport.ScreenFormat) async throws
+  #endif
 }
 public enum WebRTCError : Foundation.LocalizedError {
   case notInitialized
@@ -186,6 +190,7 @@ public enum RemoteSupportError : Foundation.LocalizedError {
   case queryTimedOut(Foundation.TimeInterval)
   case failedToSend(messageType: Swift.String)
   case networkRequestFailed(title: Swift.String, message: Swift.String)
+  case failedToSetupScreenSharing(message: Swift.String)
   public var errorDescription: Swift.String? {
     get
   }
@@ -202,6 +207,7 @@ public struct ScreenFormat : Swift.Codable, RemoteSupport.MediaConfiguration {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct CameraFormat : Swift.Codable, RemoteSupport.MediaConfiguration {
+  public let id: Foundation.UUID
   public let cameraName: Swift.String
   public let isFrontFacing: Swift.Bool
   public let format: RemoteSupport.FrameFormat
