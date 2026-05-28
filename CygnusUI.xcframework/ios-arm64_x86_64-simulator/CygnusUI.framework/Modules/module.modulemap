@@ -7,5 +7,4 @@ framework module CygnusUI {
 
 module CygnusUI.Swift {
   header "CygnusUI-Swift.h"
-  requires objc
 }

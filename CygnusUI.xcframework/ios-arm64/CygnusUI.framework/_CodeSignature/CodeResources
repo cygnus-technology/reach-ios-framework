@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		XFiMMzcs1vcMhz/co5VSrNeUUbA=
+		s4b9Wg1G1ilkohNl6vQROujIPrQ=
 		</data>
 		<key>ConnectionStatusIndicator.nib</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/CygnusUI-Swift.h</key>
 		<data>
-		7PsZCHq/hdXfM3lKi63sXaCmRoQ=
+		J0dOXMEED8bJZ4SLgWR1GwhG1Yo=
 		</data>
 		<key>Headers/CygnusUI.h</key>
 		<data>
@@ -66,31 +66,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		P2II31yu/kt7U+xVQgEnDhSejfc=
+		AcDTkCOysnaOj+PWst5B4HIs0yk=
 		</data>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		fSA2UqFEbivmjziGL8nPjPthupg=
+		LxaBxvvDlYoIo249SYI5+1nWkog=
 		</data>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		aVapFiQe7OTPMaxnKbvbeXySlJQ=
+		Qxofb0Mzgr2+Q9FxZLvXVxpt2qo=
 		</data>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		+MAWxWXC+YJbykJtvBSi+6WVpDg=
+		CYdGcpvvIp97Ytgx2amFQ7+sW3I=
 		</data>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		aVapFiQe7OTPMaxnKbvbeXySlJQ=
+		Qxofb0Mzgr2+Q9FxZLvXVxpt2qo=
 		</data>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		n3aEJMnRSyE+zXGVAxd1HDUM8a8=
+		40exWM5JGo8f+PxeFtcaDQJ5K78=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		uH8wPNSoEHLoYCCdjHD7JWh7PZ0=
+		zI59BXHZKFewAJ70EbfEkh9m/7U=
 		</data>
 		<key>Reach.storyboardc/0PQ-Jl-eM3-view-DMm-Rg-Y68.nib</key>
 		<data>
@@ -279,7 +279,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CUscDJ2T8ljxOwrU68EtvBCpyX5IRtHT0jl+s2EzHfI=
+			02naMvSP0heLMlSgATK82LPmdkVTCWUEHmszdkIrUqs=
 			</data>
 		</dict>
 		<key>ConnectionStatusIndicator.nib</key>
@@ -370,7 +370,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RTEv2OoHs084WjUIvXQ/IWMYT51eSCCzx6ZAPmZFSaQ=
+			K6f5cmqZBKrUJ1k0TjLd74jaamCvKctv7pvJqRWNSO8=
 			</data>
 		</dict>
 		<key>Headers/CygnusUI.h</key>
@@ -384,42 +384,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			drj/nIZIxkayeeBX5b8Ecfh32bnFklD/K6qGrZkhuEY=
+			YBmX3UxC4gEbdlZVFnjM6aa4xj70Fab+m8+MLjUZE9Q=
 			</data>
 		</dict>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/CfWWjdHdBs/zqwQtqr+Tey6Y8N06UE0BM2XyP2CN1w=
+			dMNcGXJS3oflElGzWWouB/4xVv7yr3eF76MXx3LD7kM=
 			</data>
 		</dict>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NVyQdHWpkUz/dswMwQOlzEAMkP7h8LbUY6vOEA4cLEg=
+			GULuZTRGWktwr+iXLVvjrcWXy9lwSqJNJdELn5s/VUg=
 			</data>
 		</dict>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/CfWWjdHdBs/zqwQtqr+Tey6Y8N06UE0BM2XyP2CN1w=
+			dMNcGXJS3oflElGzWWouB/4xVv7yr3eF76MXx3LD7kM=
 			</data>
 		</dict>
 		<key>Modules/CygnusUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R57xzmNxiVQe7gWMaGrgVSnqYqtDG+nXB3A32fVhOsk=
+			0w3zT0P4+24alIDUAk7dbSm+b86exq2zCdimVFRBglg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HIT3E6N8B2LPTECUGChxomMMKLR+0svkKabPcZSHviw=
+			BkHCNtLYe042fXrGUTJtuOIi/kPp6fR/DcyuAnt9mNk=
 			</data>
 		</dict>
 		<key>Reach.storyboardc/0PQ-Jl-eM3-view-DMm-Rg-Y68.nib</key>

@@ -7,5 +7,4 @@ framework module ReachProtocol {
 
 module ReachProtocol.Swift {
   header "ReachProtocol-Swift.h"
-  requires objc
 }
