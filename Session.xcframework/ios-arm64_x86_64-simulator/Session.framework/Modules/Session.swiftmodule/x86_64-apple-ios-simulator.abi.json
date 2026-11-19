@@ -6934,15 +6934,7 @@
             "mangledName": "$s7Session16ReachChatServiceC15unownedExecutorScevp",
             "moduleName": "Session",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -8473,15 +8465,7 @@
             "mangledName": "$s7Session24ReachShareUtilityServiceC15unownedExecutorScevp",
             "moduleName": "Session",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -9880,15 +9864,7 @@
             "mangledName": "$s7Session13VideoRecorderC15unownedExecutorScevp",
             "moduleName": "Session",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -11028,15 +11004,7 @@
             "mangledName": "$s7Session17ReachShareServiceC15unownedExecutorScevp",
             "moduleName": "Session",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -12293,6 +12261,82 @@
         "children": [
           {
             "kind": "Var",
+            "name": "connectionStatus",
+            "printedName": "connectionStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<Session.ConnectionStatus, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionStatus",
+                    "printedName": "Session.ConnectionStatus",
+                    "usr": "s:7Session16ConnectionStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7Session05ReachA7ServiceC16connectionStatus7Combine12AnyPublisherVyAA010ConnectionE0Os5NeverOGvp",
+            "mangledName": "$s7Session05ReachA7ServiceC16connectionStatus7Combine12AnyPublisherVyAA010ConnectionE0Os5NeverOGvp",
+            "moduleName": "Session",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<Session.ConnectionStatus, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionStatus",
+                        "printedName": "Session.ConnectionStatus",
+                        "usr": "s:7Session16ConnectionStatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Session05ReachA7ServiceC16connectionStatus7Combine12AnyPublisherVyAA010ConnectionE0Os5NeverOGvg",
+                "mangledName": "$s7Session05ReachA7ServiceC16connectionStatus7Combine12AnyPublisherVyAA010ConnectionE0Os5NeverOGvg",
+                "moduleName": "Session",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "remoteSupportPublisher",
             "printedName": "remoteSupportPublisher",
             "children": [
@@ -12448,82 +12492,6 @@
                 "declKind": "Accessor",
                 "usr": "s:7Session05ReachA7ServiceC02onA5Ended7Combine12AnyPublisherVyyts5NeverOGvg",
                 "mangledName": "$s7Session05ReachA7ServiceC02onA5Ended7Combine12AnyPublisherVyyts5NeverOGvg",
-                "moduleName": "Session",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "onSessionReconnecting",
-            "printedName": "onSessionReconnecting",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AnyPublisher",
-                "printedName": "Combine.AnyPublisher<Swift.Bool, Swift.Never>",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
-                  }
-                ],
-                "usr": "s:7Combine12AnyPublisherV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7Session05ReachA7ServiceC02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvp",
-            "mangledName": "$s7Session05ReachA7ServiceC02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvp",
-            "moduleName": "Session",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AnyPublisher",
-                    "printedName": "Combine.AnyPublisher<Swift.Bool, Swift.Never>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Never",
-                        "printedName": "Swift.Never",
-                        "usr": "s:s5NeverO"
-                      }
-                    ],
-                    "usr": "s:7Combine12AnyPublisherV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7Session05ReachA7ServiceC02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvg",
-                "mangledName": "$s7Session05ReachA7ServiceC02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvg",
                 "moduleName": "Session",
                 "implicit": true,
                 "declAttributes": [
@@ -13219,15 +13187,7 @@
             "mangledName": "$s7Session05ReachA7ServiceC15unownedExecutorScevp",
             "moduleName": "Session",
             "implicit": true,
-            "intro_Macosx": "10.15",
-            "intro_iOS": "13.0",
-            "intro_tvOS": "13.0",
-            "intro_watchOS": "6.0",
             "declAttributes": [
-              "Available",
-              "Available",
-              "Available",
-              "Available",
               "Final",
               "Nonisolated",
               "Semantics"
@@ -13608,6 +13568,79 @@
           },
           {
             "kind": "Var",
+            "name": "connectionStatus",
+            "printedName": "connectionStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyPublisher",
+                "printedName": "Combine.AnyPublisher<Session.ConnectionStatus, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionStatus",
+                    "printedName": "Session.ConnectionStatus",
+                    "usr": "s:7Session16ConnectionStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine12AnyPublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7Session0A7ServiceP16connectionStatus7Combine12AnyPublisherVyAA010ConnectionD0Os5NeverOGvp",
+            "mangledName": "$s7Session0A7ServiceP16connectionStatus7Combine12AnyPublisherVyAA010ConnectionD0Os5NeverOGvp",
+            "moduleName": "Session",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<Session.ConnectionStatus, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionStatus",
+                        "printedName": "Session.ConnectionStatus",
+                        "usr": "s:7Session16ConnectionStatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Session0A7ServiceP16connectionStatus7Combine12AnyPublisherVyAA010ConnectionD0Os5NeverOGvg",
+                "mangledName": "$s7Session0A7ServiceP16connectionStatus7Combine12AnyPublisherVyAA010ConnectionD0Os5NeverOGvg",
+                "moduleName": "Session",
+                "genericSig": "<τ_0_0 where τ_0_0 : Session.SessionService>",
+                "sugared_genericSig": "<Self where Self : Session.SessionService>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "remoteSupportPublisher",
             "printedName": "remoteSupportPublisher",
             "children": [
@@ -13686,79 +13719,6 @@
                 "declKind": "Accessor",
                 "usr": "s:7Session0A7ServiceP22remoteSupportPublisher7Combine03AnyE0Vy06RemoteD00hD6ClientCSgs5NeverOGvg",
                 "mangledName": "$s7Session0A7ServiceP22remoteSupportPublisher7Combine03AnyE0Vy06RemoteD00hD6ClientCSgs5NeverOGvg",
-                "moduleName": "Session",
-                "genericSig": "<τ_0_0 where τ_0_0 : Session.SessionService>",
-                "sugared_genericSig": "<Self where Self : Session.SessionService>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "onSessionReconnecting",
-            "printedName": "onSessionReconnecting",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AnyPublisher",
-                "printedName": "Combine.AnyPublisher<Swift.Bool, Swift.Never>",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
-                  }
-                ],
-                "usr": "s:7Combine12AnyPublisherV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7Session0A7ServiceP02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvp",
-            "mangledName": "$s7Session0A7ServiceP02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvp",
-            "moduleName": "Session",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AnyPublisher",
-                    "printedName": "Combine.AnyPublisher<Swift.Bool, Swift.Never>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Never",
-                        "printedName": "Swift.Never",
-                        "usr": "s:s5NeverO"
-                      }
-                    ],
-                    "usr": "s:7Combine12AnyPublisherV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7Session0A7ServiceP02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvg",
-                "mangledName": "$s7Session0A7ServiceP02onA12Reconnecting7Combine12AnyPublisherVySbs5NeverOGvg",
                 "moduleName": "Session",
                 "genericSig": "<τ_0_0 where τ_0_0 : Session.SessionService>",
                 "sugared_genericSig": "<Self where Self : Session.SessionService>",
@@ -14600,42 +14560,42 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/Session\/Session\/Services\/ReachSessionService.swift",
       "kind": "Array",
-      "offset": 1325,
+      "offset": 1353,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/Session\/Session\/Services\/ReachSessionService.swift",
       "kind": "Array",
-      "offset": 1380,
+      "offset": 1408,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/Session\/Session\/Services\/ReachSessionService.swift",
       "kind": "Array",
-      "offset": 1441,
+      "offset": 1469,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/Session\/Session\/Services\/ReachSessionService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1809,
+      "offset": 1837,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/Session\/Session\/Services\/ReachSessionService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1843,
+      "offset": 1871,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/Session\/Session\/Services\/ReachSessionService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2585,
+      "offset": 2603,
       "length": 5,
       "value": "false"
     }

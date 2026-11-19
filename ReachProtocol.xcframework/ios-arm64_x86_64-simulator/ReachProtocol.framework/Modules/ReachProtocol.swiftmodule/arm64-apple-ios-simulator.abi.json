@@ -15,430 +15,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TransportModule",
-        "printedName": "TransportModule",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "onMessage",
-            "printedName": "onMessage",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PassthroughSubject",
-                "printedName": "Combine.PassthroughSubject<Foundation.Data, Swift.Never>",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Data",
-                    "printedName": "Foundation.Data",
-                    "usr": "s:10Foundation4DataV"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
-                  }
-                ],
-                "usr": "s:7Combine18PassthroughSubjectC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvp",
-            "mangledName": "$s13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvp",
-            "moduleName": "ReachProtocol",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PassthroughSubject",
-                    "printedName": "Combine.PassthroughSubject<Foundation.Data, Swift.Never>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Data",
-                        "printedName": "Foundation.Data",
-                        "usr": "s:10Foundation4DataV"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Never",
-                        "printedName": "Swift.Never",
-                        "usr": "s:s5NeverO"
-                      }
-                    ],
-                    "usr": "s:7Combine18PassthroughSubjectC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvg",
-                "mangledName": "$s13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvg",
-                "moduleName": "ReachProtocol",
-                "genericSig": "<τ_0_0 where τ_0_0 : ReachProtocol.TransportModule>",
-                "sugared_genericSig": "<Self where Self : ReachProtocol.TransportModule>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "send",
-            "printedName": "send(data:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Data",
-                "printedName": "Foundation.Data",
-                "usr": "s:10Foundation4DataV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13ReachProtocol15TransportModuleP4send4datay10Foundation4DataV_tYaKF",
-            "mangledName": "$s13ReachProtocol15TransportModuleP4send4datay10Foundation4DataV_tYaKF",
-            "moduleName": "ReachProtocol",
-            "genericSig": "<τ_0_0 where τ_0_0 : ReachProtocol.TransportModule>",
-            "sugared_genericSig": "<Self where Self : ReachProtocol.TransportModule>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "receivedBytes",
-            "printedName": "receivedBytes(data:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Data",
-                "printedName": "Foundation.Data",
-                "usr": "s:10Foundation4DataV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13ReachProtocol15TransportModuleP13receivedBytes4datay10Foundation4DataV_tF",
-            "mangledName": "$s13ReachProtocol15TransportModuleP13receivedBytes4datay10Foundation4DataV_tF",
-            "moduleName": "ReachProtocol",
-            "genericSig": "<τ_0_0 where τ_0_0 : ReachProtocol.TransportModule>",
-            "sugared_genericSig": "<Self where Self : ReachProtocol.TransportModule>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:13ReachProtocol15TransportModuleP",
-        "mangledName": "$s13ReachProtocol15TransportModuleP",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ParameterContainer",
-        "printedName": "ParameterContainer",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "parameterInfo",
-            "printedName": "parameterInfo",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ParameterInfo",
-                "printedName": "ReachProtocol.ParameterInfo",
-                "usr": "s:13ReachProtocol13ParameterInfoV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvp",
-            "mangledName": "$s13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvp",
-            "moduleName": "ReachProtocol",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ParameterInfo",
-                    "printedName": "ReachProtocol.ParameterInfo",
-                    "usr": "s:13ReachProtocol13ParameterInfoV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvg",
-                "mangledName": "$s13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvg",
-                "moduleName": "ReachProtocol",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "parameterValue",
-            "printedName": "parameterValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ParameterValue",
-                "printedName": "ReachProtocol.ParameterValue",
-                "usr": "s:13ReachProtocol14ParameterValueV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvp",
-            "mangledName": "$s13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvp",
-            "moduleName": "ReachProtocol",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ParameterValue",
-                    "printedName": "ReachProtocol.ParameterValue",
-                    "usr": "s:13ReachProtocol14ParameterValueV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvg",
-                "mangledName": "$s13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvg",
-                "moduleName": "ReachProtocol",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "displayValue",
-            "printedName": "displayValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13ReachProtocol18ParameterContainerV12displayValueSSvp",
-            "mangledName": "$s13ReachProtocol18ParameterContainerV12displayValueSSvp",
-            "moduleName": "ReachProtocol",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13ReachProtocol18ParameterContainerV12displayValueSSvg",
-                "mangledName": "$s13ReachProtocol18ParameterContainerV12displayValueSSvg",
-                "moduleName": "ReachProtocol",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(parameterInfo:parameterValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ParameterContainer",
-                "printedName": "ReachProtocol.ParameterContainer",
-                "usr": "s:13ReachProtocol18ParameterContainerV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ParameterInfo",
-                "printedName": "ReachProtocol.ParameterInfo",
-                "usr": "s:13ReachProtocol13ParameterInfoV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ParameterValue",
-                "printedName": "ReachProtocol.ParameterValue",
-                "usr": "s:13ReachProtocol14ParameterValueV"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:13ReachProtocol18ParameterContainerV13parameterInfo0E5ValueAcA0cF0V_AA0cG0Vtcfc",
-            "mangledName": "$s13ReachProtocol18ParameterContainerV13parameterInfo0E5ValueAcA0cF0V_AA0cG0Vtcfc",
-            "moduleName": "ReachProtocol",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:13ReachProtocol18ParameterContainerV",
-        "mangledName": "$s13ReachProtocol18ParameterContainerV",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReachProtocol",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "ReachError",
         "printedName": "ReachError",
@@ -657,6 +233,218 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ParameterContainer",
+        "printedName": "ParameterContainer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "parameterInfo",
+            "printedName": "parameterInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ParameterInfo",
+                "printedName": "ReachProtocol.ParameterInfo",
+                "usr": "s:13ReachProtocol13ParameterInfoV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvp",
+            "mangledName": "$s13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvp",
+            "moduleName": "ReachProtocol",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ParameterInfo",
+                    "printedName": "ReachProtocol.ParameterInfo",
+                    "usr": "s:13ReachProtocol13ParameterInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvg",
+                "mangledName": "$s13ReachProtocol18ParameterContainerV13parameterInfoAA0cF0Vvg",
+                "moduleName": "ReachProtocol",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "parameterValue",
+            "printedName": "parameterValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ParameterValue",
+                "printedName": "ReachProtocol.ParameterValue",
+                "usr": "s:13ReachProtocol14ParameterValueV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvp",
+            "mangledName": "$s13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvp",
+            "moduleName": "ReachProtocol",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ParameterValue",
+                    "printedName": "ReachProtocol.ParameterValue",
+                    "usr": "s:13ReachProtocol14ParameterValueV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvg",
+                "mangledName": "$s13ReachProtocol18ParameterContainerV14parameterValueAA0cF0Vvg",
+                "moduleName": "ReachProtocol",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "displayValue",
+            "printedName": "displayValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReachProtocol18ParameterContainerV12displayValueSSvp",
+            "mangledName": "$s13ReachProtocol18ParameterContainerV12displayValueSSvp",
+            "moduleName": "ReachProtocol",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReachProtocol18ParameterContainerV12displayValueSSvg",
+                "mangledName": "$s13ReachProtocol18ParameterContainerV12displayValueSSvg",
+                "moduleName": "ReachProtocol",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(parameterInfo:parameterValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ParameterContainer",
+                "printedName": "ReachProtocol.ParameterContainer",
+                "usr": "s:13ReachProtocol18ParameterContainerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ParameterInfo",
+                "printedName": "ReachProtocol.ParameterInfo",
+                "usr": "s:13ReachProtocol13ParameterInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ParameterValue",
+                "printedName": "ReachProtocol.ParameterValue",
+                "usr": "s:13ReachProtocol14ParameterValueV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReachProtocol18ParameterContainerV13parameterInfo0E5ValueAcA0cF0V_AA0cG0Vtcfc",
+            "mangledName": "$s13ReachProtocol18ParameterContainerV13parameterInfo0E5ValueAcA0cF0V_AA0cG0Vtcfc",
+            "moduleName": "ReachProtocol",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13ReachProtocol18ParameterContainerV",
+        "mangledName": "$s13ReachProtocol18ParameterContainerV",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -66291,6 +66079,26 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftProtobuf",
         "printedName": "SwiftProtobuf",
         "declKind": "Import",
@@ -68611,6 +68419,198 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TransportModule",
+        "printedName": "TransportModule",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "onMessage",
+            "printedName": "onMessage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PassthroughSubject",
+                "printedName": "Combine.PassthroughSubject<Foundation.Data, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine18PassthroughSubjectC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvp",
+            "mangledName": "$s13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvp",
+            "moduleName": "ReachProtocol",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PassthroughSubject",
+                    "printedName": "Combine.PassthroughSubject<Foundation.Data, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine18PassthroughSubjectC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvg",
+                "mangledName": "$s13ReachProtocol15TransportModuleP9onMessage7Combine18PassthroughSubjectCy10Foundation4DataVs5NeverOGvg",
+                "moduleName": "ReachProtocol",
+                "genericSig": "<τ_0_0 where τ_0_0 : ReachProtocol.TransportModule>",
+                "sugared_genericSig": "<Self where Self : ReachProtocol.TransportModule>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ReachProtocol15TransportModuleP4send4datay10Foundation4DataV_tYaKF",
+            "mangledName": "$s13ReachProtocol15TransportModuleP4send4datay10Foundation4DataV_tYaKF",
+            "moduleName": "ReachProtocol",
+            "genericSig": "<τ_0_0 where τ_0_0 : ReachProtocol.TransportModule>",
+            "sugared_genericSig": "<Self where Self : ReachProtocol.TransportModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receivedBytes",
+            "printedName": "receivedBytes(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ReachProtocol15TransportModuleP13receivedBytes4datay10Foundation4DataV_tF",
+            "mangledName": "$s13ReachProtocol15TransportModuleP13receivedBytes4datay10Foundation4DataV_tF",
+            "moduleName": "ReachProtocol",
+            "genericSig": "<τ_0_0 where τ_0_0 : ReachProtocol.TransportModule>",
+            "sugared_genericSig": "<Self where Self : ReachProtocol.TransportModule>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13ReachProtocol15TransportModuleP",
+        "mangledName": "$s13ReachProtocol15TransportModuleP",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReachProtocol",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "UInt8",
         "printedName": "UInt8",
@@ -68623,6 +68623,13 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
           {
             "kind": "Conformance",
             "name": "_FormatSpecifiable",
@@ -68694,6 +68701,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -69041,6 +69062,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -69110,6 +69138,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -69457,6 +69499,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -69526,6 +69575,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -69866,6 +69929,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -69935,6 +70005,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -70282,6 +70366,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -70351,6 +70442,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -70698,6 +70803,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -70767,6 +70879,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -71114,6 +71240,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -71183,6 +71316,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -71530,6 +71677,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -71599,6 +71753,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -71953,6 +72121,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -72035,6 +72210,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -72454,6 +72643,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -72536,6 +72732,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleFromBytes",
+            "printedName": "ConvertibleFromBytes",
+            "usr": "s:s20ConvertibleFromBytesP",
+            "mangledName": "$ss20ConvertibleFromBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -72977,6 +73187,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "BitwiseCopyable",
             "printedName": "BitwiseCopyable",
             "usr": "s:s15BitwiseCopyableP",
@@ -72988,6 +73205,13 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConvertibleToBytes",
+            "printedName": "ConvertibleToBytes",
+            "usr": "s:s18ConvertibleToBytesP",
+            "mangledName": "$ss18ConvertibleToBytesP"
           },
           {
             "kind": "Conformance",
@@ -73142,6 +73366,13 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
           {
             "kind": "Conformance",
             "name": "ContiguousBytes",
@@ -73849,6 +74080,13 @@
             ],
             "usr": "s:16CoreTransferable0B0P",
             "mangledName": "$s16CoreTransferable0B0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
           },
           {
             "kind": "Conformance",
@@ -74734,6 +74972,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "CVAttachmentValueRepresentable",
+            "printedName": "CVAttachmentValueRepresentable",
+            "usr": "s:9CoreVideo30CVAttachmentValueRepresentableP",
+            "mangledName": "$s9CoreVideo30CVAttachmentValueRepresentableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ContiguousBytes",
             "printedName": "ContiguousBytes",
             "usr": "s:10Foundation15ContiguousBytesP",
@@ -75236,27 +75481,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/ReadTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 387,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/ReadTransfer.swift",
-      "kind": "Array",
-      "offset": 613,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/ReadTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 731,
-      "length": 1,
-      "value": "0"
-    },
-    {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Models\/Extensions.swift",
       "kind": "StringLiteral",
       "offset": 17716,
@@ -75381,55 +75605,6 @@
       "offset": 22822,
       "length": 29,
       "value": "\"Unrecognized parameter type\""
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 307,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 312,
-      "length": 4,
-      "value": "1000"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 446,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 589,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 674,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1122,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Utilities.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3837,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Models\/Request.swift",
@@ -81347,9 +81522,44 @@
       "value": "\"param_notify_config_count\""
     },
     {
-      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/WriteTransfer.swift",
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
       "kind": "IntegerLiteral",
-      "offset": 1200,
+      "offset": 307,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 312,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 446,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 589,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 674,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/FileTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1122,
       "length": 1,
       "value": "0"
     },
@@ -81380,6 +81590,34 @@
       "offset": 752,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/ReadTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 387,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/ReadTransfer.swift",
+      "kind": "Array",
+      "offset": 613,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/ReadTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 731,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Transfer\/WriteTransfer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1200,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/DeviceAccess.swift",
@@ -81433,37 +81671,44 @@
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/DeviceAccess.swift",
       "kind": "BooleanLiteral",
-      "offset": 10712,
+      "offset": 11316,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/DeviceAccess.swift",
       "kind": "BooleanLiteral",
-      "offset": 17908,
+      "offset": 19815,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/DeviceAccess.swift",
       "kind": "Array",
-      "offset": 19993,
+      "offset": 21900,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/DeviceAccess.swift",
       "kind": "IntegerLiteral",
-      "offset": 22734,
+      "offset": 24951,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/DeviceAccess.swift",
       "kind": "IntegerLiteral",
-      "offset": 24289,
+      "offset": 26506,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/connerchristianson\/Documents\/Cygnus\/reach_sdk_swift\/ReachProtocol\/Utilities.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3837,
+      "length": 5,
+      "value": "false"
     }
   ]
 }

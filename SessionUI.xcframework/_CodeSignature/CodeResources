@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/SessionUI.framework/Assets.car</key>
 		<data>
-		LjYdibv/NiYHqsh2gVBf+XG6k0c=
+		VWpii1+pCW8wWoh+fcEH7x6+Gac=
 		</data>
 		<key>ios-arm64/SessionUI.framework/ChivoMono.ttf</key>
 		<data>
@@ -22,23 +22,23 @@
 		</data>
 		<key>ios-arm64/SessionUI.framework/Info.plist</key>
 		<data>
-		OXk2OHlhfUgjoRKcTr5caC/0BqQ=
+		DTmLWpQzZ8QN9ny1ySGE3EopQ6s=
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		uLU2OG+EBT+U2c2eDQr4KTN/4fI=
+		jhe6bZco1oWGwuMDnj2IS7js30o=
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		pj7dIh1sLNcH37zLt7Qtjn3blo0=
+		6hw4g1TFzOQeIOQMvok7xCgwLDE=
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		fgv/DWuz2DTpPrD5XgssuoFz58A=
+		LMouKVt9mdP+aHdbFQtqeVyH8ec=
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		pj7dIh1sLNcH37zLt7Qtjn3blo0=
+		6hw4g1TFzOQeIOQMvok7xCgwLDE=
 		</data>
 		<key>ios-arm64/SessionUI.framework/Modules/module.modulemap</key>
 		<data>
@@ -50,27 +50,86 @@
 		</data>
 		<key>ios-arm64/SessionUI.framework/SessionUI</key>
 		<data>
-		Mf3YhgpyYHaLfRKvBUmqdvgHXpk=
+		6xWv5lUCLi7XwVv+v5UNrO03ptw=
 		</data>
-		<key>ios-arm64/SessionUI.framework/_CodeSignature/CodeResources</key>
-		<data>
-		ylgBtWiTP7oq+YZcXUBcTBRc3ws=
-		</data>
+		<key>ios-arm64/SessionUI.framework/de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6VoSAE2yOnGcfN8m1zT7NtZEgMg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xPUjmcwJgiReswWqUYJrkziwCmc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AbCezpLw12OrQpwyVHQpp2HY1iA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/fr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hAdqTGFBpjadQCMguWwXie3lEx4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LTF7JOAx84qwQR0b0NyVK0WYwFc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iNlSn2biqO+xRAkrKjzZmK3QScw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l7+lu0glnGFQuMAryHRyO+TrU2E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
 		<data>
 		tQyMiKavkMLHEW9J3rTdu0/Z2N8=
 		</data>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Resources/DWARF/SessionUI</key>
 		<data>
-		0vj+aI63v0fdBM+PBTKjZPjgA5o=
+		k5MW5ToYynJ75XAlK4CWqOwHX+w=
 		</data>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<data>
-		BTjnQoRWK8YakqLxHTVyJkIpL14=
+		xq4e02oQlckMY0f2kNqpDjdjqPY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Assets.car</key>
 		<data>
-		LjYdibv/NiYHqsh2gVBf+XG6k0c=
+		VWpii1+pCW8wWoh+fcEH7x6+Gac=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/ChivoMono.ttf</key>
 		<data>
@@ -86,39 +145,39 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Info.plist</key>
 		<data>
-		vpMz8T6BTbP9a3xBPQ5hD/wfdYU=
+		XYGT8/YMvwAvANm6BLUe3Myq8Ng=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Zhp+5hpHoDgYbSAGGmOX//g0onk=
+		RXO8sa1RNtXo9oGQ4v1mIoWxeBY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		03zktA6ETciL467VnwjpdRGQ0PA=
+		OCroDND2/7p92Nx7SFjtr3J2xlo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		TSZoqklhTWYV6XHc8nSqSOQeYwc=
+		54cNaWSuUu6Ucox/+suS6VjOUTY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		03zktA6ETciL467VnwjpdRGQ0PA=
+		OCroDND2/7p92Nx7SFjtr3J2xlo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Zhp+5hpHoDgYbSAGGmOX//g0onk=
+		RXO8sa1RNtXo9oGQ4v1mIoWxeBY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BPOmktKh1ZP7lAxeSqvXYu8wA50=
+		uXZLZQYBUm2py0bAsMJitm6F/rY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		f1Nf3aMCFulDEtKYL37n0O8vLU8=
+		km5ISun201CNDgrfM8yoeGarMn4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BPOmktKh1ZP7lAxeSqvXYu8wA50=
+		uXZLZQYBUm2py0bAsMJitm6F/rY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/module.modulemap</key>
 		<data>
@@ -130,27 +189,86 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/SessionUI</key>
 		<data>
-		rWUpqxYIeJ+Zv01U8hJcaoRdCYA=
+		Ic5sjflY9eW96F0NbNXg9Niaol4=
 		</data>
-		<key>ios-arm64_x86_64-simulator/SessionUI.framework/_CodeSignature/CodeResources</key>
-		<data>
-		Z/K+zYXYMB+1wW9jVmpz/2C0CXk=
-		</data>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6VoSAE2yOnGcfN8m1zT7NtZEgMg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xPUjmcwJgiReswWqUYJrkziwCmc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AbCezpLw12OrQpwyVHQpp2HY1iA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/fr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hAdqTGFBpjadQCMguWwXie3lEx4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LTF7JOAx84qwQR0b0NyVK0WYwFc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iNlSn2biqO+xRAkrKjzZmK3QScw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l7+lu0glnGFQuMAryHRyO+TrU2E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
 		<data>
 		tQyMiKavkMLHEW9J3rTdu0/Z2N8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/DWARF/SessionUI</key>
 		<data>
-		z7/YychJCmwnHZ/QYDP29hpHZqM=
+		pglT0VjZdUyB7/IB7w9QzHqHGDo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<data>
-		ke6/oVSU8pLPWOVRNKWJIjTe6PM=
+		6Ua6q8RyA2AmLpHfG1UTRI5X2a4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/x86_64/SessionUI.yml</key>
 		<data>
-		sQFfpGJfgWCzSunSNR0Afhh6rTU=
+		voCQtaAqcsYYhRRNhJBeCPM5pTc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -159,7 +277,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dZmGeSlI7zD6IDvqxyEwNYzQV5wYcSnSY3cUgGvxOQ0=
+			9iLcqzhJykdl/K9rpAcHdvW3nzh5LzL6D1YQDxjHuwk=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/ChivoMono.ttf</key>
@@ -187,35 +305,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qrT3umIjnEWk50rlRaS8jGURwHaBoE5nVHZfnzi02zY=
+			qoF8p8G4CxuMG2LVeWY1iBXubly2DL956LjMnp+go7Y=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YUzHna9kuzB2Pumq3c7+m6J4wGE80YP4P+Dw9IpQFtY=
+			fmT/f4czzvxL5h8Vog4V3ErENyj/QUNjjMBARMX6cuo=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ifqpFAgw0Yg+Bfm/KpQkdmUjgydoGzMlfAvouoB1srg=
+			aED8C7hSBkECl5sULSxvbdqcj24llgj0dgHX/jK3DvY=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2X2iSpFCHaUnHeTkPIYa9+iLRq5vVM2EnrSjj+kUjPQ=
+			/SqMbZwgAAcQ5zDaQ6NLF12M6KCXLrjmxpLqtfCvJO4=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ifqpFAgw0Yg+Bfm/KpQkdmUjgydoGzMlfAvouoB1srg=
+			aED8C7hSBkECl5sULSxvbdqcj24llgj0dgHX/jK3DvY=
 			</data>
 		</dict>
 		<key>ios-arm64/SessionUI.framework/Modules/module.modulemap</key>
@@ -236,15 +354,71 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ahv3sIJusH/Du+/7zakYqS1J9Uc7tJN4pA6upG4qGQE=
+			mmRllxibdwGqbaGb4D0BiYE15CtMwHN5v7T3Q6cRMCM=
 			</data>
 		</dict>
-		<key>ios-arm64/SessionUI.framework/_CodeSignature/CodeResources</key>
+		<key>ios-arm64/SessionUI.framework/de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			adTYnm8aELDrnpDd1fPE9KBrFUmMZt49fJS4w4biHXk=
+			LkmuaIzzfTaX/L51xq7s1XU72VAev2kbjEqNn/GyL5o=
 			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zn8yeAg5uJoai66IgqRXSRfxodS2x2XjyojqMDqtSUk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OgTirRXjSzjSuxYeW/yo3sRH1FxibkmUhvse0VUc6Cs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/fr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y3nK8EiW7coWXdutAXyNuG/8i+lZAQPNiHWh++RJnsw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WDpy/idHvSkXwUG0d3DAJIv8RgUkNZGa/QXorjt5BCg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZEmNicY0z27hzmx0FNvc9PMeucOLl1aGXZq2srXJaPU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64/SessionUI.framework/sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MmHAsB8alQmbKLVoYbdO4Sxw1Ke9YveCLUjRc0+kfW8=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
 		<dict>
@@ -257,21 +431,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lSnye7yO6kMdS35QypDzVX4hhUWbN9v9F8Yy7+bJSGY=
+			Rf0ixFG+rxBBEWlRJpsQqMQ4rse46RXVW8mUEm93g6M=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LT2DTDsQvuKHBgrFEO+Hf5JBuy9fGVPLJVJldOTbjSE=
+			2EyQi70iGUsa0C4fUAosizaNt1l4Ot4WKcbknPjXYps=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dZmGeSlI7zD6IDvqxyEwNYzQV5wYcSnSY3cUgGvxOQ0=
+			9iLcqzhJykdl/K9rpAcHdvW3nzh5LzL6D1YQDxjHuwk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/ChivoMono.ttf</key>
@@ -299,63 +473,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7R8/J/ud/O/8D9O/U5AhOsF1IA4hsZO6LdCPy1Amjpo=
+			5Vpe2y9VneOHksxlSZHXkCWRUkuyr6l8LzHWx1esO/I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PYijS0in0SdyqiZnZwxhJxGMQCv41yXrVAfztP3G3Es=
+			anQnOnGePwluy8eILX9A3H76qoGBP5TWjrqAJ06tSbk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NICjUIw0G3uakrG9BRNCC+F//YPU+q5iURA/y/eWbhA=
+			kEOSqGKqwIAmoKx0NQRtu3ekJxWNfhFESqNAklK90+I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/nb+2g8hK0uBinl3GSJTO68Z2f9TxglmNlZ0Fi0js/E=
+			hCtsqokGPNli55SvOvMZTCbzSyvpwKhRzxin6rDNuKE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NICjUIw0G3uakrG9BRNCC+F//YPU+q5iURA/y/eWbhA=
+			kEOSqGKqwIAmoKx0NQRtu3ekJxWNfhFESqNAklK90+I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PYijS0in0SdyqiZnZwxhJxGMQCv41yXrVAfztP3G3Es=
+			anQnOnGePwluy8eILX9A3H76qoGBP5TWjrqAJ06tSbk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q+fm33oD6wYi26110U1JO+Co3Hz8h7+wL+Ut2fDFAD4=
+			VFLmQhsime6fZSl9qDqBhivV176D/ALSpWsnBAQEkoc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VSGkQmQdApJlZljsWKDuExbL0iIw4ITombRnthVGy1M=
+			O2CNBr3Tge7+hLr9UOY9rbNNJrTJTPI2FGeay2nPYhA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/SessionUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q+fm33oD6wYi26110U1JO+Co3Hz8h7+wL+Ut2fDFAD4=
+			VFLmQhsime6fZSl9qDqBhivV176D/ALSpWsnBAQEkoc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SessionUI.framework/Modules/module.modulemap</key>
@@ -376,15 +550,71 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OEEAlLrEbXuR7QosBHfll8/XEwCiDumvo7WzVDpdh3E=
+			m02aOSQqc5CLExuy1s+v41tyzfjlzKo4r9KucoQKQGM=
 			</data>
 		</dict>
-		<key>ios-arm64_x86_64-simulator/SessionUI.framework/_CodeSignature/CodeResources</key>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AM1Le/H5CyHvMyJ1lleAqJiKI8fM1ss0MieTJ68DhVU=
+			LkmuaIzzfTaX/L51xq7s1XU72VAev2kbjEqNn/GyL5o=
 			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zn8yeAg5uJoai66IgqRXSRfxodS2x2XjyojqMDqtSUk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OgTirRXjSzjSuxYeW/yo3sRH1FxibkmUhvse0VUc6Cs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/fr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y3nK8EiW7coWXdutAXyNuG/8i+lZAQPNiHWh++RJnsw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WDpy/idHvSkXwUG0d3DAJIv8RgUkNZGa/QXorjt5BCg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZEmNicY0z27hzmx0FNvc9PMeucOLl1aGXZq2srXJaPU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/SessionUI.framework/sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MmHAsB8alQmbKLVoYbdO4Sxw1Ke9YveCLUjRc0+kfW8=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Info.plist</key>
 		<dict>
@@ -397,21 +627,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nEsad5cL7LMhIU30z6/Wri5wNcFMJZJ0++F94stNuCg=
+			xKu6NiN2N8L8ZzsBDpE7reP5EgYwwXOJ5eFzFCfmOmk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/aarch64/SessionUI.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kjeO7c1Op7ckDSBH3ncLtHLa1OC0KGM6EAlJDc4WTkI=
+			WViMbQKvomgye4c0k6K/lcBq17VR4Afrb4YOMp3Mlv0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SessionUI.framework.dSYM/Contents/Resources/Relocations/x86_64/SessionUI.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Omh8VDB2byHQvk1wMuWIphvxHtgkAV2GA1bZQvWVaoI=
+			ADs2bpzbZxzt5I9CjsFfhbrST+ZRoAe99awjjmYXNY4=
 			</data>
 		</dict>
 	</dict>
